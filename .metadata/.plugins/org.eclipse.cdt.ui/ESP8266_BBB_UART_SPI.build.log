@@ -1,0 +1,12 @@
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15356233834444983702358690067235.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
