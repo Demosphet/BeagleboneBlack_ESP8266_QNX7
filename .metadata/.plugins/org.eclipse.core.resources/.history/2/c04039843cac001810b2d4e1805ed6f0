@@ -7,10 +7,6 @@ QCONFIG=qconfig.mk
 endif
 include $(QCONFIG)
 
-#===== LIBS - a space-separated list of library items to be included in the link.
-LIBS+=c socket spi-master
-
-#===== USEFILE - the file containing the usage message for the application.
 USEFILE=
 
 include $(MKFILES_ROOT)/qmacros.mk
