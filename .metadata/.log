@@ -31,3 +31,68 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY org.eclipse.cdt.core 1 0 2018-08-30 19:57:19.181
 !MESSAGE Indexed 'ESP8266_BBB_UART_SPI' (1 sources, 16 headers) in 0.158 sec: 1,161 declarations; 991 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.qnx.tools.ide.qde.core 4 4 2018-08-30 20:14:19.369
+!MESSAGE Error
+!STACK 1
+org.eclipse.core.runtime.CoreException: Program file does not exist
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunch.throwException(GdbLaunch.java:865)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunch.getProgramPath(GdbLaunch.java:824)
+	at com.qnx.tools.ide.qde.debug.internal.core.dsf.QDELaunch.getProgramPath(QDELaunch.java:629)
+	at com.qnx.tools.ide.qde.debug.internal.core.dsf.QDELaunch.getLocalExecutablePath(QDELaunch.java:331)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDELaunchConfigurationDelegate.setProgramPath(QDELaunchConfigurationDelegate.java:211)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDELaunchConfigurationDelegate.autocomplete(QDELaunchConfigurationDelegate.java:185)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDELaunchConfigurationDelegate.launch(QDELaunchConfigurationDelegate.java:125)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Contains: 
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2018-08-30 20:14:19.370
+!MESSAGE Program file does not exist
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 104 2018-08-30 20:14:19.370
+!MESSAGE 
+
+!ENTRY com.qnx.tools.ide.qde.core 4 4 2018-08-30 20:14:19.371
+!MESSAGE Error
+!STACK 1
+org.eclipse.core.runtime.CoreException: Program file does not exist
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunch.throwException(GdbLaunch.java:865)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunch.getProgramPath(GdbLaunch.java:824)
+	at com.qnx.tools.ide.qde.debug.internal.core.dsf.QDELaunch.getProgramPath(QDELaunch.java:629)
+	at com.qnx.tools.ide.qde.debug.internal.core.dsf.QDELaunch.getLocalExecutablePath(QDELaunch.java:331)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDELaunchConfigurationDelegate.verifyBinary(QDELaunchConfigurationDelegate.java:217)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDELaunchConfigurationDelegate.setProgramPath(QDELaunchConfigurationDelegate.java:213)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDELaunchConfigurationDelegate.autocomplete(QDELaunchConfigurationDelegate.java:185)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDELaunchConfigurationDelegate.launch(QDELaunchConfigurationDelegate.java:125)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Contains: 
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2018-08-30 20:14:19.371
+!MESSAGE Program file does not exist
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 104 2018-08-30 20:14:19.371
+!MESSAGE 
+
+!ENTRY com.qnx.tools.ide.qde.debug.ui 4 -1 2018-08-30 20:14:19.396
+!MESSAGE Program path is empty
+!STACK 1
+org.eclipse.core.runtime.CoreException: Program path is empty
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.coreException(QDELaunchUtils.java:1116)
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.verifyProgramPath(QDELaunchUtils.java:1125)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDELaunchConfigurationDelegate.verifyBinary(QDELaunchConfigurationDelegate.java:217)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDELaunchConfigurationDelegate.setProgramPath(QDELaunchConfigurationDelegate.java:213)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDELaunchConfigurationDelegate.autocomplete(QDELaunchConfigurationDelegate.java:185)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDELaunchConfigurationDelegate.launch(QDELaunchConfigurationDelegate.java:125)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 com.qnx.tools.ide.qde.core 4 0 2018-08-30 20:14:19.396
+!MESSAGE Program path is empty
+!SUBENTRY 1 com.qnx.tools.ide.qde.core 4 0 2018-08-30 20:14:19.396
+!MESSAGE Program path is empty
