@@ -65,7 +65,6 @@
 #define PIN_MODE_6      0x06
 #define PIN_MODE_7      0x07
 
-//Struct for configuring the Pin Multiplexer
 typedef union _CONF_MODULE_PIN_STRUCT { //See TRM Page 1446
     unsigned int d32;
     struct {                            //Name: field size unsigned
@@ -79,6 +78,16 @@ typedef union _CONF_MODULE_PIN_STRUCT { //See TRM Page 1446
     } b;
 } _CONF_MODULE_PIN;
 
+int GPIO_val_high   =           0x01;
+int GPIO_val_low    =           0x00;
+
+//Interrupt
+#define GPIO_IRQSTATUS_SET_1    0x38    //enable interrupt generation
+#define GPIO_IRQWAKEN_1         0x48    //Wakeup Enable for Interrupt Line
+#define GPIO_FALLINGDETECT      0x14C   //set falling edge trigger
+#define GPIO_CLEARDATAOUT       0x190   //clear data out Register
+#define GPIO_IRQSTATUS_1        0x30    //clear any prior IRQs
+
 //SPI - Path & Message size
 #define SPI_PATH "/dev/spi1"
 #define TSPI_WRITE_SHORT        (8)
@@ -91,83 +100,137 @@ uint8_t reg1[7]     =           {0xff, 0x3E, 0x11, 0x00, 0x44, 0x22, 0x66};    /
 uint8_t reg2[7]     =           {0xfb, 0x04, 0x04, 0x3b, 0x40, 0x40, 0x3f};    //Data to be sent for testing purposes
 uint8_t reg3[7]     =           {0x0f, 0x02, 0x02, 0x02, 0x02, 0x02, 0x02};    //Data to be sent for testing purposes
 
-void Pin_status() {
+void Pin_status(){
     printf("0. val = %#8x\n\n",AM335X_GPIO1_BASE);
 
     //Setting GPIO_1 Pins for use with Interrupt and nHib
     //GPIO global pointers
     uintptr_t gpio1_base = NULL;
-    uintptr_t control_module = NULL;
+    // uintptr_t control_module = NULL;
 
-    volatile uint32_t val = 0;
-
-    control_module = mmap_device_io(AM335X_CONTROL_MODULE_SIZE, AM335X_CONTROL_MODULE_BASE);
-
-    if (control_module) {
-        in32s(&val,1,control_module+GPIO_6_pinConfig);
-        printf("Current pinmux configuration for      GPIO6  = %#010x\n", val);
-
-        in32s(&val,1,control_module+GPIO_7_pinConfig);
-        printf("Current pinmux configuration for      GPIO7  = %#010x\n", val);
-
-        in32s(&val,1,control_module+spi_cs_1_pinConfig);
-        printf("Current pinmux configuration for   SPI 1 CS  = %#010x\n", val);
-
-        in32s(&val,1,control_module+spi_d0_1_pinConfig);
-        printf("Current pinmux configuration for   SPI 1 D0  = %#010x\n", val);
-
-        in32s(&val,1,control_module+spi_d1_1_pinConfig);
-        printf("Current pinmux configuration for   SPI 1 D1  = %#010x\n", val);
-
-        in32s(&val,1,control_module+spi_sclk_1_pinConfig);
-        printf("Current pinmux configuration for SPI 1 SCLK  = %#010x\n", val);
-
-        in32s(&val,1,control_module+uart1_ctsn_pinConfig);
-        printf("Current pinmux configuration for UART 1 CTSN = %#010x\n", val);
-
-        in32s(&val,1,control_module+uart1_rtsn_pinConfig);
-        printf("Current pinmux configuration for UART 1 RTSN = %#010x\n", val);
-
-        in32s(&val,1,control_module+uart1_rxd_pinConfig);
-        printf("Current pinmux configuration for UART 1 RXD  = %#010x\n", val);
-
-        in32s(&val,1,control_module+uart1_txd_pinConfig);
-        printf("Current pinmux configuration for UART 1 TXD  = %#010x\n\n", val);
-
-        munmap_device_io(control_module, AM335X_CONTROL_MODULE_SIZE);
-    }
-}
-
-void Pin_control (unsigned int pin, unsigned int value) {
-    unsigned int PIN = pin;
-    printf("PIN: %d\n",PIN);
-    unsigned int VALUE = value;
-    printf("VALUE: %d\n",VALUE);
-    PIN &= VALUE;
-    printf("New PIN VALUE: %d\n\n",PIN);
-
-    uintptr_t gpio1_base = NULL;
     volatile uint32_t val = 0;
 
     gpio1_base = mmap_device_io(AM335X_GPIO_SIZE , AM335X_GPIO1_BASE);
+    // control_module = mmap_device_io(AM335X_CONTROL_MODULE_SIZE, AM335X_CONTROL_MODULE_BASE);
 
-    if (gpio1_base) {
+    // if (control_module) {
+    //     in32s(&val,1,control_module+GPIO_6_pinConfig);
+    //     printf("Current pinmux configuration for      GPIO6 = %#010x\n", val);
+
+    //     in32s(&val,1,control_module+GPIO_7_pinConfig);
+    //     printf("Current pinmux configuration for      GPIO7 = %#010x\n", val);
+
+    //     in32s(&val,1,control_module+spi_cs_1_pinConfig);
+    //     printf("Current pinmux configuration for   SPI 1 CS = %#010x\n", val);
+
+    //     in32s(&val,1,control_module+spi_d0_1_pinConfig);
+    //     printf("Current pinmux configuration for   SPI 1 D0 = %#010x\n", val);
+
+    //     in32s(&val,1,control_module+spi_d1_1_pinConfig);
+    //     printf("Current pinmux configuration for   SPI 1 D1 = %#010x\n", val);
+
+    //     in32s(&val,1,control_module+spi_sclk_1_pinConfig);
+    //     printf("Current pinmux configuration for SPI 1 SCLK = %#010x\n", val);
+
+    //     in32s(&val,1,control_module+uart1_ctsn_pinConfig);
+    //     printf("Current pinmux configuration for UART 1 CTSN = %#010x\n", val);
+
+    //     in32s(&val,1,control_module+uart1_rtsn_pinConfig);
+    //     printf("Current pinmux configuration for UART 1 RTSN = %#010x\n", val);
+
+    //     in32s(&val,1,control_module+uart1_rxd_pinConfig);
+    //     printf("Current pinmux configuration for UART 1 RXD = %#010x\n", val);
+
+    //     in32s(&val,1,control_module+uart1_txd_pinConfig);
+    //     printf("Current pinmux configuration for UART 1 TXD = %#010x\n\n", val);
+
+    //     munmap_device_io(control_module, AM335X_CONTROL_MODULE_SIZE);
+
+    if( gpio1_base ) {
         //Write value to output enable
-        val &= ~(PIN);
+        val &= ~(NHIB|IRQ);
         out32(gpio1_base + GPIO_OE, val);
 
         val = in32(gpio1_base + GPIO_DATAOUT);  //Read in current value
         printf("1. val = %#8x\n",val);          //Debug
-        val &= ~(PIN);                          //Clear the bits that we might change
+        val &= ~(NHIB|IRQ);                     //Clear the bits that we might change
         printf("2. val = %#8x\n",val);          //Debug
-        val |= (PIN);                           //Set the pattern to display (set next value, i++)
+        val |= (NHIB|IRQ);                      //Set the pattern to display (set next value, i++)
         printf("3. val = %#8x\n\n",val);        //Debug
         out32(gpio1_base + GPIO_DATAOUT, val);  //Write new value
         sleep(1);
 
+        // printf("Press a key to continue... ");
+        // char string;
+        // scanf("%c",&string);
+        // printf("\n\n");
+
         munmap_device_io(gpio1_base, AM335X_GPIO_SIZE);
     }
 }
+
+// void Pin_control (unsigned int pin, unsigned int value) {
+//     unsigned int PIN = pin;
+//     printf("PIN: %d\n",PIN);
+//     unsigned int VALUE = value;
+//     printf("VALUE: %d\n",VALUE);
+//     PIN &= VALUE;
+//     printf("New PIN VALUE: %d\n",PIN);
+
+//     //Setting GPIO_1 Pins for use with Interrupt and nHib
+//     //GPIO global pointers
+//     uintptr_t gpio1_base = NULL;
+//     uintptr_t control_module = NULL;
+
+//     volatile uint32_t val = 0;
+
+//     gpio1_base = mmap_device_io(AM335X_GPIO_SIZE , AM335X_GPIO1_BASE);
+//     control_module = mmap_device_io(AM335X_CONTROL_MODULE_SIZE, AM335X_CONTROL_MODULE_BASE);
+
+//     if( gpio1_base ) {
+//         //Write value to output enable
+//         val &= ~(PIN);
+//         out32(gpio1_base + GPIO_OE, val);
+
+//         val = in32(gpio1_base + GPIO_DATAOUT);  //Read in current value
+//         printf("1. val = %#8x\n",val);          //Debug
+//         val &= ~(PIN);                     //Clear the bits that we might change
+//         printf("2. val = %#8x\n",val);          //Debug
+//         val |= (PIN);                      //Set the pattern to display (set next value, i++)
+//         printf("3. val = %#8x\n\n",val);        //Debug
+//         out32(gpio1_base + GPIO_DATAOUT, val);  //Write new value
+//         sleep(1);
+
+//         munmap_device_io(gpio1_base, AM335X_GPIO_SIZE);
+
+//         printf("Press a key to continue... ");
+//         char string;
+//         scanf("%c",&string);
+//         printf("\n\n");
+//     }
+
+//     // if( gpio1_base ) {
+//     //     //Write value to output enable
+//     //     val &= ~(NHIB|IRQ);
+//     //     out32(gpio1_base + GPIO_OE, val);
+
+//     //     val = in32(gpio1_base + GPIO_DATAOUT);  //Read in current value
+//     //     printf("1. val = %#8x\n",val);          //Debug
+//     //     val &= ~(NHIB|IRQ);                     //Clear the bits that we might change
+//     //     printf("2. val = %#8x\n",val);          //Debug
+//     //     val |= (NHIB|IRQ);                      //Set the pattern to display (set next value, i++)
+//     //     printf("3. val = %#8x\n\n",val);        //Debug
+//     //     out32(gpio1_base + GPIO_DATAOUT, val);  //Write new value
+//     //     sleep(1);
+
+//     //     printf("Press a key to continue... ");
+//     //     char string;
+//     //     scanf("%c",&string);
+//     //     printf("\n\n");
+
+//     //     munmap_device_io(gpio1_base, AM335X_GPIO_SIZE);
+//     // }
+// }
 
 void Pin_config (int mode, unsigned int puden, unsigned int putypesel, unsigned int rxactive, unsigned int slewctrl, unsigned int pin) {
     int MODE = mode;
@@ -297,39 +360,71 @@ int spiclose() {
 int main(void) {
     puts("Hello World!!!"); /* prints Hello World!!! */
 
-    ThreadCtl( _NTO_TCTL_IO_PRIV , NULL); // Request I/O privileges
+    // ThreadCtl( _NTO_TCTL_IO_PRIV , NULL); // Request I/O privileges
 
-    //GPIO Check and Configuration Code
-    Pin_status();
-    Pin_control(NHIB,0x00);
-    Pin_control(IRQ,0x00);
+    printf("0. val = %#8x\n\n",AM335X_GPIO1_BASE);
+
+    //Setting GPIO_1 Pins for use with Interrupt and nHib
+    //GPIO global pointers
+    uintptr_t gpio1_base = NULL;
+    // uintptr_t control_module = NULL;
+
+    volatile uint32_t val = 0;
+
+    gpio1_base = mmap_device_io(AM335X_GPIO_SIZE , AM335X_GPIO1_BASE);
+
+    if( gpio1_base ) {
+        //Write value to output enable
+        val &= ~(NHIB|IRQ);
+        out32(gpio1_base + GPIO_OE, val);
+
+        val = in32(gpio1_base + GPIO_DATAOUT);  //Read in current value
+        printf("1. val = %#8x\n",val);          //Debug
+        val &= ~(NHIB|IRQ);                     //Clear the bits that we might change
+        printf("2. val = %#8x\n",val);          //Debug
+        val |= (NHIB|IRQ);                      //Set the pattern to display (set next value, i++)
+        printf("3. val = %#8x\n\n",val);        //Debug
+        out32(gpio1_base + GPIO_DATAOUT, val);  //Write new value
+        sleep(1);
+
+        // printf("Press a key to continue... ");
+        // char string;
+        // scanf("%c",&string);
+        // printf("\n\n");
+
+        munmap_device_io(gpio1_base, AM335X_GPIO_SIZE);
+    }
+
+    // //GPIO Check and Configuration Code
+    // Pin_status();
+    // Pin_control(NHIB,0x00);
     // Pin_config(PIN_MODE_0,PU_ENABLE,PU_PULL_DOWN,RECV_DISABLE,SLEW_FAST,uart1_ctsn_pinConfig);
     // Pin_config(PIN_MODE_0,PU_ENABLE,PU_PULL_DOWN,RECV_DISABLE,SLEW_FAST,uart1_rtsn_pinConfig);
     // Pin_status();
 
-    //UART Code
-    int fd;
-    ret = 0;
-    int p = 1;
-    int int_counter = 0;
-    char char_counter[5];
-    char read_buffer[10000];
-    printf("Test 1\n");
+    // //UART Code
+    // int fd;
+    // int ret = 0;
+    // int p = 1;
+    // int int_counter = 0;
+    // char char_counter[5];
+    // char read_buffer[10000];
+    // printf("Test 1\n");
 
-    fd = open(UART_PATH,O_RDWR);
-    printf("Test 2\n");
-    char write_buffer[50] = "AT";
-    write(fd,&write_buffer,sizeof(write_buffer));
-    printf("Test 3\n");
+    // fd = open(UART_PATH,O_RDWR);
+    // printf("Test 2\n");
+    // char write_buffer[50] = "AT";
+    // write(fd,&write_buffer,sizeof(write_buffer));
+    // printf("Test 3\n");
 
-    ret = read(fd,&read_buffer,sizeof(read_buffer));
-    printf("Test 4\n");
-    read_buffer[ret] = '\0';
-    printf("Test 5\n");
-    printf("1. Number of Bytes: %d\n",ret);
-    printf("1. Read value: %s\n\n",read_buffer);
-    ret = read(fd,&read_buffer,sizeof(read_buffer));
-    printf("Test 6\n");
+    // ret = read(fd,&read_buffer,sizeof(read_buffer));
+    // printf("Test 4\n");
+    // read_buffer[ret] = '\0';
+    // printf("Test 5\n");
+    // printf("1. Number of Bytes: %d\n",ret);
+    // printf("1. Read value: %s\n\n",read_buffer);
+    // ret = read(fd,&read_buffer,sizeof(read_buffer));
+    // printf("Test 6\n");
 
     // //SPI Code
     // spiopen(SPI_PATH);
