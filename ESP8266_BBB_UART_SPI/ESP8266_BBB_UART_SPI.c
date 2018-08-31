@@ -143,8 +143,8 @@ void Pin_control (unsigned int pin, unsigned int value) {
     printf("PIN: %d\n",PIN);
     unsigned int VALUE = value;
     printf("VALUE: %d\n",VALUE);
-    PIN &= VALUE;
-    printf("New PIN VALUE: %d\n\n",PIN);
+    unsigned int new_PIN = (PIN & VALUE);
+    printf("New PIN VALUE: %d\n\n",new_PIN);
 
     uintptr_t gpio1_base = NULL;
     volatile uint32_t val = 0;
@@ -157,13 +157,13 @@ void Pin_control (unsigned int pin, unsigned int value) {
         out32(gpio1_base + GPIO_OE, val);
 
         val = in32(gpio1_base + GPIO_DATAOUT);  //Read in current value
-        printf("1. val = %#8x\n",val);          //Debug
+        printf("1. val = %#8x\n", val);         //Debug
         val &= ~(PIN);                          //Clear the bits that we might change
-        printf("2. val = %#8x\n",val);          //Debug
-        val |= (PIN);                           //Set the pattern to display (set next value, i++)
-        printf("3. val = %#8x\n\n",val);        //Debug
+        printf("2. val = %#8x\n", val);         //Debug
+        val |= (new_PIN);                       //Set the pattern to display (set next value, i++)
+        printf("3. val = %#8x\n\n", val);       //Debug
         out32(gpio1_base + GPIO_DATAOUT, val);  //Write new value
-        sleep(1);
+        sleep(0.25);
 
         munmap_device_io(gpio1_base, AM335X_GPIO_SIZE);
     }
@@ -248,7 +248,7 @@ int spiwrite(int iter) {
     int counter = 0;
     //Write to SPI1
     while(p) {
-        // printf("Counter = %d\n",counter);
+        printf("Counter = %d\n",counter);
         for(int i = 0; i < 7; i++){
             buffer[0] = reg1[0];
             buffer[1] = reg1[1];
@@ -300,36 +300,43 @@ int main(void) {
     ThreadCtl( _NTO_TCTL_IO_PRIV , NULL); // Request I/O privileges
 
     //GPIO Check and Configuration Code
-    Pin_status();
-    Pin_control(NHIB,0x00);
-    Pin_control(IRQ,0x00);
+    // Pin_status();
+    // Pin_control(IRQ,0x00);
+    // Pin_control(IRQ,0xFF);
+    // Pin_control(NHIB,0x00);
+    // Pin_control(NHIB,0xFF);
+    // sleep(1);
     // Pin_config(PIN_MODE_0,PU_ENABLE,PU_PULL_DOWN,RECV_DISABLE,SLEW_FAST,uart1_ctsn_pinConfig);
     // Pin_config(PIN_MODE_0,PU_ENABLE,PU_PULL_DOWN,RECV_DISABLE,SLEW_FAST,uart1_rtsn_pinConfig);
     // Pin_status();
 
     //UART Code
-    int fd;
     ret = 0;
-    int p = 1;
-    int int_counter = 0;
-    char char_counter[5];
     char read_buffer[10000];
+    file = open(UART_PATH, O_RDWR);
     printf("Test 1\n");
 
-    fd = open(UART_PATH,O_RDWR);
-    printf("Test 2\n");
-    char write_buffer[50] = "AT";
-    write(fd,&write_buffer,sizeof(write_buffer));
-    printf("Test 3\n");
-
-    ret = read(fd,&read_buffer,sizeof(read_buffer));
     printf("Test 4\n");
-    read_buffer[ret] = '\0';
+    char write_buffer[50] = "AT\n";
+    printf("\nTx: %s\n", write_buffer);
+    write(file, &write_buffer, sizeof(write_buffer));
+    // for (int i = 0; i < 11; i++) {
+    //     write(file, &write_buffer, sizeof(write_buffer));
+    // }
     printf("Test 5\n");
-    printf("1. Number of Bytes: %d\n",ret);
-    printf("1. Read value: %s\n\n",read_buffer);
-    ret = read(fd,&read_buffer,sizeof(read_buffer));
-    printf("Test 6\n");
+
+    int counter = 0;
+    for (int i = 0; i < 18; i++) {
+        printf("Test 6.%d\n", counter);
+        ret = read(file, &read_buffer, sizeof(read_buffer));
+        printf("Test 7.%d\n", counter);
+        read_buffer[ret] = '\0';
+        printf("Test 8.%d\n", counter);
+        printf("%d. Number of Bytes: %d\n", counter, ret);
+        printf("%d. Read value: %s\n\n", counter, read_buffer);
+
+        counter++;
+    }
 
     // //SPI Code
     // spiopen(SPI_PATH);
