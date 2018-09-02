@@ -299,7 +299,9 @@ int main(void) {
 
     ThreadCtl( _NTO_TCTL_IO_PRIV , NULL); // Request I/O privileges
 
-    //GPIO Check and Configuration Code
+    // //--------GPIO Check & Configuration Code--------
+    // //NHIB : Pin 3 - Connector 8
+    // //IRQ  : Pin 4 - Connector 8
     // Pin_status();
     // Pin_control(IRQ,0x00);
     // Pin_control(IRQ,0xFF);
@@ -310,7 +312,9 @@ int main(void) {
     // Pin_config(PIN_MODE_0,PU_ENABLE,PU_PULL_DOWN,RECV_DISABLE,SLEW_FAST,uart1_rtsn_pinConfig);
     // Pin_status();
 
-    //UART Code
+    //--------UART Code--------
+    //Tx : Pin 13 - Connector 9
+    //Rx : Pin 11 - Connector 9
     ret = 0;
     char read_buffer[10000];
     file = open(UART_PATH, O_RDWR);
@@ -338,7 +342,11 @@ int main(void) {
         counter++;
     }
 
-    // //SPI Code
+    // //--------SPI Code--------
+    // //CS   : Pin 28 - Connector 9
+    // //MOSI : Pin 29 - Connector 9
+    // //MISO : Pin 30 - Connector 9
+    // //SCLK : Pin 31 - Connector 9
     // spiopen(SPI_PATH);
     // spisetcfg();
 

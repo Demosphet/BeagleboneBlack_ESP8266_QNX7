@@ -24,7 +24,7 @@
             <qconnport value="8000"/>
             <qconnguid value="707fbc23-6af6-4d06-8d7e-3f287d97726a"/>
             <targettmpdir value="/tmp"/>
-            <qconnhostname value="10.0.1.22"/>
+            <qconnhostname value="10.0.1.8"/>
         </item>
     </data>
 </trgtproject>
