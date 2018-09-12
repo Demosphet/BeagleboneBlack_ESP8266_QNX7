@@ -81,15 +81,23 @@ typedef union _CONF_MODULE_PIN_STRUCT { //See TRM Page 1446
 
 //SPI - Path & Message size
 #define SPI_PATH "/dev/spi1"
+#define TSPI_WRITE_7            (7)
 #define TSPI_WRITE_SHORT        (8)
+#define TSPI_WRITE_12           (12)
+#define TSPI_WRITE_16           (16)
+#define TSPI_WRITE_32           (32)
 
 int file;
 int ret;
-uint8_t buffer                  [256 * 1024];
+uint8_t write_buffer            [256 * 1024];
+uint8_t read_buffer             [256 * 1024];
 uint8_t j           =           0x02;
-uint8_t reg1[7]     =           {0xff, 0x3E, 0x11, 0x00, 0x44, 0x22, 0x66};    //Data to be sent for testing purposes
-uint8_t reg2[7]     =           {0xfb, 0x04, 0x04, 0x3b, 0x40, 0x40, 0x3f};    //Data to be sent for testing purposes
-uint8_t reg3[7]     =           {0x0f, 0x02, 0x02, 0x02, 0x02, 0x02, 0x02};    //Data to be sent for testing purposes
+uint8_t reg1[8]     =           {0xff, 0x3E, 0x11, 0x00, 0x44, 0x22, 0x66, 0x00};    //Data to be sent for testing purposes
+uint8_t reg2[7]     =           {0xfb, 0x04, 0x04, 0x3b, 0x40, 0x40, 0x3f};          //Data to be sent for testing purposes
+uint8_t reg3[7]     =           {0x0f, 0x02, 0x02, 0x02, 0x02, 0x02, 0x02};          //Data to be sent for testing purposes
+uint8_t reg4[8]     =           {0x48, 0x65, 0x72, 0x65, 0x21, 0x21, 0x21, 0x00};    //Data to be sent for testing purposes
+uint8_t reg5[12]    =           {0x48, 0x65, 0x6c, 0x6c, 0x6f, 0x20, 0x53, 0x6c, 0x61, 0x76, 0x65};
+uint8_t reg6[16]    =           {0x41, 0x72, 0x65, 0x20, 0x79, 0x6f, 0x75, 0x20, 0x61, 0x6c, 0x69, 0x76, 0x65, 0x3f, 0x0};
 
 void Pin_status() {
     printf("0. val = %#8x\n\n",AM335X_GPIO1_BASE);
@@ -158,14 +166,33 @@ void Pin_control (unsigned int pin, unsigned int value) {
 
         val = in32(gpio1_base + GPIO_DATAOUT);  //Read in current value
         printf("1. val = %#8x\n", val);         //Debug
-        val &= ~(PIN);                          //Clear the bits that we might change
-        printf("2. val = %#8x\n", val);         //Debug
-        val |= (new_PIN);                       //Set the pattern to display (set next value, i++)
-        printf("3. val = %#8x\n\n", val);       //Debug
+        
+        if (new_PIN) {                          //Determining whether the PIN is required to set LOW or HIGH
+            val |= (PIN);                       //Set the pattern to display (set next value, i++)
+            printf("3. val = %#8x\n\n", val);   //Debug
+        } if (!new_PIN) {
+            val &= ~(PIN);                      //Clear the bits that we might change
+            printf("2. val = %#8x\n", val);     //Debug            
+        }
         out32(gpio1_base + GPIO_DATAOUT, val);  //Write new value
-        sleep(0.25);
+        delay(250);
 
         munmap_device_io(gpio1_base, AM335X_GPIO_SIZE);
+
+        // //Write value to output enable
+        // val &= ~(PIN);
+        // out32(gpio1_base + GPIO_OE, val);
+
+        // val = in32(gpio1_base + GPIO_DATAOUT);  //Read in current value
+        // printf("1. val = %#8x\n", val);         //Debug
+        // val &= ~(PIN);                          //Clear the bits that we might change
+        // printf("2. val = %#8x\n", val);         //Debug
+        // val |= (new_PIN);                       //Set the pattern to display (set next value, i++)
+        // printf("3. val = %#8x\n\n", val);       //Debug
+        // out32(gpio1_base + GPIO_DATAOUT, val);  //Write new value
+        // sleep(0.25);
+
+        // munmap_device_io(gpio1_base, AM335X_GPIO_SIZE);
     }
 }
 
@@ -214,8 +241,9 @@ int spisetcfg() {
     spi_cfg_t spicfg;
 
     //CLK POL -> 0 || CLK PHA -> 1 || For later use maybe?
-    spicfg.mode = (8 & SPI_MODE_CHAR_LEN_MASK)|SPI_MODE_CKPHASE_HALF;
+    spicfg.mode = (8 & SPI_MODE_CHAR_LEN_MASK)|SPI_MODE_CKPHASE_HALF|SPI_MODE_CKPOL_HIGH;
     spicfg.clock_rate = 100000;
+    // spicfg.clock_rate = 1000000;
 
     ret = spi_setcfg(file,0,&spicfg);
     if (ret != EOK){
@@ -246,40 +274,51 @@ int spiwrite(int iter) {
     int p = 1;
     int iterations = iter;
     int counter = 0;
+    char output[128] = "";
+    char values[50] = "";
     //Write to SPI1
     while(p) {
         printf("Counter = %d\n",counter);
-        for(int i = 0; i < 7; i++){
-            buffer[0] = reg1[0];
-            buffer[1] = reg1[1];
-            buffer[2] = reg1[2];
-            buffer[3] = reg1[3];
-            buffer[4] = reg1[4];
-            buffer[5] = reg1[5];
-            buffer[6] = reg1[6];
-            buffer[7] = reg1[7];
-
-            ret = spi_write(file,SPI_DEV_LOCK,buffer,TSPI_WRITE_SHORT);
-
-            j = j << 1;
-
-            if (ret == -1){
-                printf("spi_write failed: %s\n", strerror(errno));
-            } else {
-                fprintf(stdout,"spi_write successful! \n");
-                fprintf(stdout,"Number of bytes: %d\n\n",ret);
-            }
-
-            //Read from SPI1
-            ret = spi_read(file,SPI_DEV_LOCK,buffer,TSPI_WRITE_SHORT);
-            if (ret == -1){
-                printf("spi_read failed: %s\n", strerror(errno));
-            } else {
-                fprintf(stdout,"spi_read successful! \n");
-                fprintf(stdout,"Number of bytes: %d\n\n",ret);
-            }
+        //Write to SPI1
+        for (int i = 0; i < sizeof(reg4); i++) {
+            write_buffer[i] = reg4[i];
         }
-        sleep(0.5);
+        ret = spi_write(file,SPI_DEV_LOCK,write_buffer,TSPI_WRITE_SHORT);
+        if (ret == -1){
+            printf("spi_write failed: %s\n", strerror(errno));
+        } else {
+            fprintf(stdout,"spi_write successful! \n");
+            fprintf(stdout,"Number of bytes: %d\n",ret);
+            for (int i = 0; i < ret; i++) {
+                // printf("Loop %d\n",i);
+                sprintf(values, "%#0x ", write_buffer[i]);
+                strcat(output, values);
+                memset(values, 0, sizeof(values));
+            }
+            fprintf(stdout, "Sent - Data: %s\n\n", output);
+            memset(output, 0, sizeof(output));
+            // fprintf(stdout,"Sent - Data: %#0x %#0x %#0x %#0x %#0x %#0x %#0x %#0x\n\n", write_buffer[0], write_buffer[1], write_buffer[2], write_buffer[3], write_buffer[4], write_buffer[5], write_buffer[6], write_buffer[7]);
+        }
+
+        //Read from SPI1
+        ret = spi_read(file,SPI_DEV_LOCK,read_buffer,TSPI_WRITE_32);
+        if (ret == -1){
+            printf("spi_read failed: %s\n", strerror(errno));
+        } else {
+            fprintf(stdout,"spi_read successful! \n");
+            fprintf(stdout,"Number of bytes: %d\n",ret);
+            for (int i = 0; i < ret; i++) {
+                // printf("Loop %d\n",i);
+                sprintf(values, "%#0x ", read_buffer[i]);
+                strcat(output, values);
+                memset(values, 0, sizeof(values));
+            }
+            fprintf(stdout, "Read - Data: %s\n\n", output);
+            memset(output, 0, sizeof(output));
+            // fprintf(stdout,"Read - Data: %#0x %#0x %#0x %#0x %#0x %#0x %#0x\n\n", read_buffer[0], read_buffer[1], read_buffer[2], read_buffer[3], read_buffer[4], read_buffer[5], read_buffer[6], read_buffer[7]);
+        }
+
+        sleep(1);
         counter++;
         printf("Count = %d\n\n",counter);
 
@@ -307,55 +346,63 @@ int main(void) {
     // Pin_control(IRQ,0xFF);
     // Pin_control(NHIB,0x00);
     // Pin_control(NHIB,0xFF);
-    // sleep(1);
-    // Pin_config(PIN_MODE_0,PU_ENABLE,PU_PULL_DOWN,RECV_DISABLE,SLEW_FAST,uart1_ctsn_pinConfig);
-    // Pin_config(PIN_MODE_0,PU_ENABLE,PU_PULL_DOWN,RECV_DISABLE,SLEW_FAST,uart1_rtsn_pinConfig);
-    // Pin_status();
+    // // sleep(1);
+    // // Pin_config(PIN_MODE_0,PU_ENABLE,PU_PULL_DOWN,RECV_DISABLE,SLEW_FAST,uart1_ctsn_pinConfig);
+    // // Pin_config(PIN_MODE_0,PU_ENABLE,PU_PULL_DOWN,RECV_DISABLE,SLEW_FAST,uart1_rtsn_pinConfig);
+    // // Pin_status();
 
     //--------UART Code--------
     //Tx : Pin 13 - Connector 9
     //Rx : Pin 11 - Connector 9
     ret = 0;
-    char read_buffer[10000];
+    char char_read_buffer[8];
+    // char char_write_buffer[8] = "Hello\n";
+    char char_write_buffer[8] = "Yo";
     file = open(UART_PATH, O_RDWR);
-    printf("Test 1\n");
+    // printf("Test 1\n");
 
-    printf("Test 4\n");
-    char write_buffer[50] = "AT\n";
-    printf("\nTx: %s\n", write_buffer);
-    write(file, &write_buffer, sizeof(write_buffer));
-    // for (int i = 0; i < 11; i++) {
-    //     write(file, &write_buffer, sizeof(write_buffer));
-    // }
-    printf("Test 5\n");
+    // memset(char_read_buffer, 0, sizeof(char_read_buffer));
+    // printf("\nContent of char_read_buffer: %s\n", char_read_buffer);
 
     int counter = 0;
-    for (int i = 0; i < 18; i++) {
-        printf("Test 6.%d\n", counter);
-        ret = read(file, &read_buffer, sizeof(read_buffer));
-        printf("Test 7.%d\n", counter);
-        read_buffer[ret] = '\0';
-        printf("Test 8.%d\n", counter);
-        printf("%d. Number of Bytes: %d\n", counter, ret);
-        printf("%d. Read value: %s\n\n", counter, read_buffer);
+    for (int i = 0; i < 1800; i++) {
+        // printf("Test 2\n");
+        printf("\n%d Tx: %s", counter, char_write_buffer);
+        ret = write(file, &char_write_buffer, strlen(char_write_buffer));
+        printf("\n%d Tx: Number of Bytes: %d\n", counter, ret);
+        // delay(1000);
+
+        ret = 0;
+        // printf("Test 3\n");
+
+        ret = read(file, &char_read_buffer, sizeof(char_read_buffer));
+        // printf("Test 4\n");
+        char_read_buffer[ret] = '\0';
+        printf("\n%d Rx: Number of Bytes: %d", counter, ret);
+        printf("\n%d Rx: %s\n", counter, char_read_buffer);
 
         counter++;
     }
 
+    if (close(file) == -1) {
+        printf("close failed: %s\n", strerror(errno));
+    }
+
     // //--------SPI Code--------
     // //CS   : Pin 28 - Connector 9
-    // //MOSI : Pin 29 - Connector 9
-    // //MISO : Pin 30 - Connector 9
+    // //MOSI : Pin 29 - Connector 9 (MISO)
+    // //MISO : Pin 30 - Connector 9 (MIS1)
     // //SCLK : Pin 31 - Connector 9
     // spiopen(SPI_PATH);
     // spisetcfg();
 
-    // printf("How many times would you like to send the data? ");
-    // int input;
-    // scanf("%d",&input);
-    // printf("Input: %d\n\n",input);
+    // // printf("How many times would you like to send the data? ");
+    // // int input;
+    // // scanf("%d",&input);
+    // // printf("Input: %d\n\n",input);
 
-    // spiwrite(input);
+    // // spiwrite(input);
+    // spiwrite(1000);
     // spiclose();
 
     printf("Main Terminated...!\n");

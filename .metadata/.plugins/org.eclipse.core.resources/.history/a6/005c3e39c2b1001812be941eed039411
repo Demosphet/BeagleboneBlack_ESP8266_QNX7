@@ -1,0 +1,70 @@
+/***********************************************
+ * BBB UART4 code - working, 18/9/2016, DL
+ *
+ * correct init for UART4 -> devc-seromap -e -F -b115200 -c48000000/16 0x481a8000^2,45
+ * PINmux for UART4       ->     out32(control_module + conf_gpmc_wait0       , (MODE(6) | PULLUP_EN | RXACTIVE));    [P9 11] UART4_RXD
+ *                        ->     out32(control_module + conf_gpmc_wpn         , (MODE(6) | PULLUDEN));                [P9 13] UART4_TXD
+ *
+ * Tested with and without pinmux code ( commented out - is working either way )
+ *
+ *
+ ***********************************************/
+
+
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <fcntl.h>
+#include "string.h"
+#include <hw/inout.h>
+#include <sys/mman.h>
+#include <sys/neutrino.h>
+#include <stdint.h>
+
+//#include "beaglebone_control.h"
+//#include "beaglebone_gpio.h"
+
+
+#define SLEWCTRL                      (0x1 << 6)
+#define RXACTIVE                      (0x1 << 5)
+#define PULLUP_EN                     (0x1 << 4)      /* Pull UP Selection */
+#define PULLUDEN                      (0x0 << 3)      /* Pull up enabled */
+#define PULLUDDIS                     (0x1 << 3)      /* Pull up disabled */
+#define MODE(val)                     val
+
+
+char buffer[50] = "This is a test to make UART4 talk\r\n";
+
+
+int main(int argc, char *argv[]) {
+    int fd;
+    uintptr_t control_module = NULL;
+
+
+
+    printf("Welcome to the QNX Momentics IDE\n");
+
+//  control_module = mmap_device_io(AM335X_CONTROL_MODULE_SIZE, AM335X_CONTROL_MODULE_BASE);
+//  out32(control_module + conf_gpmc_wait0       , (MODE(6) | PULLUP_EN | RXACTIVE));             /* [P9 11] UART4_RXD  */
+//  out32(control_module + conf_gpmc_wpn         , (MODE(6) | PULLUDEN));                         /* [P9 13] UART4_TXD  */
+
+
+
+    fd = open ( "/dev/ser2", O_RDWR );
+
+    for (int i = 0; i < 20; i++) {
+        write ( fd, &buffer, sizeof(buffer) );
+        delay(750);
+    }
+
+
+
+
+    return EXIT_SUCCESS;
+}
+
+
+
+// devc-seromap -e -F -b115200 -c48000000/16 0x48022000^2,73  -- UART1 build init
+// devc-seromap -e -F -b115200 -c48000000/16 0x481a8000^2,45  -- UART4 Built init
+// waitfor /dev/ser2 4

@@ -3,6 +3,7 @@ LaunchTargetManager/com.qnx.tools.ide.target.qconn,Beaglebone_Black/arch=armle
 LaunchTargetManager/com.qnx.tools.ide.target.qconn,Beaglebone_Black/os=qnx
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
+com.qnx.tools.ide.qde.debug.core.descriptorType.default\:Beaglebone_Black/activeLaunchMode=run
 com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/ESP8266_BBB_UART_SPI/activeLaunchMode=run
 com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/ESP8266_BBB_UART_SPI/activeLaunchTarget=com.qnx.tools.ide.target.qconn\:Beaglebone_Black
 configDescList=com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/ESP8266_BBB_UART_SPI,com.qnx.tools.ide.qde.debug.core.descriptorType.default\:Beaglebone_Black
