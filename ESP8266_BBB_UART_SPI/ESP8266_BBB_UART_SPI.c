@@ -43,10 +43,10 @@
 #define spi_sclk_1_pinConfig                    0x990   // conf_conf_mcasp0_aclkx (TRM pp 1458) for spi_1_sclk
 
 // UART - Path & Message size
-#define UART_PATH       "/dev/ser2"
+#define UART_PATH                               "/dev/ser2"
 
-char char_read_buffer[32];
-char char_write_buffer[32];
+char char_read_buffer                           [32];
+char char_write_buffer                          [32];
 
 // (No longer used) Configuring the pinmux for UART1 - PIN MUX Configuration strut values (TRM pp 1446)
 #define PU_ENABLE                               0x00
@@ -267,9 +267,8 @@ int spigetdevinfo() {
 }
 
 //--------SPI Write--------
-int spiwrite(int iter) {
+int spiwrite(int iterations) {
     int loop_state      = 1;
-    int iterations      = iter;
     int counter         = 0;
     char output[128]    = "";
     char values[50]     = "";
@@ -303,14 +302,14 @@ int spiwrite(int iter) {
         // --------Read from SPI1--------(Placed here for testing purposes)
         // Reading from the buffer
         ret = spi_read(file,SPI_DEV_LOCK,read_buffer,TSPI_WRITE_32);
-        if (ret == -1){
+        if(ret == -1){
             printf("spi_read failed: %s\n", strerror(errno));
         } else {
             fprintf(stdout,"spi_read successful! \n");
             fprintf(stdout,"Number of bytes: %d\n",ret);
 
             // Displaying what was read from the buffer
-            for (int i = 0; i < ret; i++) {
+            for(int i = 0; i < ret; i++) {
                 //  printf("Loop %d\n",i);
                 sprintf(values, "%#0x ", read_buffer[i]);
                 strcat(output, values);
@@ -324,7 +323,7 @@ int spiwrite(int iter) {
         counter++;
         printf("Count = %d\n\n",counter);
 
-        if ( iterations == counter){
+        if(iterations == counter){
             loop_state = 0;
         }
     }
@@ -333,6 +332,47 @@ int spiwrite(int iter) {
 int spiclose() {
     ret = spi_close(file);
     fprintf(stdout,"Value returned from spi_close: %d\n\n",ret);
+}
+
+int UART_write(char *message, int iterations){
+    int counter = 0;
+    int living  = 1;
+    ret         = 0;
+    strcpy(char_write_buffer,message);
+
+    while(living) {
+        printf("Test 2\n");
+        printf("\n%d Tx: %s", counter, char_write_buffer);
+        ret = write(file, &char_write_buffer, strlen(char_write_buffer));
+        printf("\n%d Tx: Number of Bytes: %d\n", counter, ret);
+        // delay(1000);
+        counter++;
+
+        if(iterations == counter){
+            living = 0;
+        }
+    }
+    return ret;
+}
+
+char *UART_read() {
+    int counter = 0;
+    int living  = 1;
+    ret         = 0;
+
+    while(living) {
+        printf("Test 3\n");
+        ret = read(file, &char_read_buffer, sizeof(char_read_buffer));
+        printf("Test 4\n");
+        char_read_buffer[ret] = '\0';
+        printf("\n%d Rx: Number of Bytes: %d", counter, ret);
+        printf("\n%d Rx: %s\n", counter, char_read_buffer);
+        counter++;
+        if(counter == 2){
+            living = 0;
+        }
+    }
+    return char_read_buffer;
 }
 
 int main(void) {
@@ -358,29 +398,35 @@ int main(void) {
     // Rx : Pin 11 - Connector 9
     ret = 0;
     file = open(UART_PATH, O_RDWR);
-    // printf("Test 1\n");
-    write_buffer[8] = "Yo";
 
-    int counter = 0;
-    for (int i = 0; i < 1800; i++) {
-        // printf("Test 2\n");
-        printf("\n%d Tx: %s", counter, char_write_buffer);
-        ret = write(file, &char_write_buffer, strlen(char_write_buffer));
-        printf("\n%d Tx: Number of Bytes: %d\n", counter, ret);
-        // delay(1000);
+    UART_write("Hello",1);
+    // UART_read();
+    printf("Value of UART_read: %s\n", UART_read());
+    printf("Value of char_read_buffer: %s\n", char_read_buffer);
 
-        ret = 0;
-        // printf("Test 3\n");
+    // // printf("Test 1\n");
+    // strcpy(char_write_buffer,"Yo");
 
-        ret = read(file, &char_read_buffer, sizeof(char_read_buffer));
-        // printf("Test 4\n");
-        char_read_buffer[ret] = '\0';
-        printf("\n%d Rx: Number of Bytes: %d", counter, ret);
-        printf("\n%d Rx: %s\n", counter, char_read_buffer);
-        memset(char_read_buffer, 0, sizeof(char_read_buffer));
+    // int counter = 0;
+    // for (int i = 0; i < 1800; i++) {
+    //     // printf("Test 2\n");
+    //     printf("\n%d Tx: %s", counter, char_write_buffer);
+    //     ret = write(file, &char_write_buffer, strlen(char_write_buffer));
+    //     printf("\n%d Tx: Number of Bytes: %d\n", counter, ret);
+    //     // delay(1000);
 
-        counter++;
-    }
+    //     ret = 0;
+    //     // printf("Test 3\n");
+
+    //     ret = read(file, &char_read_buffer, sizeof(char_read_buffer));
+    //     // printf("Test 4\n");
+    //     char_read_buffer[ret] = '\0';
+    //     printf("\n%d Rx: Number of Bytes: %d", counter, ret);
+    //     printf("\n%d Rx: %s\n", counter, char_read_buffer);
+    //     memset(char_read_buffer, 0, sizeof(char_read_buffer));
+
+    //     counter++;
+    // }
 
     if (close(file) == -1) {
         printf("close failed: %s\n", strerror(errno));
