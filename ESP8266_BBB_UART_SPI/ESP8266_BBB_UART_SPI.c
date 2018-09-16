@@ -1,3 +1,4 @@
+//--------------------------------Headers--------------------------------
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -15,6 +16,8 @@
 #include <sys/mman.h>    // for mmap_device_io()
 #include <stdint.h>      // for unit32 types
 
+
+//--------------------------------Global Definitions--------------------------------
 // Registers required to configure and use the pins
 #define AM335X_CONTROL_MODULE_BASE (uint64_t)   0x44E10000
 #define AM335X_CONTROL_MODULE_SIZE (size_t)     0x00001448
@@ -45,9 +48,6 @@
 // UART - Path & Message size
 #define UART_PATH                               "/dev/ser2"
 
-char char_read_buffer                           [32];
-char char_write_buffer                          [32];
-
 // (No longer used) Configuring the pinmux for UART1 - PIN MUX Configuration strut values (TRM pp 1446)
 #define PU_ENABLE                               0x00
 #define PU_DISABLE                              0x01
@@ -68,7 +68,20 @@ char char_write_buffer                          [32];
 #define PIN_MODE_6                              0x06
 #define PIN_MODE_7                              0x07
 
-// Struct for configuring the Pin Multiplexer
+// SPI - Path & Message size
+#define SPI_PATH "/dev/spi1"
+#define TSPI_WRITE_7                            (7)
+#define TSPI_WRITE_SHORT                        (8)
+#define TSPI_WRITE_12                           (12)
+#define TSPI_WRITE_16                           (16)
+#define TSPI_WRITE_32                           (32)
+
+////--------------------------------Global Variables//--------------------------------
+// UART - Message size
+char char_read_buffer                           [32];
+char char_write_buffer                          [32];
+
+//Struct for configuring the Pin Multiplexer
 typedef union _CONF_MODULE_PIN_STRUCT {             // See TRM Page 1446
     unsigned int d32;
     struct {                                        // Name: field size unsigned
@@ -80,21 +93,15 @@ typedef union _CONF_MODULE_PIN_STRUCT {             // See TRM Page 1446
         unsigned int conf_res_1 :               13; // Reserved
         unsigned int conf_res_2 :               12; // Reserved MSB
     } b;
-} _CONF_MODULE_PIN;
+}   _CONF_MODULE_PIN;
 
-// SPI - Path & Message size
-#define SPI_PATH "/dev/spi1"
-#define TSPI_WRITE_7                            (7)
-#define TSPI_WRITE_SHORT                        (8)
-#define TSPI_WRITE_12                           (12)
-#define TSPI_WRITE_16                           (16)
-#define TSPI_WRITE_32                           (32)
-
+// File openers and return variable
 int file;
 int ret;
+
+// Data packets declarations for SPI communications
 uint8_t write_buffer                            [256 * 1024];
 uint8_t read_buffer                             [256 * 1024];
-uint8_t j           =                           0x02;
 uint8_t reg1[8]     =                           {0xff, 0x3E, 0x11, 0x00, 0x44, 0x22, 0x66, 0x00};                       // Data to be sent for testing purposes
 uint8_t reg2[7]     =                           {0xfb, 0x04, 0x04, 0x3b, 0x40, 0x40, 0x3f};                             // Data to be sent for testing purposes
 uint8_t reg3[7]     =                           {0x0f, 0x02, 0x02, 0x02, 0x02, 0x02, 0x02};                             // Data to be sent for testing purposes
@@ -102,8 +109,74 @@ uint8_t reg4[8]     =                           {0x48, 0x65, 0x72, 0x65, 0x21, 0
 uint8_t reg5[12]    =                           {0x48, 0x65, 0x6c, 0x6c, 0x6f, 0x20, 0x53, 0x6c, 0x61, 0x76, 0x65};
 uint8_t reg6[16]    =                           {0x41, 0x72, 0x65, 0x20, 0x79, 0x6f, 0x75, 0x20, 0x61, 0x6c, 0x69, 0x76, 0x65, 0x3f, 0x0};
 
-//--------Checking the status of the pins--------
-void Pin_status() {
+//--------------------------------Prototypes--------------------------------
+void Pin_status();
+void Pin_control(unsigned int pin, unsigned int value);
+void Pin_config(int mode, unsigned int puden, unsigned int putypesel, unsigned int rxactive, unsigned int slewctrl, unsigned int pin);
+int spiopen();
+int spisetcfg();
+int spigetdevinfo();
+int spiwrite(int iterations);
+int spiclose();
+int UART_write(char *message, int iterations);
+char *UART_read();
+
+//-------------------------------------------------------------------------
+int main(void){
+    puts("Hello World!!!"); /* prints Hello World!!! */
+
+    ThreadCtl( _NTO_TCTL_IO_PRIV , NULL); // Request I/O privileges
+
+    // //--------GPIO Check & Configuration Code--------
+    // // GPIO06 : Pin 3 - Connector 8
+    // // GPIO07  : Pin 4 - Connector 8
+    // Pin_status();
+    // Pin_control(GPIO07,0x00);
+    // Pin_control(GPIO07,0xFF);
+    // Pin_control(GPIO06,0x00);
+    // Pin_control(GPIO06,0xFF);
+    // // sleep(1);
+    // // Pin_config(PIN_MODE_0,PU_ENABLE,PU_PULL_DOWN,RECV_DISABLE,SLEW_FAST,uart1_ctsn_pinConfig);
+    // // Pin_config(PIN_MODE_0,PU_ENABLE,PU_PULL_DOWN,RECV_DISABLE,SLEW_FAST,uart1_rtsn_pinConfig);
+    // // Pin_status();
+
+    //--------UART Code--------
+    // Tx : Pin 13 - Connector 9
+    // Rx : Pin 11 - Connector 9
+    ret = 0;
+    file = open(UART_PATH, O_RDWR);
+
+    UART_write("Hello",1);
+    UART_read();
+    // printf("Value of UART_read: %s\n", UART_read());
+
+    if (close(file) == -1) {
+        printf("close failed: %s\n", strerror(errno));
+    }
+
+    // //--------SPI Code--------
+    // // CS   : Pin 28 - Connector 9
+    // // MOSI : Pin 29 - Connector 9 (MISO)
+    // // MISO : Pin 30 - Connector 9 (MIS1)
+    // // SCLK : Pin 31 - Connector 9
+    // spiopen(SPI_PATH);
+    // spisetcfg();
+
+    // // printf("How many times would you like to send the data? ");
+    // // int input;
+    // // scanf("%d",&input);
+    // // printf("Input: %d\n\n",input);
+
+    // // spiwrite(input);
+    // spiwrite(1000);
+    // spiclose();
+
+    printf("Main Terminated...!\n");
+    return EXIT_SUCCESS;
+}
+//--------------------------------Function Definitions--------------------------------
+// Checking the status of the pins
+void Pin_status(){
     printf("0. val = %#8x\n\n",AM335X_GPIO1_BASE);
 
     //--------Setting GPIO_1 Pins for use with GPIO07 and GPIO06--------
@@ -151,8 +224,8 @@ void Pin_status() {
     }
 }
 
-//--------GPIO Pin control--------
-void Pin_control (unsigned int pin, unsigned int value) {
+// GPIO Pin control
+void Pin_control(unsigned int pin, unsigned int value) {
     unsigned int PIN        = pin;
     unsigned int VALUE      = value;
     unsigned int new_PIN    = (PIN & VALUE);
@@ -188,8 +261,8 @@ void Pin_control (unsigned int pin, unsigned int value) {
     }
 }
 
-//--------Pin configuration through configuring the PIN MUX settings--------
-void Pin_config (int mode, unsigned int puden, unsigned int putypesel, unsigned int rxactive, unsigned int slewctrl, unsigned int pin) {
+// Pin configuration through configuring the PIN MUX settings
+void Pin_config(int mode, unsigned int puden, unsigned int putypesel, unsigned int rxactive, unsigned int slewctrl, unsigned int pin) {
     int MODE                = mode;
     unsigned int PUDEN      = puden;
     unsigned int PUTYPESEL  = putypesel;
@@ -218,7 +291,8 @@ void Pin_config (int mode, unsigned int puden, unsigned int putypesel, unsigned 
     out32(control_module + PIN, pinConfigGPMC.d32);
 }
 
-int spiopen() {
+// Opening the communication link to SPI1
+int spiopen(){
     //  Open SPI1
     if((file = spi_open(SPI_PATH) ) < 0) {  // Open SPI1
         printf("Error while opening Device File!!\n\n");
@@ -229,8 +303,8 @@ int spiopen() {
 
 }
 
-//--------Configuring the SPI1--------
-int spisetcfg() {
+// Configuring the SPI1
+int spisetcfg(){
     spi_cfg_t spicfg;
 
     // Setting the correct SPI operation mode
@@ -248,8 +322,8 @@ int spisetcfg() {
     }
 }
 
-//--------Checking device info--------
-int spigetdevinfo() {
+// Checking device info
+int spigetdevinfo(){
     spi_devinfo_t devinfo;
     spi_cfg_t spicfg;
 
@@ -266,8 +340,8 @@ int spigetdevinfo() {
     }
 }
 
-//--------SPI Write--------
-int spiwrite(int iterations) {
+// SPI write function
+int spiwrite(int iterations){
     int loop_state      = 1;
     int counter         = 0;
     char output[128]    = "";
@@ -329,11 +403,13 @@ int spiwrite(int iterations) {
     }
 }
 
-int spiclose() {
+// Closing the communication link to SPI1
+int spiclose(){
     ret = spi_close(file);
     fprintf(stdout,"Value returned from spi_close: %d\n\n",ret);
 }
 
+// UART write function
 int UART_write(char *message, int iterations){
     int counter = 0;
     int living  = 1;
@@ -355,7 +431,8 @@ int UART_write(char *message, int iterations){
     return ret;
 }
 
-char *UART_read() {
+// UART read function
+char *UART_read(){
     int counter = 0;
     int living  = 1;
     ret         = 0;
@@ -373,82 +450,4 @@ char *UART_read() {
         }
     }
     return char_read_buffer;
-}
-
-int main(void) {
-    puts("Hello World!!!"); /* prints Hello World!!! */
-
-    ThreadCtl( _NTO_TCTL_IO_PRIV , NULL); // Request I/O privileges
-
-    // //--------GPIO Check & Configuration Code--------
-    // // GPIO06 : Pin 3 - Connector 8
-    // // GPIO07  : Pin 4 - Connector 8
-    // Pin_status();
-    // Pin_control(GPIO07,0x00);
-    // Pin_control(GPIO07,0xFF);
-    // Pin_control(GPIO06,0x00);
-    // Pin_control(GPIO06,0xFF);
-    // // sleep(1);
-    // // Pin_config(PIN_MODE_0,PU_ENABLE,PU_PULL_DOWN,RECV_DISABLE,SLEW_FAST,uart1_ctsn_pinConfig);
-    // // Pin_config(PIN_MODE_0,PU_ENABLE,PU_PULL_DOWN,RECV_DISABLE,SLEW_FAST,uart1_rtsn_pinConfig);
-    // // Pin_status();
-
-    //--------UART Code--------
-    // Tx : Pin 13 - Connector 9
-    // Rx : Pin 11 - Connector 9
-    ret = 0;
-    file = open(UART_PATH, O_RDWR);
-
-    UART_write("Hello",1);
-    // UART_read();
-    printf("Value of UART_read: %s\n", UART_read());
-    printf("Value of char_read_buffer: %s\n", char_read_buffer);
-
-    // // printf("Test 1\n");
-    // strcpy(char_write_buffer,"Yo");
-
-    // int counter = 0;
-    // for (int i = 0; i < 1800; i++) {
-    //     // printf("Test 2\n");
-    //     printf("\n%d Tx: %s", counter, char_write_buffer);
-    //     ret = write(file, &char_write_buffer, strlen(char_write_buffer));
-    //     printf("\n%d Tx: Number of Bytes: %d\n", counter, ret);
-    //     // delay(1000);
-
-    //     ret = 0;
-    //     // printf("Test 3\n");
-
-    //     ret = read(file, &char_read_buffer, sizeof(char_read_buffer));
-    //     // printf("Test 4\n");
-    //     char_read_buffer[ret] = '\0';
-    //     printf("\n%d Rx: Number of Bytes: %d", counter, ret);
-    //     printf("\n%d Rx: %s\n", counter, char_read_buffer);
-    //     memset(char_read_buffer, 0, sizeof(char_read_buffer));
-
-    //     counter++;
-    // }
-
-    if (close(file) == -1) {
-        printf("close failed: %s\n", strerror(errno));
-    }
-
-    // //--------SPI Code--------
-    // // CS   : Pin 28 - Connector 9
-    // // MOSI : Pin 29 - Connector 9 (MISO)
-    // // MISO : Pin 30 - Connector 9 (MIS1)
-    // // SCLK : Pin 31 - Connector 9
-    // spiopen(SPI_PATH);
-    // spisetcfg();
-
-    // // printf("How many times would you like to send the data? ");
-    // // int input;
-    // // scanf("%d",&input);
-    // // printf("Input: %d\n\n",input);
-
-    // // spiwrite(input);
-    // spiwrite(1000);
-    // spiclose();
-
-    printf("Main Terminated...!\n");
-    return EXIT_SUCCESS;
 }

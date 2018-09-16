@@ -1,12 +1,244 @@
-"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile1537078764327303016656270824394.tmp 
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15370797514745874779073335852596.tmp 
 C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
 make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
 C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
 make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
-make.exe[2]: Nothing to be done for 'all'.
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -c -Os -Wc,-Wall          -DNDEBUG   -I. -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7 -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI -IC:/qnx700/target/qnx7/usr/include    -EL         -DVARIANT_le -DVARIANT_v7 -DBUILDENV_qss  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c 
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c: In function 'Pin_status':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:184:28: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+     uintptr_t gpio1_base = NULL;
+                            ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:185:32: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+     uintptr_t control_module = NULL;
+                                ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:193:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+GPIO_6_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:15:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:196:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+GPIO_7_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:15:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:199:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+spi_cs_1_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:15:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:202:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+spi_d0_1_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:15:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:205:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+spi_d1_1_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:15:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:208:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+spi_sclk_1_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:15:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:211:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+uart1_ctsn_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:15:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:214:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+uart1_rtsn_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:15:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:217:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+uart1_rxd_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:15:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:220:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+uart1_txd_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:15:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:184:15: warning: unused variable 'gpio1_base' [-Wunused-variable]
+     uintptr_t gpio1_base = NULL;
+               ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c: In function 'Pin_control':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:237:31: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+     uintptr_t gpio1_base    = NULL;
+                               ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c: In function 'Pin_config':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:275:15: warning: unused variable 'gpio1_base' [-Wunused-variable]
+     uintptr_t gpio1_base = mmap_device_io(AM335X_GPIO_SIZE , AM335X_GPIO1_BASE);
+               ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c: In function 'spisetcfg':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:323:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c: In function 'spigetdevinfo':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:341:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c: In function 'spiwrite':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:404:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c: In function 'spiclose':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:410:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+C:/qnx700/host/win64/x86_64/usr/bin/rm -f  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7/ESP8266_BBB_UART_SPI
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -Wl,--no-keep-memory        -o C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7/ESP8266_BBB_UART_SPI    ESP8266_BBB_UART_SPI.o  -L. -LC:/qnx700/target/qnx7/armle-v7/lib -LC:/qnx700/target/qnx7/armle-v7/usr/lib -Wl,--rpath-link,. -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/lib -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/usr/lib       -lc    -lsocket    -lspi-master   -EL          
 make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
 C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
 make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
-make.exe[2]: Nothing to be done for 'all'.
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -c  -Wc,-Wall             -I. -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/le.v7 -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI -IC:/qnx700/target/qnx7/usr/include    -EL      -g        -DVARIANT_le -DVARIANT_v7 -DVARIANT_g -DBUILDENV_qss  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c 
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c: In function 'Pin_status':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:184:28: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+     uintptr_t gpio1_base = NULL;
+                            ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:185:32: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+     uintptr_t control_module = NULL;
+                                ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:193:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+GPIO_6_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:15:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:196:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+GPIO_7_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:15:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:199:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+spi_cs_1_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:15:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:202:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+spi_d0_1_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:15:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:205:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+spi_d1_1_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:15:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:208:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+spi_sclk_1_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:15:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:211:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+uart1_ctsn_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:15:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:214:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+uart1_rtsn_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:15:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:217:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+uart1_rxd_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:15:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:220:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+uart1_txd_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:15:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:184:15: warning: unused variable 'gpio1_base' [-Wunused-variable]
+     uintptr_t gpio1_base = NULL;
+               ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c: In function 'Pin_control':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:237:31: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+     uintptr_t gpio1_base    = NULL;
+                               ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c: In function 'Pin_config':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:275:15: warning: unused variable 'gpio1_base' [-Wunused-variable]
+     uintptr_t gpio1_base = mmap_device_io(AM335X_GPIO_SIZE , AM335X_GPIO1_BASE);
+               ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c: In function 'spisetcfg':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:323:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c: In function 'spigetdevinfo':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:341:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c: In function 'spiwrite':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:404:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c: In function 'spiclose':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:410:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+C:/qnx700/host/win64/x86_64/usr/bin/rm -f  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g/ESP8266_BBB_UART_SPI_g
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -Wl,--no-keep-memory        -o C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g/ESP8266_BBB_UART_SPI_g    ESP8266_BBB_UART_SPI.o  -L. -LC:/qnx700/target/qnx7/armle-v7/lib -LC:/qnx700/target/qnx7/armle-v7/usr/lib -Wl,--rpath-link,. -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/lib -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/usr/lib       -lc    -lsocket    -lspi-master   -EL      -g         
 make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
 make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
