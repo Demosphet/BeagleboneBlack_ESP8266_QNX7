@@ -7,7 +7,7 @@
 #include <share.h>
 
 // Define what the channel is called. It will be located at <hostname>/dev/name/local/myname"
-// change myname to something unique for you (The client should be set to same name)
+// Change myname to something unique for you (The client should be set to same name)
 #define ATTACH_POINT "test_native_message_passing"
 
 #define BUF_SIZE 100
@@ -51,13 +51,12 @@ int server() {
         return EXIT_FAILURE;
     }
 
-    printf("Server Listening for Clients on ATTACH_POINT: %s \n", ATTACH_POINT);
+    printf("Server Listening for Clients on ATTACH_POINT: %s \n\n", ATTACH_POINT);
 
     /*
     *  Server Loop
     */
     my_data msg;
-    int compare;
     int rcvid       = 0, msgnum = 0;    // no message received yet
     int stay_alive  = 1, living = 0;    // server stays running (ignores _PULSE_CODE_DISCONNECT request)
 
@@ -129,23 +128,30 @@ int server() {
             // A message (presumably ours) received
 
             // put your message handling code here and assemble a reply message
-            compare = strcmp(msg.data,"END");
-            if (!compare) {
-                sprintf(replymsg.buf, "Message %d ... Oh no... Good bye", msgnum);
-                printf("'%s' from client (ID:%d) : Client is terminating communcations\n ", msg.data, msg.ClientID);
+            if (!strcmp(msg.data,"First response")) {
+                sprintf(replymsg.buf, "Hello");
+                printf("Server received data packet with value of '%s' from client (ID:%d), ", msg.data, msg.ClientID);
                 fflush(stdout);
-                sleep(1); // Delay the reply by a second (just for demonstration purposes)
+                delay(250); // Delay the reply by a second (just for demonstration purposes)
+                printf("\nReplying with: '%s'\n\n",replymsg.buf);
+                MsgReply(rcvid, EOK, &replymsg, sizeof(replymsg));
 
-                printf("\nReplying with: '%s'\n",replymsg.buf);
+            } else if (!strcmp(msg.data,"END")) {
+                // sprintf(replymsg.buf, "Message %d ... Oh no... Good bye", msgnum);
+                sprintf(replymsg.buf, "... Oh no... Good bye");
+                printf("'%s' from client (ID:%d) : Client is terminating communcations ", msg.data, msg.ClientID);
+                fflush(stdout);
+                delay(250); // Delay the reply by a second (just for demonstration purposes)
+                printf("\nReplying with: '%s'\n\n",replymsg.buf);
                 MsgReply(rcvid, EOK, &replymsg, sizeof(replymsg));
                 stay_alive = 0;
+
             } else {
                 sprintf(replymsg.buf, "Message %d received", msgnum);
                 printf("Server received data packet with value of '%s' from client (ID:%d), ", msg.data, msg.ClientID);
                 fflush(stdout);
-                sleep(1); // Delay the reply by a second (just for demonstration purposes)
-
-                printf("\nReplying with: '%s'\n",replymsg.buf);
+                delay(250); // Delay the reply by a second (just for demonstration purposes)
+                printf("\nReplying with: '%s'\n\n",replymsg.buf);
                 MsgReply(rcvid, EOK, &replymsg, sizeof(replymsg));
             }
             // sprintf(replymsg.buf, "Message %d received", msgnum);
@@ -155,6 +161,7 @@ int server() {
 
             // printf("\nReplying with: '%s'\n",replymsg.buf);
             // MsgReply(rcvid, EOK, &replymsg, sizeof(replymsg));
+
         } else {
             printf("\n--->ERROR: Server received something, but could not handle it correctly\n");
         }

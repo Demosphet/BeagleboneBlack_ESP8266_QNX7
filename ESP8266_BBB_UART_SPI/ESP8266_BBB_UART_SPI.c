@@ -4,17 +4,19 @@
 
 // New Headers
 #include <devctl.h>
-#include <sys/types.h>
 #include <errno.h>
 #include <unistd.h>
-#include <stdint.h>
 #include <fcntl.h>
-#include <sys/neutrino.h>
-#include <hw/spi-master.h>
+#include <share.h>
 #include <string.h>
-#include <hw/inout.h>    // for in32() and out32()
-#include <sys/mman.h>    // for mmap_device_io()
-#include <stdint.h>      // for unit32 types
+#include <stdint.h>         // For unit32 types
+#include <sys/iofunc.h>
+#include <sys/dispatch.h>
+#include <sys/neutrino.h>
+#include <sys/types.h>
+#include <sys/mman.h>       // For mmap_device_io()
+#include <hw/inout.h>       // For in32() and out32()
+#include <hw/spi-master.h>
 
 
 //--------------------------------Global Definitions--------------------------------
@@ -76,6 +78,14 @@
 #define TSPI_WRITE_16                           (16)
 #define TSPI_WRITE_32                           (32)
 
+// Native Message Passing
+/* Define where the channel is located
+** Only need to use one of these (depending if you want to use QNET networking or running it locally):
+*/
+#define LOCAL_ATTACH_POINT "test_native_message_passing"                                        // Change myname to the same name used for the server code.
+#define QNET_ATTACH_POINT  "net/RMIT_BBB_v5_Sachith/dev/name/local/test_native_message_passing" // Hostname using full path, change myname to the name used for server
+#define BUF_SIZE 100                                                                            // Buffer size for messages
+
 ////--------------------------------Global Variables//--------------------------------
 // UART - Message size
 char char_read_buffer                           [32];
@@ -95,6 +105,19 @@ typedef union _CONF_MODULE_PIN_STRUCT {             // See TRM Page 1446
     } b;
 }   _CONF_MODULE_PIN;
 
+// Struct for handling the initial data sent to the server
+typedef struct {
+    struct _pulse hdr;  // Our real data comes after this header
+    int ClientID;       // Our data (unique id from client)
+    char data[BUF_SIZE];
+}   my_data;
+
+// Struct for handling the reply sent to the server
+typedef struct {
+    struct _pulse hdr;  // Our real data comes after this header
+    char buf[BUF_SIZE]; // Message we send back to clients to tell them the messages was processed correctly.
+}   my_reply;
+
 // File openers and return variable
 int file;
 int ret;
@@ -110,6 +133,8 @@ uint8_t reg5[12]    =                           {0x48, 0x65, 0x6c, 0x6c, 0x6f, 0
 uint8_t reg6[16]    =                           {0x41, 0x72, 0x65, 0x20, 0x79, 0x6f, 0x75, 0x20, 0x61, 0x6c, 0x69, 0x76, 0x65, 0x3f, 0x0};
 
 //--------------------------------Prototypes--------------------------------
+// int native_message_passing_client(char *sname, char *message);
+int native_message_passing_client(char *sname);
 void Pin_status();
 void Pin_control(unsigned int pin, unsigned int value);
 void Pin_config(int mode, unsigned int puden, unsigned int putypesel, unsigned int rxactive, unsigned int slewctrl, unsigned int pin);
@@ -118,11 +143,13 @@ int spisetcfg();
 int spigetdevinfo();
 int spiwrite(int iterations);
 int spiclose();
-int UART_write(char *message, int iterations);
-char *UART_read();
+int UART_write();
+int UART_read();
+// int UART_write(char *message, int iterations);
+// char *UART_read();
 
 //-------------------------------------------------------------------------
-int main(void){
+int main(void) {
     puts("Hello World!!!"); /* prints Hello World!!! */
 
     ThreadCtl( _NTO_TCTL_IO_PRIV , NULL); // Request I/O privileges
@@ -145,9 +172,27 @@ int main(void){
     // Rx : Pin 11 - Connector 9
     ret = 0;
     file = open(UART_PATH, O_RDWR);
+    int living = 1;
 
-    UART_write("Hello",1);
-    UART_read();
+    ret = 0;
+    printf("\nThis is A Client running\n");
+    ret = native_message_passing_client(LOCAL_ATTACH_POINT);
+
+    // // Test 2 Implementations
+    // while (living) {
+    //     printf("Waiting for a packet from the ESP8266\n");
+    //     UART_read();
+    //     printf("\nThis is A Client running\n");
+    //     ret = 0;
+    //     ret = native_message_passing_client(LOCAL_ATTACH_POINT, char_read_buffer);
+    //     UART_write();
+    //     if (!strcmp(char_read_buffer,"END")) {
+    //         living = 0;
+    //     }
+    // }
+
+    // // Test 1 Implementations
+    // UART_write("Hello",1);
     // printf("Value of UART_read: %s\n", UART_read());
 
     if (close(file) == -1) {
@@ -175,8 +220,95 @@ int main(void){
     return EXIT_SUCCESS;
 }
 //--------------------------------Function Definitions--------------------------------
+// Native Message Passing Client code
+int native_message_passing_client(char *sname/*, char *message*/) {
+    my_data msg;
+    my_reply reply;
+
+    int server_coid;
+    int compare;
+    int index    = 0;
+    int living   = 1;
+    msg.ClientID = 600; // Unique number for this client (optional)
+
+    printf("Trying to connect to server named: %s\n", sname);
+    if ((server_coid = name_open(sname, 0)) == -1) {
+        printf("--->ERROR, could not connect to server!\n\n");
+        return EXIT_FAILURE;
+    }
+
+    printf("Connection established to: %s\n\n", sname);
+
+    // We would have pre-defined data to stuff here
+    msg.hdr.type    = 0x00;
+    msg.hdr.subtype = 0x00;
+
+    // Do whatever work you wanted with server connection
+    while(living) { // send data packets
+        // // Original implementation
+        // printf("Enter the message you wish to send: ");
+        // if(fgets(message, sizeof message, stdin) != NULL) {
+        //     message[strcspn(message, "\r\n")] = 0;
+        // } else {
+        //     printf("Error: No characters have been read at end-of-file!\n");
+        // }
+        // // scanf("%s", &message);
+        // // printf("You entered: %s\n", message);
+
+        // compare = strcmp(message, "END");
+        // if (!compare) {
+        //     printf("Equal to intended\n");
+        //     living = 0;
+        // }
+        
+        // // Test 2 Implementation
+        // strcpy(msg.data, message);
+
+        // // Test 3 Implementation
+        UART_read();
+        strcpy(msg.data, char_read_buffer);
+
+        // the data we are sending is in msg.data
+        // printf("char message: '%s'\n", message); // Test 2 Implementation
+        printf("Client (ID:%d), sending data packet with the integer value: %s \n", msg.ClientID, msg.data);
+        fflush(stdout);
+
+        if (MsgSend(server_coid, &msg, sizeof(msg), &reply, sizeof(reply)) == -1) {
+            printf("--->Error data '%s' NOT sent to server\n", msg.data);
+            // maybe we did not get a reply from the server
+            // break;
+
+            printf("--->Trying to connect to server named: %s\n", sname);
+            if ((server_coid = name_open(sname, 0)) == -1) {
+                printf("--->ERROR, could not connect to server!\n\n");
+                // return EXIT_FAILURE;
+            } else {
+                printf("Connection established to: %s\n", sname);
+            }
+        } else { // now process the reply
+            printf("Reply is: '%s'\n\n", reply.buf);
+            strcpy(char_write_buffer, reply.buf);
+            UART_write();
+
+            if (!strcmp(reply.buf, "... Oh no... Good bye")) {
+                living = 0;
+            } else {
+                living = 1;
+            }
+        }
+        sleep(1);       // Wait a few seconds before sending the next data packet
+        // living = 0;     // Testing purposes only
+    }
+
+    // Close the connection
+    printf("\nSending message to server to tell it to close the connection\n");
+    name_close(server_coid);
+
+    return EXIT_SUCCESS;
+}
+
 // Checking the status of the pins
-void Pin_status(){
+void Pin_status() {
     printf("0. val = %#8x\n\n",AM335X_GPIO1_BASE);
 
     //--------Setting GPIO_1 Pins for use with GPIO07 and GPIO06--------
@@ -292,7 +424,7 @@ void Pin_config(int mode, unsigned int puden, unsigned int putypesel, unsigned i
 }
 
 // Opening the communication link to SPI1
-int spiopen(){
+int spiopen() {
     //  Open SPI1
     if((file = spi_open(SPI_PATH) ) < 0) {  // Open SPI1
         printf("Error while opening Device File!!\n\n");
@@ -304,7 +436,7 @@ int spiopen(){
 }
 
 // Configuring the SPI1
-int spisetcfg(){
+int spisetcfg() {
     spi_cfg_t spicfg;
 
     // Setting the correct SPI operation mode
@@ -323,7 +455,7 @@ int spisetcfg(){
 }
 
 // Checking device info
-int spigetdevinfo(){
+int spigetdevinfo() {
     spi_devinfo_t devinfo;
     spi_cfg_t spicfg;
 
@@ -341,7 +473,7 @@ int spigetdevinfo(){
 }
 
 // SPI write function
-int spiwrite(int iterations){
+int spiwrite(int iterations) {
     int loop_state      = 1;
     int counter         = 0;
     char output[128]    = "";
@@ -404,50 +536,66 @@ int spiwrite(int iterations){
 }
 
 // Closing the communication link to SPI1
-int spiclose(){
+int spiclose() {
     ret = spi_close(file);
     fprintf(stdout,"Value returned from spi_close: %d\n\n",ret);
 }
 
 // UART write function
-int UART_write(char *message, int iterations){
-    int counter = 0;
-    int living  = 1;
-    ret         = 0;
-    strcpy(char_write_buffer,message);
-
-    while(living) {
-        printf("Test 2\n");
-        printf("\n%d Tx: %s", counter, char_write_buffer);
-        ret = write(file, &char_write_buffer, strlen(char_write_buffer));
-        printf("\n%d Tx: Number of Bytes: %d\n", counter, ret);
-        // delay(1000);
-        counter++;
-
-        if(iterations == counter){
-            living = 0;
-        }
-    }
+int UART_write(/*char *message, int iterations*/) {
+    ret = 0;
+    printf("Test 2\n");
+    printf("\nTx: %s", char_write_buffer);
+    ret = write(file, &char_write_buffer, strlen(char_write_buffer));
+    printf("\nTx: Number of Bytes: %d\n", ret);
     return ret;
+
+    // int counter = 0;
+    // int living  = 1;
+    // ret         = 0;
+    // strcpy(char_write_buffer,message);
+
+    // while(living) {
+    //     printf("Test 2\n");
+    //     printf("\n%d Tx: %s", counter, char_write_buffer);
+    //     ret = write(file, &char_write_buffer, strlen(char_write_buffer));
+    //     printf("\n%d Tx: Number of Bytes: %d\n", counter, ret);
+    //     // delay(1000);
+    //     counter++;
+
+    //     if(iterations == counter){
+    //         living = 0;
+    //     }
+    // }
+    // return ret;
 }
 
 // UART read function
-char *UART_read(){
-    int counter = 0;
-    int living  = 1;
-    ret         = 0;
+int UART_read() {
+    ret = 0;
+    printf("Test 3\n");
+    ret = read(file, &char_read_buffer, sizeof(char_read_buffer));
+    printf("Test 4\n");
+    // char_read_buffer[ret] = '\0'    //Use this if you want to include either "\n" or the "\r" at the end
+    char_read_buffer[ret-1] = '\0';
+    printf("\nRx: Number of Bytes: %d", ret);
+    printf("\nRx: %s\n", char_read_buffer);
+    return ret;
 
-    while(living) {
-        printf("Test 3\n");
-        ret = read(file, &char_read_buffer, sizeof(char_read_buffer));
-        printf("Test 4\n");
-        char_read_buffer[ret] = '\0';
-        printf("\n%d Rx: Number of Bytes: %d", counter, ret);
-        printf("\n%d Rx: %s\n", counter, char_read_buffer);
-        counter++;
-        if(counter == 2){
-            living = 0;
-        }
-    }
-    return char_read_buffer;
+    // int counter = 0;
+    // int living  = 1;
+    // ret         = 0;
+
+    // while(living) {
+    //     printf("Test 3\n");
+    //     ret = read(file, &char_read_buffer, sizeof(char_read_buffer));
+    //     printf("Test 4\n");
+    //     char_read_buffer[ret] = '\0';
+    //     printf("\n%d Rx: Number of Bytes: %d", counter, ret);
+    //     printf("\n%d Rx: %s\n", counter, char_read_buffer);
+    //     counter++;
+    //     if(counter == 2){
+    //         living = 0;
+    //     }
+    // }
 }

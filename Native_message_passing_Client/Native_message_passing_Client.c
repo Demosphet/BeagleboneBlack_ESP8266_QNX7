@@ -6,23 +6,23 @@
 #include <share.h>
 
 // Define where the channel is located
-// only need to use one of these (depending if you want to use QNET networking or running it locally):
-#define LOCAL_ATTACH_POINT "test_native_message_passing"                                          // change myname to the same name used for the server code.
-#define QNET_ATTACH_POINT  "net/RMIT_BBB_v5_Sachith/dev/name/local/test_native_message_passing" // hostname using full path, change myname to the name used for server
+// Only need to use one of these (depending if you want to use QNET networking or running it locally):
+#define LOCAL_ATTACH_POINT "test_native_message_passing"                                            // Change myname to the same name used for the server code.
+#define QNET_ATTACH_POINT  "net/RMIT_BBB_v5_Sachith/dev/name/local/test_native_message_passing"     // Hostname using full path, change myname to the name used for server
 
 #define BUF_SIZE 100
 
 
 typedef struct {
-    struct _pulse hdr; // Our real data comes after this header
-    int ClientID; // our data (unique id from client)
-    // int data;     // our data
+    struct _pulse hdr;  // Our real data comes after this header
+    int ClientID;       // Our data (unique id from client)
+    // int data;        // Our data
     char data[BUF_SIZE];
 }   my_data;
 
 typedef struct {
-    struct _pulse hdr; // Our real data comes after this header
-    char buf[BUF_SIZE];// Message we send back to clients to tell them the messages was processed correctly.
+    struct _pulse hdr;  // Our real data comes after this header
+    char buf[BUF_SIZE]; // Message we send back to clients to tell them the messages was processed correctly.
 }   my_reply;
 
 
@@ -57,7 +57,7 @@ int client(char *sname) {
         return EXIT_FAILURE;
     }
 
-    printf("Connection established to: %s\n", sname);
+    printf("Connection established to: %s\n\n", sname);
 
     // We would have pre-defined data to stuff here
     msg.hdr.type    = 0x00;
@@ -99,13 +99,13 @@ int client(char *sname) {
                 printf("Connection established to: %s\n", sname);
             }
         } else { // now process the reply
-            printf("Reply is: '%s'\n", reply.buf);
+            printf("Reply is: '%s'\n\n", reply.buf);
         }
         sleep(1);    // wait a few seconds before sending the next data packet
     }
 
     // Close the connection
-    printf("\n Sending message to server to tell it to close the connection\n");
+    printf("\nSending message to server to tell it to close the connection\n");
     name_close(server_coid);
 
     return EXIT_SUCCESS;
