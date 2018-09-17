@@ -136,6 +136,38 @@ int server() {
                 printf("\nReplying with: '%s'\n\n",replymsg.buf);
                 MsgReply(rcvid, EOK, &replymsg, sizeof(replymsg));
 
+            } else if (!strcmp(msg.data,"Second response")) {
+                sprintf(replymsg.buf, "Hello\n");
+                printf("Server received data packet with value of '%s' from client (ID:%d), ", msg.data, msg.ClientID);
+                fflush(stdout);
+                delay(250); // Delay the reply by a second (just for demonstration purposes)
+                printf("\nReplying with: '%s'\n\n",replymsg.buf);
+                MsgReply(rcvid, EOK, &replymsg, sizeof(replymsg));
+
+            } else if (!strcmp(msg.data,"Third response")) {
+                sprintf(replymsg.buf, "Hello\r");
+                printf("Server received data packet with value of '%s' from client (ID:%d), ", msg.data, msg.ClientID);
+                fflush(stdout);
+                delay(250); // Delay the reply by a second (just for demonstration purposes)
+                printf("\nReplying with: '%s'\n\n",replymsg.buf);
+                MsgReply(rcvid, EOK, &replymsg, sizeof(replymsg));
+                                
+            }  else if (!strcmp(msg.data,"Fourth response")) {
+                sprintf(replymsg.buf, "Hello\r\n");
+                printf("Server received data packet with value of '%s' from client (ID:%d), ", msg.data, msg.ClientID);
+                fflush(stdout);
+                delay(250); // Delay the reply by a second (just for demonstration purposes)
+                printf("\nReplying with: '%s'\n\n",replymsg.buf);
+                MsgReply(rcvid, EOK, &replymsg, sizeof(replymsg));
+                                
+            }  else if (!strcmp(msg.data,"Fifth response")) {
+                sprintf(replymsg.buf, "Test Message");
+                printf("Server received data packet with value of '%s' from client (ID:%d), ", msg.data, msg.ClientID);
+                fflush(stdout);
+                delay(250); // Delay the reply by a second (just for demonstration purposes)
+                printf("\nReplying with: '%s'\n\n",replymsg.buf);
+                MsgReply(rcvid, EOK, &replymsg, sizeof(replymsg));
+                                
             } else if (!strcmp(msg.data,"END")) {
                 // sprintf(replymsg.buf, "Message %d ... Oh no... Good bye", msgnum);
                 sprintf(replymsg.buf, "... Oh no... Good bye");

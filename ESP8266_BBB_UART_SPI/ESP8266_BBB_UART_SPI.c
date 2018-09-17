@@ -230,6 +230,7 @@ int native_message_passing_client(char *sname/*, char *message*/) {
     int index    = 0;
     int living   = 1;
     msg.ClientID = 600; // Unique number for this client (optional)
+    char message[32];
 
     printf("Trying to connect to server named: %s\n", sname);
     if ((server_coid = name_open(sname, 0)) == -1) {
@@ -245,28 +246,27 @@ int native_message_passing_client(char *sname/*, char *message*/) {
 
     // Do whatever work you wanted with server connection
     while(living) { // send data packets
-        // // Original implementation
-        // printf("Enter the message you wish to send: ");
-        // if(fgets(message, sizeof message, stdin) != NULL) {
-        //     message[strcspn(message, "\r\n")] = 0;
-        // } else {
-        //     printf("Error: No characters have been read at end-of-file!\n");
-        // }
-        // // scanf("%s", &message);
-        // // printf("You entered: %s\n", message);
+        // Original implementation
+        printf("Enter the message you wish to send: ");
+        if(fgets(message, sizeof message, stdin) != NULL) {
+            message[strcspn(message, "\r\n")] = 0;
+        } else {
+            printf("Error: No characters have been read at end-of-file!\n");
+        }
+        // scanf("%s", &message);
+        // printf("You entered: %s\n", message);
 
-        // compare = strcmp(message, "END");
-        // if (!compare) {
-        //     printf("Equal to intended\n");
-        //     living = 0;
-        // }
+        if (!strcmp(message, "END")) {
+            printf("Equal to intended\n");
+            living = 0;
+        }
         
-        // // Test 2 Implementation
-        // strcpy(msg.data, message);
+        // Test 2 Implementation
+        strcpy(msg.data, message);
 
         // // Test 3 Implementation
-        UART_read();
-        strcpy(msg.data, char_read_buffer);
+        // UART_read();
+        // strcpy(msg.data, char_read_buffer);
 
         // the data we are sending is in msg.data
         // printf("char message: '%s'\n", message); // Test 2 Implementation
@@ -289,6 +289,7 @@ int native_message_passing_client(char *sname/*, char *message*/) {
             printf("Reply is: '%s'\n\n", reply.buf);
             strcpy(char_write_buffer, reply.buf);
             UART_write();
+            UART_read();
 
             if (!strcmp(reply.buf, "... Oh no... Good bye")) {
                 living = 0;
