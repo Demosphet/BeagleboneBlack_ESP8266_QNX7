@@ -289,7 +289,7 @@ int native_message_passing_client(char *sname/*, char *message*/) {
             printf("Reply is: '%s'\n\n", reply.buf);
             strcpy(char_write_buffer, reply.buf);
             UART_write();
-            UART_read();
+            // UART_read();
 
             if (!strcmp(reply.buf, "... Oh no... Good bye")) {
                 living = 0;

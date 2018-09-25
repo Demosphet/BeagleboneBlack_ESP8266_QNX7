@@ -14005,3 +14005,1225 @@ make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266
 make.exe[2]: Nothing to be done for 'all'.
 make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
 make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15373201914484538338351833233055.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15373201971443945200871945394775.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15373203547692945603757258098184.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15373203659407276968253971021570.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15373206368211137872088449329401.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile1537320664733656928610911092097.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15373209161391277044187482876847.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15373209235451230285597911248329.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15373209299353158679047864691382.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15373210966126694877739009966657.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15373211145004475672490513960231.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile153732112136328958518310106645.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile1537321212833796010907612116017.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15373212186855776279968738749270.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile1537321223754593167853146744685.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15373213843013910948750652949187.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15373213918057588655963028992263.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15373215053387736347530542919743.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile1537321512053301514654232946844.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15373215863216736742490741347621.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15373215920798237072195578372254.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15373219539933255028870125289853.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile1537321969277923506686897243778.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378721391335269631615671987922.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -c -Os -Wc,-Wall          -DNDEBUG   -I. -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7 -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send -IC:/qnx700/target/qnx7/usr/include    -EL         -DVARIANT_le -DVARIANT_v7 -DBUILDENV_qss  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/Message_Queue_Send.c 
+C:/qnx700/host/win64/x86_64/usr/bin/rm -f  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7/Message_Queue_Send
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -Wl,--no-keep-memory        -o C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7/Message_Queue_Send    Message_Queue_Send.o  -L. -LC:/qnx700/target/qnx7/armle-v7/lib -LC:/qnx700/target/qnx7/armle-v7/usr/lib -Wl,--rpath-link,. -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/lib -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/usr/lib       -EL          
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -c  -Wc,-Wall             -I. -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/le.v7 -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send -IC:/qnx700/target/qnx7/usr/include    -EL      -g        -DVARIANT_le -DVARIANT_v7 -DVARIANT_g -DBUILDENV_qss  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/Message_Queue_Send.c 
+C:/qnx700/host/win64/x86_64/usr/bin/rm -f  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g/Message_Queue_Send_g
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -Wl,--no-keep-memory        -o C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g/Message_Queue_Send_g    Message_Queue_Send.o  -L. -LC:/qnx700/target/qnx7/armle-v7/lib -LC:/qnx700/target/qnx7/armle-v7/usr/lib -Wl,--rpath-link,. -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/lib -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/usr/lib       -EL      -g         
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile1537872176459461332126305730358.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -c -Os -Wc,-Wall          -DNDEBUG   -I. -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7 -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive -IC:/qnx700/target/qnx7/usr/include    -EL         -DVARIANT_le -DVARIANT_v7 -DBUILDENV_qss  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/Message_Queue_Receive.c 
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/Message_Queue_Receive.c: In function 'main':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/Message_Queue_Receive.c:44:9: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if (!strcmp(buf, "done"))   //once we get this message we know not to expect any more mqueue data
+         ^
+C:/qnx700/host/win64/x86_64/usr/bin/rm -f  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7/Message_Queue_Receive
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -Wl,--no-keep-memory        -o C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7/Message_Queue_Receive    Message_Queue_Receive.o  -L. -LC:/qnx700/target/qnx7/armle-v7/lib -LC:/qnx700/target/qnx7/armle-v7/usr/lib -Wl,--rpath-link,. -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/lib -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/usr/lib       -EL          
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -c  -Wc,-Wall             -I. -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/le.v7 -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive -IC:/qnx700/target/qnx7/usr/include    -EL      -g        -DVARIANT_le -DVARIANT_v7 -DVARIANT_g -DBUILDENV_qss  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/Message_Queue_Receive.c 
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/Message_Queue_Receive.c: In function 'main':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/Message_Queue_Receive.c:44:9: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if (!strcmp(buf, "done"))   //once we get this message we know not to expect any more mqueue data
+         ^
+C:/qnx700/host/win64/x86_64/usr/bin/rm -f  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g/Message_Queue_Receive_g
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -Wl,--no-keep-memory        -o C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g/Message_Queue_Receive_g    Message_Queue_Receive.o  -L. -LC:/qnx700/target/qnx7/armle-v7/lib -LC:/qnx700/target/qnx7/armle-v7/usr/lib -Wl,--rpath-link,. -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/lib -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/usr/lib       -EL      -g         
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378722427343709206892138670508.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378722545699744623061324501.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378722620154257753423155524570.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile153787233426439507186295352371.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378723377411087039267011490146.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378724585988232844885254613077.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -c -Os -Wc,-Wall          -DNDEBUG   -I. -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7 -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send -IC:/qnx700/target/qnx7/usr/include    -EL         -DVARIANT_le -DVARIANT_v7 -DBUILDENV_qss  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/Message_Queue_Send.c 
+C:/qnx700/host/win64/x86_64/usr/bin/rm -f  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7/Message_Queue_Send
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -Wl,--no-keep-memory        -o C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7/Message_Queue_Send    Message_Queue_Send.o  -L. -LC:/qnx700/target/qnx7/armle-v7/lib -LC:/qnx700/target/qnx7/armle-v7/usr/lib -Wl,--rpath-link,. -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/lib -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/usr/lib       -EL          
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -c  -Wc,-Wall             -I. -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/le.v7 -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send -IC:/qnx700/target/qnx7/usr/include    -EL      -g        -DVARIANT_le -DVARIANT_v7 -DVARIANT_g -DBUILDENV_qss  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/Message_Queue_Send.c 
+C:/qnx700/host/win64/x86_64/usr/bin/rm -f  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g/Message_Queue_Send_g
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -Wl,--no-keep-memory        -o C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g/Message_Queue_Send_g    Message_Queue_Send.o  -L. -LC:/qnx700/target/qnx7/armle-v7/lib -LC:/qnx700/target/qnx7/armle-v7/usr/lib -Wl,--rpath-link,. -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/lib -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/usr/lib       -EL      -g         
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378724612162746158284049410739.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378724652952783617975787745528.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile1537872477341360432878388880806.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378724823932837319440275527008.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378728749407540120813960876587.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -c -Os -Wc,-Wall          -DNDEBUG   -I. -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7 -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send -IC:/qnx700/target/qnx7/usr/include    -EL         -DVARIANT_le -DVARIANT_v7 -DBUILDENV_qss  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/Message_Queue_Send.c 
+C:/qnx700/host/win64/x86_64/usr/bin/rm -f  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7/Message_Queue_Send
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -Wl,--no-keep-memory        -o C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7/Message_Queue_Send    Message_Queue_Send.o  -L. -LC:/qnx700/target/qnx7/armle-v7/lib -LC:/qnx700/target/qnx7/armle-v7/usr/lib -Wl,--rpath-link,. -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/lib -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/usr/lib       -EL          
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -c  -Wc,-Wall             -I. -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/le.v7 -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send -IC:/qnx700/target/qnx7/usr/include    -EL      -g        -DVARIANT_le -DVARIANT_v7 -DVARIANT_g -DBUILDENV_qss  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/Message_Queue_Send.c 
+C:/qnx700/host/win64/x86_64/usr/bin/rm -f  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g/Message_Queue_Send_g
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -Wl,--no-keep-memory        -o C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g/Message_Queue_Send_g    Message_Queue_Send.o  -L. -LC:/qnx700/target/qnx7/armle-v7/lib -LC:/qnx700/target/qnx7/armle-v7/usr/lib -Wl,--rpath-link,. -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/lib -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/usr/lib       -EL      -g         
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378728776844566950592553913222.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378728815478135401749719908235.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378730762851110251494192489039.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -c -Os -Wc,-Wall          -DNDEBUG   -I. -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7 -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send -IC:/qnx700/target/qnx7/usr/include    -EL         -DVARIANT_le -DVARIANT_v7 -DBUILDENV_qss  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/Message_Queue_Send.c 
+C:/qnx700/host/win64/x86_64/usr/bin/rm -f  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7/Message_Queue_Send
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -Wl,--no-keep-memory        -o C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7/Message_Queue_Send    Message_Queue_Send.o  -L. -LC:/qnx700/target/qnx7/armle-v7/lib -LC:/qnx700/target/qnx7/armle-v7/usr/lib -Wl,--rpath-link,. -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/lib -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/usr/lib       -EL          
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -c  -Wc,-Wall             -I. -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/le.v7 -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send -IC:/qnx700/target/qnx7/usr/include    -EL      -g        -DVARIANT_le -DVARIANT_v7 -DVARIANT_g -DBUILDENV_qss  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/Message_Queue_Send.c 
+C:/qnx700/host/win64/x86_64/usr/bin/rm -f  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g/Message_Queue_Send_g
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -Wl,--no-keep-memory        -o C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g/Message_Queue_Send_g    Message_Queue_Send.o  -L. -LC:/qnx700/target/qnx7/armle-v7/lib -LC:/qnx700/target/qnx7/armle-v7/usr/lib -Wl,--rpath-link,. -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/lib -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/usr/lib       -EL      -g         
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378730780788589718135909982708.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378731028278221856064642358890.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -c -Os -Wc,-Wall          -DNDEBUG   -I. -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7 -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send -IC:/qnx700/target/qnx7/usr/include    -EL         -DVARIANT_le -DVARIANT_v7 -DBUILDENV_qss  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/Message_Queue_Send.c 
+C:/qnx700/host/win64/x86_64/usr/bin/rm -f  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7/Message_Queue_Send
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -Wl,--no-keep-memory        -o C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7/Message_Queue_Send    Message_Queue_Send.o  -L. -LC:/qnx700/target/qnx7/armle-v7/lib -LC:/qnx700/target/qnx7/armle-v7/usr/lib -Wl,--rpath-link,. -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/lib -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/usr/lib       -EL          
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -c  -Wc,-Wall             -I. -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/le.v7 -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send -IC:/qnx700/target/qnx7/usr/include    -EL      -g        -DVARIANT_le -DVARIANT_v7 -DVARIANT_g -DBUILDENV_qss  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/Message_Queue_Send.c 
+C:/qnx700/host/win64/x86_64/usr/bin/rm -f  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g/Message_Queue_Send_g
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -Wl,--no-keep-memory        -o C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g/Message_Queue_Send_g    Message_Queue_Send.o  -L. -LC:/qnx700/target/qnx7/armle-v7/lib -LC:/qnx700/target/qnx7/armle-v7/usr/lib -Wl,--rpath-link,. -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/lib -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/usr/lib       -EL      -g         
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378731055784481423147988923396.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378731086665444148511442650557.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378732031111828889359476095733.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -c -Os -Wc,-Wall          -DNDEBUG   -I. -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7 -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send -IC:/qnx700/target/qnx7/usr/include    -EL         -DVARIANT_le -DVARIANT_v7 -DBUILDENV_qss  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/Message_Queue_Send.c 
+C:/qnx700/host/win64/x86_64/usr/bin/rm -f  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7/Message_Queue_Send
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -Wl,--no-keep-memory        -o C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7/Message_Queue_Send    Message_Queue_Send.o  -L. -LC:/qnx700/target/qnx7/armle-v7/lib -LC:/qnx700/target/qnx7/armle-v7/usr/lib -Wl,--rpath-link,. -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/lib -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/usr/lib       -EL          
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -c  -Wc,-Wall             -I. -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/le.v7 -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send -IC:/qnx700/target/qnx7/usr/include    -EL      -g        -DVARIANT_le -DVARIANT_v7 -DVARIANT_g -DBUILDENV_qss  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/Message_Queue_Send.c 
+C:/qnx700/host/win64/x86_64/usr/bin/rm -f  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g/Message_Queue_Send_g
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -Wl,--no-keep-memory        -o C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g/Message_Queue_Send_g    Message_Queue_Send.o  -L. -LC:/qnx700/target/qnx7/armle-v7/lib -LC:/qnx700/target/qnx7/armle-v7/usr/lib -Wl,--rpath-link,. -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/lib -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/usr/lib       -EL      -g         
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378732056893467134808103635490.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378732097922615705941423005195.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile1537873228287105016392660884124.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -c -Os -Wc,-Wall          -DNDEBUG   -I. -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7 -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send -IC:/qnx700/target/qnx7/usr/include    -EL         -DVARIANT_le -DVARIANT_v7 -DBUILDENV_qss  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/Message_Queue_Send.c 
+C:/qnx700/host/win64/x86_64/usr/bin/rm -f  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7/Message_Queue_Send
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -Wl,--no-keep-memory        -o C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7/Message_Queue_Send    Message_Queue_Send.o  -L. -LC:/qnx700/target/qnx7/armle-v7/lib -LC:/qnx700/target/qnx7/armle-v7/usr/lib -Wl,--rpath-link,. -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/lib -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/usr/lib       -EL          
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -c  -Wc,-Wall             -I. -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/le.v7 -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send -IC:/qnx700/target/qnx7/usr/include    -EL      -g        -DVARIANT_le -DVARIANT_v7 -DVARIANT_g -DBUILDENV_qss  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/Message_Queue_Send.c 
+C:/qnx700/host/win64/x86_64/usr/bin/rm -f  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g/Message_Queue_Send_g
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -Wl,--no-keep-memory        -o C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g/Message_Queue_Send_g    Message_Queue_Send.o  -L. -LC:/qnx700/target/qnx7/armle-v7/lib -LC:/qnx700/target/qnx7/armle-v7/usr/lib -Wl,--rpath-link,. -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/lib -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/usr/lib       -EL      -g         
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378732307915690156342821590907.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378732348095700543511721120261.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378732786241326055707182784268.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378732817533820939898932213206.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378733690594493001200105588793.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -c -Os -Wc,-Wall          -DNDEBUG   -I. -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7 -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send -IC:/qnx700/target/qnx7/usr/include    -EL         -DVARIANT_le -DVARIANT_v7 -DBUILDENV_qss  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/Message_Queue_Send.c 
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/Message_Queue_Send.c: In function 'main':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/Message_Queue_Send.c:65:11: warning: 'i' may be used uninitialized in this function [-Wmaybe-uninitialized]
+          i++;
+           ^
+C:/qnx700/host/win64/x86_64/usr/bin/rm -f  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7/Message_Queue_Send
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -Wl,--no-keep-memory        -o C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7/Message_Queue_Send    Message_Queue_Send.o  -L. -LC:/qnx700/target/qnx7/armle-v7/lib -LC:/qnx700/target/qnx7/armle-v7/usr/lib -Wl,--rpath-link,. -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/lib -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/usr/lib       -EL          
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -c  -Wc,-Wall             -I. -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/le.v7 -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send -IC:/qnx700/target/qnx7/usr/include    -EL      -g        -DVARIANT_le -DVARIANT_v7 -DVARIANT_g -DBUILDENV_qss  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/Message_Queue_Send.c 
+C:/qnx700/host/win64/x86_64/usr/bin/rm -f  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g/Message_Queue_Send_g
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -Wl,--no-keep-memory        -o C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g/Message_Queue_Send_g    Message_Queue_Send.o  -L. -LC:/qnx700/target/qnx7/armle-v7/lib -LC:/qnx700/target/qnx7/armle-v7/usr/lib -Wl,--rpath-link,. -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/lib -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/usr/lib       -EL      -g         
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378733713843338486602009888515.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378733749354427768837775796175.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378734004182834938403261521843.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -c -Os -Wc,-Wall          -DNDEBUG   -I. -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7 -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send -IC:/qnx700/target/qnx7/usr/include    -EL         -DVARIANT_le -DVARIANT_v7 -DBUILDENV_qss  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/Message_Queue_Send.c 
+C:/qnx700/host/win64/x86_64/usr/bin/rm -f  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7/Message_Queue_Send
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -Wl,--no-keep-memory        -o C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7/Message_Queue_Send    Message_Queue_Send.o  -L. -LC:/qnx700/target/qnx7/armle-v7/lib -LC:/qnx700/target/qnx7/armle-v7/usr/lib -Wl,--rpath-link,. -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/lib -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/usr/lib       -EL          
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -c  -Wc,-Wall             -I. -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/le.v7 -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send -IC:/qnx700/target/qnx7/usr/include    -EL      -g        -DVARIANT_le -DVARIANT_v7 -DVARIANT_g -DBUILDENV_qss  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/Message_Queue_Send.c 
+C:/qnx700/host/win64/x86_64/usr/bin/rm -f  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g/Message_Queue_Send_g
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -Wl,--no-keep-memory        -o C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g/Message_Queue_Send_g    Message_Queue_Send.o  -L. -LC:/qnx700/target/qnx7/armle-v7/lib -LC:/qnx700/target/qnx7/armle-v7/usr/lib -Wl,--rpath-link,. -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/lib -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/usr/lib       -EL      -g         
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378734022521817962946192269173.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378734061138041458330106094473.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378737178215502417715796277943.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -c -Os -Wc,-Wall          -DNDEBUG   -I. -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7 -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send -IC:/qnx700/target/qnx7/usr/include    -EL         -DVARIANT_le -DVARIANT_v7 -DBUILDENV_qss  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/Message_Queue_Send.c 
+C:/qnx700/host/win64/x86_64/usr/bin/rm -f  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7/Message_Queue_Send
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -Wl,--no-keep-memory        -o C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7/Message_Queue_Send    Message_Queue_Send.o  -L. -LC:/qnx700/target/qnx7/armle-v7/lib -LC:/qnx700/target/qnx7/armle-v7/usr/lib -Wl,--rpath-link,. -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/lib -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/usr/lib       -EL          
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -c  -Wc,-Wall             -I. -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/le.v7 -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send -IC:/qnx700/target/qnx7/usr/include    -EL      -g        -DVARIANT_le -DVARIANT_v7 -DVARIANT_g -DBUILDENV_qss  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/Message_Queue_Send.c 
+C:/qnx700/host/win64/x86_64/usr/bin/rm -f  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g/Message_Queue_Send_g
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -Wl,--no-keep-memory        -o C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g/Message_Queue_Send_g    Message_Queue_Send.o  -L. -LC:/qnx700/target/qnx7/armle-v7/lib -LC:/qnx700/target/qnx7/armle-v7/usr/lib -Wl,--rpath-link,. -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/lib -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/usr/lib       -EL      -g         
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378737196551687450262110785821.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378737238867403835730722626124.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378737835645794047788051625861.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -c -Os -Wc,-Wall          -DNDEBUG   -I. -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7 -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send -IC:/qnx700/target/qnx7/usr/include    -EL         -DVARIANT_le -DVARIANT_v7 -DBUILDENV_qss  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/Message_Queue_Send.c 
+C:/qnx700/host/win64/x86_64/usr/bin/rm -f  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7/Message_Queue_Send
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -Wl,--no-keep-memory        -o C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7/Message_Queue_Send    Message_Queue_Send.o  -L. -LC:/qnx700/target/qnx7/armle-v7/lib -LC:/qnx700/target/qnx7/armle-v7/usr/lib -Wl,--rpath-link,. -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/lib -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/usr/lib       -EL          
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -c  -Wc,-Wall             -I. -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/le.v7 -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send -IC:/qnx700/target/qnx7/usr/include    -EL      -g        -DVARIANT_le -DVARIANT_v7 -DVARIANT_g -DBUILDENV_qss  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/Message_Queue_Send.c 
+C:/qnx700/host/win64/x86_64/usr/bin/rm -f  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g/Message_Queue_Send_g
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -Wl,--no-keep-memory        -o C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g/Message_Queue_Send_g    Message_Queue_Send.o  -L. -LC:/qnx700/target/qnx7/armle-v7/lib -LC:/qnx700/target/qnx7/armle-v7/usr/lib -Wl,--rpath-link,. -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/lib -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/usr/lib       -EL      -g         
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378737860981597853221914907203.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378737892972633111619810745134.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378739993402061617796979206030.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -c -Os -Wc,-Wall          -DNDEBUG   -I. -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7 -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send -IC:/qnx700/target/qnx7/usr/include    -EL         -DVARIANT_le -DVARIANT_v7 -DBUILDENV_qss  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/Message_Queue_Send.c 
+C:/qnx700/host/win64/x86_64/usr/bin/rm -f  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7/Message_Queue_Send
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -Wl,--no-keep-memory        -o C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7/Message_Queue_Send    Message_Queue_Send.o  -L. -LC:/qnx700/target/qnx7/armle-v7/lib -LC:/qnx700/target/qnx7/armle-v7/usr/lib -Wl,--rpath-link,. -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/lib -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/usr/lib       -EL          
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -c  -Wc,-Wall             -I. -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/le.v7 -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send -IC:/qnx700/target/qnx7/usr/include    -EL      -g        -DVARIANT_le -DVARIANT_v7 -DVARIANT_g -DBUILDENV_qss  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/Message_Queue_Send.c 
+C:/qnx700/host/win64/x86_64/usr/bin/rm -f  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g/Message_Queue_Send_g
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -Wl,--no-keep-memory        -o C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g/Message_Queue_Send_g    Message_Queue_Send.o  -L. -LC:/qnx700/target/qnx7/armle-v7/lib -LC:/qnx700/target/qnx7/armle-v7/usr/lib -Wl,--rpath-link,. -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/lib -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/usr/lib       -EL      -g         
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378740019542451700209232015385.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378740067067113168532315348216.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378741082948611683467134737359.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -c -Os -Wc,-Wall          -DNDEBUG   -I. -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7 -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send -IC:/qnx700/target/qnx7/usr/include    -EL         -DVARIANT_le -DVARIANT_v7 -DBUILDENV_qss  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/Message_Queue_Send.c 
+C:/qnx700/host/win64/x86_64/usr/bin/rm -f  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7/Message_Queue_Send
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -Wl,--no-keep-memory        -o C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7/Message_Queue_Send    Message_Queue_Send.o  -L. -LC:/qnx700/target/qnx7/armle-v7/lib -LC:/qnx700/target/qnx7/armle-v7/usr/lib -Wl,--rpath-link,. -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/lib -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/usr/lib       -EL          
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -c  -Wc,-Wall             -I. -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/le.v7 -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send -IC:/qnx700/target/qnx7/usr/include    -EL      -g        -DVARIANT_le -DVARIANT_v7 -DVARIANT_g -DBUILDENV_qss  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/Message_Queue_Send.c 
+C:/qnx700/host/win64/x86_64/usr/bin/rm -f  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g/Message_Queue_Send_g
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -Wl,--no-keep-memory        -o C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g/Message_Queue_Send_g    Message_Queue_Send.o  -L. -LC:/qnx700/target/qnx7/armle-v7/lib -LC:/qnx700/target/qnx7/armle-v7/usr/lib -Wl,--rpath-link,. -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/lib -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/usr/lib       -EL      -g         
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378741109428451639643349795903.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378741138628486675679552489577.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378741381131841541125901877311.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378741415081490909183809646272.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378753966071098482554967335424.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -c -Os -Wc,-Wall          -DNDEBUG   -I. -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7 -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI -IC:/qnx700/target/qnx7/usr/include    -EL         -DVARIANT_le -DVARIANT_v7 -DBUILDENV_qss  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c 
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c: In function 'main':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:175:9: warning: unused variable 'living' [-Wunused-variable]
+     int living = 1;
+         ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c: In function 'native_message_passing_client':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:230:9: warning: unused variable 'index' [-Wunused-variable]
+     int index    = 0;
+         ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:229:9: warning: unused variable 'compare' [-Wunused-variable]
+     int compare;
+         ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c: In function 'Pin_status':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:317:28: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+     uintptr_t gpio1_base = NULL;
+                            ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:318:32: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+     uintptr_t control_module = NULL;
+                                ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:326:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+GPIO_6_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:18:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:329:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+GPIO_7_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:18:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:332:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+spi_cs_1_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:18:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:335:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+spi_d0_1_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:18:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:338:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+spi_d1_1_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:18:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:341:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+spi_sclk_1_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:18:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:344:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+uart1_ctsn_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:18:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:347:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+uart1_rtsn_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:18:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:350:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+uart1_rxd_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:18:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:353:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+uart1_txd_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:18:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:317:15: warning: unused variable 'gpio1_base' [-Wunused-variable]
+     uintptr_t gpio1_base = NULL;
+               ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c: In function 'Pin_control':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:370:31: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+     uintptr_t gpio1_base    = NULL;
+                               ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c: In function 'Pin_config':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:408:15: warning: unused variable 'gpio1_base' [-Wunused-variable]
+     uintptr_t gpio1_base = mmap_device_io(AM335X_GPIO_SIZE , AM335X_GPIO1_BASE);
+               ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c: In function 'spisetcfg':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:456:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c: In function 'spigetdevinfo':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:474:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c: In function 'spiwrite':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:537:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c: In function 'spiclose':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:543:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+C:/qnx700/host/win64/x86_64/usr/bin/rm -f  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7/ESP8266_BBB_UART_SPI
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -Wl,--no-keep-memory        -o C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7/ESP8266_BBB_UART_SPI    ESP8266_BBB_UART_SPI.o  -L. -LC:/qnx700/target/qnx7/armle-v7/lib -LC:/qnx700/target/qnx7/armle-v7/usr/lib -Wl,--rpath-link,. -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/lib -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/usr/lib       -lc    -lsocket    -lspi-master   -EL          
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -c  -Wc,-Wall             -I. -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/le.v7 -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI -IC:/qnx700/target/qnx7/usr/include    -EL      -g        -DVARIANT_le -DVARIANT_v7 -DVARIANT_g -DBUILDENV_qss  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c 
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c: In function 'main':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:175:9: warning: unused variable 'living' [-Wunused-variable]
+     int living = 1;
+         ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c: In function 'native_message_passing_client':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:230:9: warning: unused variable 'index' [-Wunused-variable]
+     int index    = 0;
+         ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:229:9: warning: unused variable 'compare' [-Wunused-variable]
+     int compare;
+         ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c: In function 'Pin_status':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:317:28: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+     uintptr_t gpio1_base = NULL;
+                            ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:318:32: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+     uintptr_t control_module = NULL;
+                                ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:326:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+GPIO_6_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:18:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:329:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+GPIO_7_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:18:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:332:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+spi_cs_1_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:18:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:335:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+spi_d0_1_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:18:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:338:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+spi_d1_1_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:18:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:341:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+spi_sclk_1_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:18:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:344:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+uart1_ctsn_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:18:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:347:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+uart1_rtsn_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:18:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:350:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+uart1_rxd_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:18:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:353:15: warning: passing argument 1 of 'in32s' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         in32s(&val,1,control_module+uart1_txd_pinConfig);
+               ^
+In file included from C:/qnx700/target/qnx7/usr/include/hw/inout.h:37:0,
+                 from C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:18:
+C:/qnx700/target/qnx7/usr/include/arm/inout.h:106:1: note: expected 'void *' but argument is of type 'volatile uint32_t * {aka volatile unsigned int *}'
+ in32s(void *__buff, unsigned __len, _Uintptrt __addr)
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:317:15: warning: unused variable 'gpio1_base' [-Wunused-variable]
+     uintptr_t gpio1_base = NULL;
+               ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c: In function 'Pin_control':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:370:31: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+     uintptr_t gpio1_base    = NULL;
+                               ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c: In function 'Pin_config':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:408:15: warning: unused variable 'gpio1_base' [-Wunused-variable]
+     uintptr_t gpio1_base = mmap_device_io(AM335X_GPIO_SIZE , AM335X_GPIO1_BASE);
+               ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c: In function 'spisetcfg':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:456:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c: In function 'spigetdevinfo':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:474:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c: In function 'spiwrite':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:537:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c: In function 'spiclose':
+C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI.c:543:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+C:/qnx700/host/win64/x86_64/usr/bin/rm -f  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g/ESP8266_BBB_UART_SPI_g
+C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -Wl,--no-keep-memory        -o C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g/ESP8266_BBB_UART_SPI_g    ESP8266_BBB_UART_SPI.o  -L. -LC:/qnx700/target/qnx7/armle-v7/lib -LC:/qnx700/target/qnx7/armle-v7/usr/lib -Wl,--rpath-link,. -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/lib -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/usr/lib       -lc    -lsocket    -lspi-master   -EL      -g         
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378755215734093998130783778498.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378755286478939896783576947862.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15378757006441567204654185508889.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7'
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
+make.exe[2]: Nothing to be done for 'all'.
+make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm/o-le-v7-g'
+make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI/arm'
