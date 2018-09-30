@@ -1,50 +1,12 @@
-"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15370854142365004336806676778120.tmp 
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile153822183921920376627127016859.tmp 
 C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
 make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/arm'
 C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
 make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/arm/o-le-v7'
-C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -c -Os -Wc,-Wall          -DNDEBUG   -I. -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/arm/o-le-v7 -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/arm -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client -IC:/qnx700/target/qnx7/usr/include    -EL         -DVARIANT_le -DVARIANT_v7 -DBUILDENV_qss  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/Native_message_passing_Client.c 
-C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/Native_message_passing_Client.c: In function 'client':
-C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/Native_message_passing_Client.c:70:21: warning: implicit declaration of function 'strcspn' [-Wimplicit-function-declaration]
-             message[strcspn(message, "\r\n")] = 0;
-                     ^
-C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/Native_message_passing_Client.c:70:21: warning: incompatible implicit declaration of built-in function 'strcspn'
-C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/Native_message_passing_Client.c:70:21: note: include '<string.h>' or provide a declaration of 'strcspn'
-C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/Native_message_passing_Client.c:77:19: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
-         compare = strcmp(message, "END");
-                   ^
-C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/Native_message_passing_Client.c:82:9: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
-         strcpy(msg.data, message);
-         ^
-C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/Native_message_passing_Client.c:82:9: warning: incompatible implicit declaration of built-in function 'strcpy'
-C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/Native_message_passing_Client.c:82:9: note: include '<string.h>' or provide a declaration of 'strcpy'
-C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/Native_message_passing_Client.c:49:9: warning: unused variable 'index' [-Wunused-variable]
-     int index    = 0;
-         ^
-C:/qnx700/host/win64/x86_64/usr/bin/rm -f  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/arm/o-le-v7/Native_message_passing_Client
-C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -Wl,--no-keep-memory        -o C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/arm/o-le-v7/Native_message_passing_Client    Native_message_passing_Client.o  -L. -LC:/qnx700/target/qnx7/armle-v7/lib -LC:/qnx700/target/qnx7/armle-v7/usr/lib -Wl,--rpath-link,. -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/lib -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/usr/lib       -EL          
+make.exe[2]: Nothing to be done for 'all'.
 make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/arm/o-le-v7'
 C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
 make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/arm/o-le-v7-g'
-C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -c  -Wc,-Wall             -I. -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/arm/le.v7 -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/arm/o-le-v7-g -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/arm -IC:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client -IC:/qnx700/target/qnx7/usr/include    -EL      -g        -DVARIANT_le -DVARIANT_v7 -DVARIANT_g -DBUILDENV_qss  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/Native_message_passing_Client.c 
-C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/Native_message_passing_Client.c: In function 'client':
-C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/Native_message_passing_Client.c:70:21: warning: implicit declaration of function 'strcspn' [-Wimplicit-function-declaration]
-             message[strcspn(message, "\r\n")] = 0;
-                     ^
-C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/Native_message_passing_Client.c:70:21: warning: incompatible implicit declaration of built-in function 'strcspn'
-C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/Native_message_passing_Client.c:70:21: note: include '<string.h>' or provide a declaration of 'strcspn'
-C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/Native_message_passing_Client.c:77:19: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
-         compare = strcmp(message, "END");
-                   ^
-C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/Native_message_passing_Client.c:82:9: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
-         strcpy(msg.data, message);
-         ^
-C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/Native_message_passing_Client.c:82:9: warning: incompatible implicit declaration of built-in function 'strcpy'
-C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/Native_message_passing_Client.c:82:9: note: include '<string.h>' or provide a declaration of 'strcpy'
-C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/Native_message_passing_Client.c:49:9: warning: unused variable 'index' [-Wunused-variable]
-     int index    = 0;
-         ^
-C:/qnx700/host/win64/x86_64/usr/bin/rm -f  C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/arm/o-le-v7-g/Native_message_passing_Client_g
-C:/qnx700/host/win64/x86_64/usr/bin/qcc -Vgcc_ntoarmv7 -Wl,--no-keep-memory        -o C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/arm/o-le-v7-g/Native_message_passing_Client_g    Native_message_passing_Client.o  -L. -LC:/qnx700/target/qnx7/armle-v7/lib -LC:/qnx700/target/qnx7/armle-v7/usr/lib -Wl,--rpath-link,. -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/lib -Wl,--rpath-link,C:/qnx700/target/qnx7/armle-v7/usr/lib       -EL      -g         
+make.exe[2]: Nothing to be done for 'all'.
 make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/arm/o-le-v7-g'
 make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/arm'

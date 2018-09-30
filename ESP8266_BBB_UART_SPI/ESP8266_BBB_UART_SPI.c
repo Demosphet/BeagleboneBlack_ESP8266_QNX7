@@ -88,6 +88,7 @@
 
 ////--------------------------------Global Variables//--------------------------------
 // UART - Message size
+char char_read_temp_buffer                      [32];
 char char_read_buffer                           [32];
 char char_write_buffer                          [32];
 
@@ -172,13 +173,13 @@ int main(void) {
     // Rx : Pin 11 - Connector 9
     ret = 0;
     file = open(UART_PATH, O_RDWR);
-    int living = 1;
 
     ret = 0;
     printf("\nThis is A Client running\n");
     ret = native_message_passing_client(LOCAL_ATTACH_POINT);
 
     // // Test 2 Implementations
+    // int living = 1;
     // while (living) {
     //     printf("Waiting for a packet from the ESP8266\n");
     //     UART_read();
@@ -233,10 +234,15 @@ int native_message_passing_client(char *sname/*, char *message*/) {
     char message[32];
 
     printf("Trying to connect to server named: %s\n", sname);
-    if ((server_coid = name_open(sname, 0)) == -1) {
+    // if ((server_coid = name_open(sname, 0)) == -1) {
+    //     printf("--->ERROR, could not connect to server!\n\n");
+    //     return EXIT_FAILURE;
+    // }
+    while ((server_coid = name_open(sname, 0)) == -1) {
         printf("--->ERROR, could not connect to server!\n\n");
-        return EXIT_FAILURE;
+        delay(250);
     }
+
 
     printf("Connection established to: %s\n\n", sname);
 
@@ -246,23 +252,26 @@ int native_message_passing_client(char *sname/*, char *message*/) {
 
     // Do whatever work you wanted with server connection
     while(living) { // send data packets
-        // Original implementation
-        printf("Enter the message you wish to send: ");
-        if(fgets(message, sizeof message, stdin) != NULL) {
-            message[strcspn(message, "\r\n")] = 0;
-        } else {
-            printf("Error: No characters have been read at end-of-file!\n");
-        }
-        // scanf("%s", &message);
-        // printf("You entered: %s\n", message);
+        UART_read();
+        strcpy(msg.data, char_read_buffer);
 
-        if (!strcmp(message, "END")) {
-            printf("Equal to intended\n");
-            living = 0;
-        }
+        // // Original implementation
+        // printf("Enter the message you wish to send: ");
+        // if(fgets(message, sizeof message, stdin) != NULL) {
+        //     message[strcspn(message, "\r\n")] = 0;
+        // } else {
+        //     printf("Error: No characters have been read at end-of-file!\n");
+        // }
+        // // scanf("%s", &message);
+        // // printf("You entered: %s\n", message);
+
+        // if (!strcmp(message, "END")) {
+        //     printf("Equal to intended\n");
+        //     living = 0;
+        // }
         
-        // Test 2 Implementation
-        strcpy(msg.data, message);
+        // // Test 2 Implementation
+        // strcpy(msg.data, message);
 
         // // Test 3 Implementation
         // UART_read();
@@ -291,7 +300,7 @@ int native_message_passing_client(char *sname/*, char *message*/) {
             UART_write();
             // UART_read();
 
-            if (!strcmp(reply.buf, "... Oh no... Good bye")) {
+            if (!strcmp(reply.buf, "Request to Terminate has been received")) {
                 living = 0;
             } else {
                 living = 1;
@@ -574,11 +583,21 @@ int UART_write(/*char *message, int iterations*/) {
 // UART read function
 int UART_read() {
     ret = 0;
+    // printf("Test 3\n");
+    // ret = read(file, &char_read_buffer, sizeof(char_read_buffer));
+    // printf("Test 4\n");
+    // char_read_buffer[ret-1] = '\0';
+
     printf("Test 3\n");
-    ret = read(file, &char_read_buffer, sizeof(char_read_buffer));
+    ret = read(file, &char_read_temp_buffer, sizeof(char_read_temp_buffer));
     printf("Test 4\n");
     // char_read_buffer[ret] = '\0'    //Use this if you want to include either "\n" or the "\r" at the end
-    char_read_buffer[ret-1] = '\0';
+    char_read_temp_buffer[ret-1] = '\0';
+    while (!strcmp(char_read_temp_buffer, "")) {
+        ret = read(file, &char_read_temp_buffer, sizeof(char_read_temp_buffer));
+        char_read_temp_buffer[ret-1] = '\0';
+    }
+    strcpy(char_read_buffer, char_read_temp_buffer);
     printf("\nRx: Number of Bytes: %d", ret);
     printf("\nRx: %s\n", char_read_buffer);
     return ret;
