@@ -342,7 +342,6 @@ int main(int argc, char *argv[]) {
              for(i=0;i<16;i++)           // get data from SD0 (16 bits)
              {
                 strobe_SCL(gpio1_base);  // strobe the SCL line so we can read in data bit
-
                 val = KeypadReadIObit(gpio1_base, SD0); // read in data bit
                 val = ~val & 0x01;                      // invert bit and mask out everything but the LSB
                 //printf("val[%u]=%u, ",i, val);
@@ -359,6 +358,7 @@ int main(int argc, char *argv[]) {
 
 
      munmap_device_io(control_module, AM335X_CONTROL_MODULE_SIZE);
+     printf("Here? 5\n");
     }
 
      // int ret = 0;

@@ -42,7 +42,6 @@
 #define GPIO_3_pinConfig                        0x80C   // conf_gpmc_a6 (TRM pp 1456) for GPIO1_6
 #define GPIO_6_pinConfig                        0x818   // conf_gpmc_a6 (TRM pp 1456) for GPIO1_6
 #define GPIO_7_pinConfig                        0x81C   // conf_gpmc_a7 (TRM pp 1456) for GPIO1_7
-#define P9_12_pinConfig                         0x878 //  conf_gpmc_ben1 (TRM pp 1364) for GPIO1_28,  P9_12
 #define uart1_ctsn_pinConfig                    0x978   // conf_uart1_ctsn (TRM pp 1458) for uart1_ctsn
 #define uart1_rtsn_pinConfig                    0x97C   // conf_uart1_rtsn (TRM pp 1458) for uart1_rtsn
 #define uart1_rxd_pinConfig                     0x980   // conf_uart1_rxd (TRM pp 1458) for uart1_rxd
@@ -160,14 +159,10 @@ int main(void) {
 
     ThreadCtl( _NTO_TCTL_IO_PRIV , NULL); // Request I/O privileges
     Pin_status();
-    Pin_config(PIN_MODE_7,PU_ENABLE,PU_PULL_DOWN,RECV_ENABLE,SLEW_FAST,GPIO_2_pinConfig);
-    Pin_config(PIN_MODE_7,PU_ENABLE,PU_PULL_DOWN,RECV_ENABLE,SLEW_FAST,GPIO_3_pinConfig);
-    Pin_status();
     Pin_control(GPIO02, 0xFF);
     Pin_control(GPIO03, 0xFF);
     Pin_control(GPIO06, 0xFF);
     Pin_control(GPIO07, 0xFF);
-    Pin_status();   
     sleep(3);
 
     // //--------GPIO Check & Configuration Code--------
@@ -358,9 +353,6 @@ void Pin_status() {
 
         in32s(&val,1,control_module+GPIO_7_pinConfig);
         printf("Current pinmux configuration for      GPIO7  = %#010x\n", val);
-
-        in32s(&val,1,control_module+P9_12_pinConfig);
-        printf("Current pinmux configuration for     GPIO28  = %#010x\n", val);
 
         in32s(&val,1,control_module+spi_cs_1_pinConfig);
         printf("Current pinmux configuration for   SPI 1 CS  = %#010x\n", val);
