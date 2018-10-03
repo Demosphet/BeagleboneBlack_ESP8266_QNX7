@@ -42,6 +42,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <mqueue.h>
+#include <time.h>
 #include <sys/stat.h>
 #include <hw/inout.h>      // for in32() and out32();
 #include <sys/mman.h>      // for mmap_device_io();
@@ -182,88 +183,88 @@ void DecodeKeyValue(uint32_t word)
         case 0x01:
             printf("Key  1 pressed\n");
             pthread_create(NULL, NULL, Flash_LED0_ex, NULL); // flash LED
-            strcat(key_press_data,"Key  1:");
+            strcat(key_press_data,"Key   1|");
             break;
         case 0x02:
             printf("Key  2 pressed\n");
             pthread_create(NULL, NULL, Flash_LED0_ex, NULL); // flash LED
-            strcat(key_press_data,"Key  2:");
+            strcat(key_press_data,"Key   2|");
             break;
         case 0x04:
             printf("Key  3 pressed\n");
             pthread_create(NULL, NULL, Flash_LED0_ex, NULL); // flash LED
-            strcat(key_press_data,"Key  3:");
+            strcat(key_press_data,"Key   3|");
             break;
         case 0x08:
             printf("Key  4 pressed\n");
             pthread_create(NULL, NULL, Flash_LED0_ex, NULL); // flash LED
-            strcat(key_press_data,"Key  4:");
+            strcat(key_press_data,"Key   4|");
             break;
         case 0x10:
             printf("Key  5 pressed\n");
             pthread_create(NULL, NULL, Flash_LED0_ex, NULL); // flash LED
-            strcat(key_press_data,"Key  5:");
+            strcat(key_press_data,"Key   5|");
             break;
         case 0x20:
             printf("Key  6 pressed\n");
             pthread_create(NULL, NULL, Flash_LED0_ex, NULL); // flash LED
-            strcat(key_press_data,"Key  6:");
+            strcat(key_press_data,"Key   6|");
             break;
         case 0x40:
             printf("Key  7 pressed\n");
             pthread_create(NULL, NULL, Flash_LED0_ex, NULL); // flash LED
-            strcat(key_press_data,"Key  7:");
+            strcat(key_press_data,"Key   7|");
             break;
         case 0x80:
             printf("Key  8 pressed\n");
             pthread_create(NULL, NULL, Flash_LED0_ex, NULL); // flash LED
-            strcat(key_press_data,"Key  8:");
+            strcat(key_press_data,"Key   8|");
             break;
         case 0x100:
             printf("Key  9 pressed\n");
             pthread_create(NULL, NULL, Flash_LED0_ex, NULL); // flash LED
-            strcat(key_press_data,"Key  9:");
+            strcat(key_press_data,"Key   9|");
             break;
         case 0x200:
             printf("Key 10 pressed\n");
             pthread_create(NULL, NULL, Flash_LED0_ex, NULL); // flash LED
-            strcat(key_press_data,"Key  10:");
+            strcat(key_press_data,"Key  10|");
             break;
         case 0x400:
             printf("Key 11 pressed\n");
             pthread_create(NULL, NULL, Flash_LED0_ex, NULL); // flash LED
-            strcat(key_press_data,"Key  11:");
+            strcat(key_press_data,"Key  11|");
             break;
         case 0x800:
             printf("Key 12 pressed\n");
             pthread_create(NULL, NULL, Flash_LED0_ex, NULL); // flash LED
-            strcat(key_press_data,"Key  12:");
+            strcat(key_press_data,"Key  12|");
             break;
         case 0x1000:
             printf("Key 13 pressed\n");
             pthread_create(NULL, NULL, Flash_LED0_ex, NULL); // flash LED
-            strcat(key_press_data,"Key  13:");
+            strcat(key_press_data,"Key  13|");
             break;
         case 0x2000:
             printf("Key 14 pressed\n");
             pthread_create(NULL, NULL, Flash_LED0_ex, NULL); // flash LED
-            strcat(key_press_data,"Key  14:");
+            strcat(key_press_data,"Key  14|");
             break;
         case 0x4000:
             printf("Key 15 pressed\n");
             pthread_create(NULL, NULL, Flash_LED0_ex, NULL); // flash LED
-            strcat(key_press_data,"Key  15:");
+            strcat(key_press_data,"Key  15|");
             break;
         case 0x8000:
             printf("Key 16 pressed\n");
             pthread_create(NULL, NULL, Flash_LED0_ex, NULL); // flash LED
-            strcat(key_press_data,"Key  16:");
+            strcat(key_press_data,"Key  16|");
             break;
         case 0x00:  // key release event (do nothing)
             break;
         default:
             printf("Key pressed could not be determined - %lu\n", word);
-            strcat(key_press_data,"Unknown:");
+            strcat(key_press_data,"Unknown|");
     }
 }
 
@@ -273,20 +274,22 @@ void DecodeKeyValue(uint32_t word)
 #define Q_Mode S_IRUSR | S_IWUSR
 /*
  * For oflag overview see: http://www.qnx.com/developers/docs/660/index.jsp
- * O_RDWR	- send-receive   (others: O_RDONLY (receive-only), O_WRONLY (send-only))
- * O_CREAT	- instruct the server to create a new message queue
+ * O_RDWR   - send-receive   (others: O_RDONLY (receive-only), O_WRONLY (send-only))
+ * O_CREAT  - instruct the server to create a new message queue
  *
  * Mode flags overview see: http://www.qnx.com/developers/docs/660/index.jsp
- * S_IRUSR	- Read permission
- * S_IWUSR	- Write permission
+ * S_IRUSR  - Read permission
+ * S_IWUSR  - Write permission
  */
+
+char time_date[80];
 
 void message_queue_send() {
     printf("Welcome to the QNX Momentics mqueue send process\n");
 
     mqd_t   qd;
     int     i;
-    int livivng = 1;
+    int     livivng = 1;
     char    buf[MESSAGESIZE];
 
     struct  mq_attr  attr;
@@ -396,10 +399,12 @@ int main(int argc, char *argv[]) {
 
 
     printf("Welcome to the QNX Momentics mqueue send process\n");
-
-    mqd_t   qd;
-    int livivng = 1;
-    char    buf[MESSAGESIZE];
+  
+    time_t rawtime;
+    struct tm * timeinfo;
+    mqd_t  qd;
+    int    livivng = 1;
+    char   buf[MESSAGESIZE];
 
     struct  mq_attr  attr;
     // attr.mq_maxmsg = 100;
@@ -456,11 +461,15 @@ int main(int argc, char *argv[]) {
                 //  sleep(2);
                 // }
                 strcpy(buf, key_press_data);          //put the message in a char[] so it can be sent
-                printf("queue: '%s'\n", buf);           //print the message to this processes terminal
                 if (!strcmp(buf, "")) {
                     memset(buf,0,strlen(buf));
                     memset(key_press_data,0,strlen(key_press_data));
                 } else {
+                    time   (&rawtime);
+                    timeinfo = localtime (&rawtime);
+                    strftime (time_date,80,"%D %X|",timeinfo);
+                    strcat(buf, time_date);
+                    printf("queue: '%s'\n", buf);           //print the message to this processes terminal
                     mq_send(qd, buf, MESSAGESIZE, 0);       //send the mqueue
                     memset(buf,0,strlen(buf));
                     memset(key_press_data,0,strlen(key_press_data));
@@ -490,59 +499,59 @@ int main(int argc, char *argv[]) {
    printf("Main Terminated...!\n");
    return EXIT_SUCCESS;
 
-	// printf("Welcome to the QNX Momentics mqueue send process\n");
+    // printf("Welcome to the QNX Momentics mqueue send process\n");
 
- //    mqd_t	qd;
- //    int		i;
+ //    mqd_t    qd;
+ //    int      i;
  //    int livivng = 1;
- //    char	buf[MESSAGESIZE];
+ //    char buf[MESSAGESIZE];
 
  //    struct  mq_attr  attr;
  //    // attr.mq_maxmsg = 100;
  //    attr.mq_msgsize = MESSAGESIZE;
  //    attr.mq_flags = 0;
 
-	// // example using the default path notation.
-	// const char * MqueueLocation = "/test_queue";	/* will be located /dev/mqueue/test_queue  */
+    // // example using the default path notation.
+    // const char * MqueueLocation = "/test_queue"; /* will be located /dev/mqueue/test_queue  */
  //    //const char * MqueueLocation = "/net/VM-Target01/dev/mqueue/test_queue"; // (when Bridged use: VM-Target01.sece-lab.rmit.edu.au)
  //    /* Use the above line for networked (qnet) MqueueLocation
-	//  * the command 'hostname <name>' to set hostname. here it is 'M1'
-	//  * You mast also have qnet running. to do this execute the following
-	//  * command: mount -T io-net /lib/dll/lsm-qnet.so
-	//  */
+    //  * the command 'hostname <name>' to set hostname. here it is 'M1'
+    //  * You mast also have qnet running. to do this execute the following
+    //  * command: mount -T io-net /lib/dll/lsm-qnet.so
+    //  */
 
- //    qd = mq_open(MqueueLocation, Q_FLAGS, Q_Mode, &attr);			 // full path will be: <host_name>/dev/mqueue/test_queue
+ //    qd = mq_open(MqueueLocation, Q_FLAGS, Q_Mode, &attr);             // full path will be: <host_name>/dev/mqueue/test_queue
  //    if (qd != -1)
  //    {
-	// 	// for (i=1; i <= 10; ++i)
+    //  // for (i=1; i <= 10; ++i)
  //  //       {
-	// 	// 	sprintf(buf, "message %d", i);			//put the message in a char[] so it can be sent
-	// 	// 	printf("queue: '%s'\n", buf); 			//print the message to this processes terminal
-	// 	// 	mq_send(qd, buf, MESSAGESIZE, 0);		//send the mqueue
-	// 	// 	sleep(2);
-	// 	// }
-	// 	while (living) {
-	// 		sprintf(buf, "message %d", i);			//put the message in a char[] so it can be sent
-	// 		printf("queue: '%s'\n", buf); 			//print the message to this processes terminal
-	// 		mq_send(qd, buf, MESSAGESIZE, 0);		//send the mqueue
-	// 		sleep(2);
-	// 	}
-	// 	mq_send(qd, "done", 5, 0);					// send last message so the receive process knows
-	// 												// not to expect any more messages. 5 char long because
-	// 												// of '/0' char at end of the "done" string
-	// 	printf("\nAll Messages sent to the queue\n");
+    //  //  sprintf(buf, "message %d", i);          //put the message in a char[] so it can be sent
+    //  //  printf("queue: '%s'\n", buf);           //print the message to this processes terminal
+    //  //  mq_send(qd, buf, MESSAGESIZE, 0);       //send the mqueue
+    //  //  sleep(2);
+    //  // }
+    //  while (living) {
+    //      sprintf(buf, "message %d", i);          //put the message in a char[] so it can be sent
+    //      printf("queue: '%s'\n", buf);           //print the message to this processes terminal
+    //      mq_send(qd, buf, MESSAGESIZE, 0);       //send the mqueue
+    //      sleep(2);
+    //  }
+    //  mq_send(qd, "done", 5, 0);                  // send last message so the receive process knows
+    //                                              // not to expect any more messages. 5 char long because
+    //                                              // of '/0' char at end of the "done" string
+    //  printf("\nAll Messages sent to the queue\n");
 
-	// 	// as soon as this code executes the mqueue data will be deleted
-	// 	// from the /dev/mqueue/test_queue  file structure
-	// 	mq_close(qd);
-	// 	mq_unlink(MqueueLocation);
+    //  // as soon as this code executes the mqueue data will be deleted
+    //  // from the /dev/mqueue/test_queue  file structure
+    //  mq_close(qd);
+    //  mq_unlink(MqueueLocation);
  //    }
  //    else
  //    {
- //    	printf("\nThere was an ERROR opening the message queue!");
- //    	printf("\nHave you started the 'mqueue' process on the VM target?\n");
+ //     printf("\nThere was an ERROR opening the message queue!");
+ //     printf("\nHave you started the 'mqueue' process on the VM target?\n");
  //    }
 
-	printf("\nmqueue send process Exited\n");
-	return EXIT_SUCCESS;
+    printf("\nmqueue send process Exited\n");
+    return EXIT_SUCCESS;
 }

@@ -29,10 +29,14 @@ String status_RTN = "Not acquired";
 // Tokenisation preparations
 int ind1;
 int ind2;
+int ind3;
+int ind4;
 int counter;
 int string_length;
 int number_of_packets = 0;
-String token = "";
+int packet_length = 26;
+String data_token = "";
+String time_date_token = "";
 
 //// Assign output variables to GPIO pins
 //const int output5 = 5;
@@ -43,21 +47,34 @@ String incoming_bytes = "";
 void read_serial() {
     if(Serial.available() > 0) {
     incoming_bytes = "";
+
+//    Serial.println("Serial.readString()");
+//    Serial.println(Serial.readString()); 
+//    
     incoming_bytes = Serial.readString();  // Read incoming data as a String
     current_operations = incoming_bytes;
     log_operations += current_operations;
+    
+    Serial.println("current_operations");
+    Serial.println(current_operations); 
+
+    Serial.println("string_length - current_operations");
+    Serial.println(current_operations.length());    
 
     string_length = log_operations.length();
     Serial.println("string_length");
     Serial.println(string_length);
-    number_of_packets = string_length/7;
+    number_of_packets = string_length/packet_length;
     if (string_length == 0) {
       string_length = 1;
     } else {
-      ind1 = log_operations.lastIndexOf(':',(string_length-2));
+      ind1 = log_operations.lastIndexOf('|',(string_length-2));
+      ind2 = log_operations.lastIndexOf('|',(ind1-1));
       Serial.println("ind1");
       Serial.println(ind1);
-      current_operations = log_operations.substring(ind1+1, (string_length-1));
+      Serial.println("ind2");
+      Serial.println(ind2);
+      current_operations = log_operations.substring(ind2+1, (string_length-1));
     }
   }
 }
@@ -66,7 +83,8 @@ void clear_variables() {
   current_operations = "";
   log_operations = "";
   status_RTN = "";
-  token = "";
+  data_token = "";
+  time_date_token = "";
   ind1 = 0;
   ind2 = 0;
   string_length = 0;
@@ -194,27 +212,36 @@ void loop(){
             client.println("<td>Content</td>");
             client.println("</tr>");
             counter = 0;
-            ind2 = log_operations.indexOf(':', 0);
-            Serial.println("Ind2");
-            Serial.println(ind2);
+            ind3 = log_operations.indexOf('|', 0);
+            ind4 = log_operations.indexOf('|',(ind3+1));
+            Serial.println("Ind3");
+            Serial.println(ind3);
+            Serial.println("Ind4");
+            Serial.println(ind4);
             for (int i = 0; i < number_of_packets; i++) {
               if (i == 0) {
                 Serial.println("number_of_packets");
                 Serial.println(number_of_packets);
-                token = log_operations.substring(0, ind2);
-                Serial.println("token");
-                Serial.println(token);
+                data_token = log_operations.substring(0, ind3);
+                time_date_token = log_operations.substring((ind3+1), (ind3+18));
+                Serial.println("data_token");
+                Serial.println(data_token);
+                Serial.println("time_date_token");
+                Serial.println(time_date_token);
               } else {
-                token = log_operations.substring(ind2+counter, (ind2+counter+7));
-                 Serial.println("token");
-                Serial.println(token);
-                counter = counter + 7;
+                data_token = log_operations.substring(ind4+1+counter, (ind4+8+counter));
+                time_date_token = log_operations.substring(ind4+9+counter, (ind4+9+counter+18));
+                Serial.println("data_token");
+                Serial.println(data_token);
+                counter = counter + packet_length;
                 Serial.println("counter");
                 Serial.println(counter);
+                Serial.println("time_date_token");
+                Serial.println(time_date_token);                
               }
               client.println("<tr>");
-              client.println("<td>" + String(i) + "</td>");
-              client.println("<td>" + token  + "</td>");
+              client.println("<td>" + time_date_token + "</td>");
+              client.println("<td>" + data_token  + "</td>");
               client.println("</tr>");
             }
             client.println("</table>");
