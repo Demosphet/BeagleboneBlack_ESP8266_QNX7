@@ -10,6 +10,8 @@
 // Replace with your network credentials
 const char* ssid     = "BigPond 12";
 const char* password = "Why not Whales-4-Wales!!!";
+//const char* ssid = "TP-Link-AkinaSpeedStars-2.4GHz";
+//const char* password = "Cool VIBRATIONS!?! Nan1? :0";
 
 // Set web server port number to 80
 WiFiServer server(80);
@@ -18,14 +20,23 @@ WiFiServer server(80);
 String header;
 
 // Auxiliar variables to store the current output state
-String output5State = "off";
-String output4State = "off";
-String GPIO_4_state = "";
-String GPIO_5_state = "";
+//String output5State = "off";
+//String output4State = "off";
+String current_operations = "None from the Real-time Network";
+String log_operations = "";
+String status_RTN = "Not acquired";
 
-// Assign output variables to GPIO pins
-const int output5 = 5;
-const int output4 = 4;
+// Tokenisation preparations
+int ind1;
+int ind2;
+int counter;
+int string_length;
+int number_of_packets = 0;
+String token = "";
+
+//// Assign output variables to GPIO pins
+//const int output5 = 5;
+//const int output4 = 4;
 
 String incoming_bytes = "";
 
@@ -33,18 +44,42 @@ void read_serial() {
     if(Serial.available() > 0) {
     incoming_bytes = "";
     incoming_bytes = Serial.readString();  // Read incoming data as a String
-    GPIO_5_state = incoming_bytes;
+    current_operations = incoming_bytes;
+    log_operations += current_operations;
+
+    string_length = log_operations.length();
+    Serial.println("string_length");
+    Serial.println(string_length);
+    number_of_packets = string_length/7;
+    if (string_length == 0) {
+      string_length = 1;
+    } else {
+      ind1 = log_operations.lastIndexOf(':',(string_length-2));
+      Serial.println("ind1");
+      Serial.println(ind1);
+      current_operations = log_operations.substring(ind1+1, (string_length-1));
+    }
   }
+}
+
+void clear_variables() {
+  current_operations = "";
+  log_operations = "";
+  status_RTN = "";
+  token = "";
+  ind1 = 0;
+  ind2 = 0;
+  string_length = 0;
 }
 
 void setup() {
   Serial.begin(115200);
-  // Initialize the output variables as outputs
-  pinMode(output5, OUTPUT);
-  pinMode(output4, OUTPUT);
-  // Set outputs to LOW
-  digitalWrite(output5, LOW);
-  digitalWrite(output4, LOW);
+//  // Initialize the output variables as outputs
+//  pinMode(output5, OUTPUT);
+//  pinMode(output4, OUTPUT);
+//  // Set outputs to LOW
+//  digitalWrite(output5, LOW);
+//  digitalWrite(output4, LOW);
 
   // Connect to Wi-Fi network with SSID and password
 //  Serial.print("Connecting to ");
@@ -86,66 +121,104 @@ void loop(){
             
             // turns the GPIOs on and off
             if (header.indexOf("GET /5/on") >= 0) {
-//              Serial.println("GPIO 5 on");
-              output5State = "on";
-              GPIO_5_state = "ON";
+              // output5State = "on";
               // digitalWrite(output5, HIGH);
               Serial.println("Data?");
               read_serial();
-            } else if (header.indexOf("GET /5/off") >= 0) {
-//              Serial.println("GPIO 5 off");
-              output5State = "off";
-              GPIO_5_state = "OFF";
-              // digitalWrite(output5, LOW);
-              Serial.println("First response");
-              read_serial();
+              
+//            } else if (header.indexOf("GET /5/off") >= 0) {
+//              output5State = "off";
+//              // digitalWrite(output5, LOW);
+//              Serial.println("First response");
+//              read_serial();
+//            } 
+
             } else if (header.indexOf("GET /4/on") >= 0) {
-//              Serial.println("GPIO 4 on");
-              output4State = "on";
-              GPIO_4_state = "ON";
-              // digitalWrite(output4, HIGH);
-              Serial.println("ON");
-            } else if (header.indexOf("GET /4/off") >= 0) {
-              Serial.println("GPIO 4 off");
-              output4State = "off";
-              GPIO_4_state = "OFF";
-              // digitalWrite(output4, LOW);
-              Serial.println("OFF");
+              // output4State = "on";
+              // GPIO_4_state = "ON";
+              // Serial.println("ON");
+              Serial.println("First response");
+              clear_variables();
+              
             }
+            
+//            } else if (header.indexOf("GET /4/off") >= 0) {
+//              Serial.println("GPIO 4 off");
+//              output4State = "off";
+//              // GPIO_4_state = "OFF";
+//              //Serial.println("OFF");
+//            }
             
             // Display the HTML web page
             client.println("<!DOCTYPE html><html>");
             client.println("<head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">");
             client.println("<link rel=\"icon\" href=\"data:,\">");
+            
             // CSS to style the on/off buttons 
             // Feel free to change the background-color and font-size attributes to fit your preferences
             client.println("<style>html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;}");
+            client.println("table, td {border: 1px solid black;}");
             client.println(".button { background-color: #195B6A; border: none; color: white; padding: 16px 40px;");
             client.println("text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer;}");
             client.println(".button2 {background-color: #77878A;}</style></head>");
             
             // Web Page Heading
-            client.println("<body><h1>ESP8266 Web Server</h1>");
-            client.println("<body><h2>State GPIO 5 : " + GPIO_5_state + " </h2>");
-            client.println("<body><h2>State GPIO 4 : " + GPIO_4_state + " </h2>");
-            
+            client.println("<body><h1>s3483160 - Gateway</h1>");
+            client.println("<body><h2>Current Operations : " + current_operations + " </h2>");
+            client.println("<body><h2>Status : " + log_operations + " </h2>");
+                    
             // Display current state, and ON/OFF buttons for GPIO 5  
-            client.println("<p>GPIO 5 - State " + output5State + "</p>");
-            // If the output5State is off, it displays the ON button       
-            if (output5State=="off") {
-              client.println("<p><a href=\"/5/on\"><button class=\"button\">ON</button></a></p>");
-            } else {
-              client.println("<p><a href=\"/5/off\"><button class=\"button button2\">OFF</button></a></p>");
-            } 
+//            client.println("<p>GPIO 5 - State " + output5State + "</p>");
+            // If the output5State is off, it displays the ON button
+            client.println("<p><a href=\"/5/on\"><button class=\"button\">Request</button></a></p>");       
+//            if (output5State=="off") {
+//              client.println("<p><a href=\"/5/on\"><button class=\"button\">ON</button></a></p>");
+//            } else {
+//              client.println("<p><a href=\"/5/off\"><button class=\"button button2\">OFF</button></a></p>");
+//            } 
                
             // Display current state, and ON/OFF buttons for GPIO 4  
-            client.println("<p>GPIO 4 - State " + output4State + "</p>");
-            // If the output4State is off, it displays the ON button       
-            if (output4State=="off") {
-              client.println("<p><a href=\"/4/on\"><button class=\"button\">ON</button></a></p>");
-            } else {
-              client.println("<p><a href=\"/4/off\"><button class=\"button button2\">OFF</button></a></p>");
+//            client.println("<p>GPIO 4 - State " + output4State + "</p>");
+            // If the output4State is off, it displays the ON button
+            client.println("<p><a href=\"/4/on\"><button class=\"button\">Clear</button></a></p>");       
+//            if (output4State=="off") {
+//              client.println("<p><a href=\"/4/on\"><button class=\"button\">ON</button></a></p>");
+//            } else {
+//              client.println("<p><a href=\"/4/off\"><button class=\"button button2\">OFF</button></a></p>");
+//            }
+
+            //Table for displaying values and buttons
+            client.println("<table align='center'>");
+            client.println("<tr>");
+            client.println("<td>Time/Date</td>");
+            client.println("<td>Content</td>");
+            client.println("</tr>");
+            counter = 0;
+            ind2 = log_operations.indexOf(':', 0);
+            Serial.println("Ind2");
+            Serial.println(ind2);
+            for (int i = 0; i < number_of_packets; i++) {
+              if (i == 0) {
+                Serial.println("number_of_packets");
+                Serial.println(number_of_packets);
+                token = log_operations.substring(0, ind2);
+                Serial.println("token");
+                Serial.println(token);
+              } else {
+                token = log_operations.substring(ind2+counter, (ind2+counter+7));
+                 Serial.println("token");
+                Serial.println(token);
+                counter = counter + 7;
+                Serial.println("counter");
+                Serial.println(counter);
+              }
+              client.println("<tr>");
+              client.println("<td>" + String(i) + "</td>");
+              client.println("<td>" + token  + "</td>");
+              client.println("</tr>");
             }
+            client.println("</table>");
+
             client.println("</body></html>");
             
             // The HTTP response ends with another blank line

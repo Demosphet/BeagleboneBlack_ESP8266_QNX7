@@ -10,6 +10,7 @@
 #include <share.h>
 #include <string.h>
 #include <stdint.h>         // For unit32 types
+#include <mqueue.h>
 #include <sys/iofunc.h>
 #include <sys/dispatch.h>
 #include <sys/neutrino.h>
@@ -83,13 +84,8 @@
 #define TSPI_WRITE_16                           (16)
 #define TSPI_WRITE_32                           (32)
 
-// Native Message Passing
-/* Define where the channel is located
-** Only need to use one of these (depending if you want to use QNET networking or running it locally):
-*/
-#define LOCAL_ATTACH_POINT "test_native_message_passing"                                        // Change myname to the same name used for the server code.
-#define QNET_ATTACH_POINT  "net/RMIT_BBB_v5_Sachith/dev/name/local/test_native_message_passing" // Hostname using full path, change myname to the name used for server
-#define BUF_SIZE 100                                                                            // Buffer size for messages
+// Message Queues
+#define MESSAGESIZE                             1000
 
 ////--------------------------------Global Variables//--------------------------------
 // UART - Message size
@@ -111,19 +107,6 @@ typedef union _CONF_MODULE_PIN_STRUCT {             // See TRM Page 1446
     } b;
 }   _CONF_MODULE_PIN;
 
-// Struct for handling the initial data sent to the server
-typedef struct {
-    struct _pulse hdr;  // Our real data comes after this header
-    int ClientID;       // Our data (unique id from client)
-    char data[BUF_SIZE];
-}   my_data;
-
-// Struct for handling the reply sent to the server
-typedef struct {
-    struct _pulse hdr;  // Our real data comes after this header
-    char buf[BUF_SIZE]; // Message we send back to clients to tell them the messages was processed correctly.
-}   my_reply;
-
 // File openers and return variable
 int file;
 int ret;
@@ -138,50 +121,25 @@ uint8_t reg4[8]     =                           {0x48, 0x65, 0x72, 0x65, 0x21, 0
 uint8_t reg5[12]    =                           {0x48, 0x65, 0x6c, 0x6c, 0x6f, 0x20, 0x53, 0x6c, 0x61, 0x76, 0x65};
 uint8_t reg6[16]    =                           {0x41, 0x72, 0x65, 0x20, 0x79, 0x6f, 0x75, 0x20, 0x61, 0x6c, 0x69, 0x76, 0x65, 0x3f, 0x0};
 
-//--------------------------------Prototypes--------------------------------
-// int native_message_passing_client(char *sname, char *message);
-int native_message_passing_client(char *sname);
-void Pin_status();
-void Pin_control(unsigned int pin, unsigned int value);
-void Pin_config(int mode, unsigned int puden, unsigned int putypesel, unsigned int rxactive, unsigned int slewctrl, unsigned int pin);
-int spiopen();
-int spisetcfg();
-int spigetdevinfo();
-int spiwrite(int iterations);
-int spiclose();
-int UART_write();
-int UART_read();
-// int UART_write(char *message, int iterations);
-// char *UART_read();
+// //--------------------------------Prototypes--------------------------------
+// void Pin_status();
+// void Pin_control(unsigned int pin, unsigned int value);
+// void Pin_config(int mode, unsigned int puden, unsigned int putypesel, unsigned int rxactive, unsigned int slewctrl, unsigned int pin);
+// int spiopen();
+// int spisetcfg();
+// int spigetdevinfo();
+// int spiwrite(int iterations);
+// int spiclose();
+// int UART_write();
+// int UART_read();
+// // int UART_write(char *message, int iterations);
+// // char *UART_read();
 
 //-------------------------------------------------------------------------
-int main(void) {
+int main(int argc, char *argv[]) {
     puts("Hello World!!!"); /* prints Hello World!!! */
 
     ThreadCtl( _NTO_TCTL_IO_PRIV , NULL); // Request I/O privileges
-    Pin_status();
-    Pin_config(PIN_MODE_7,PU_ENABLE,PU_PULL_DOWN,RECV_ENABLE,SLEW_FAST,GPIO_2_pinConfig);
-    Pin_config(PIN_MODE_7,PU_ENABLE,PU_PULL_DOWN,RECV_ENABLE,SLEW_FAST,GPIO_3_pinConfig);
-    Pin_status();
-    Pin_control(GPIO02, 0xFF);
-    Pin_control(GPIO03, 0xFF);
-    Pin_control(GPIO06, 0xFF);
-    Pin_control(GPIO07, 0xFF);
-    Pin_status();   
-    sleep(3);
-
-    // //--------GPIO Check & Configuration Code--------
-    // // GPIO06 : Pin 3 - Connector 8
-    // // GPIO07  : Pin 4 - Connector 8
-    // Pin_status();
-    // Pin_control(GPIO07,0x00);
-    // Pin_control(GPIO07,0xFF);
-    // Pin_control(GPIO06,0x00);
-    // Pin_control(GPIO06,0xFF);
-    // // sleep(1);
-    // // Pin_config(PIN_MODE_0,PU_ENABLE,PU_PULL_DOWN,RECV_DISABLE,SLEW_FAST,uart1_ctsn_pinConfig);
-    // // Pin_config(PIN_MODE_0,PU_ENABLE,PU_PULL_DOWN,RECV_DISABLE,SLEW_FAST,uart1_rtsn_pinConfig);
-    // // Pin_status();
 
     //--------UART Code--------
     // Tx : Pin 13 - Connector 9
@@ -189,149 +147,51 @@ int main(void) {
     ret = 0;
     file = open(UART_PATH, O_RDWR);
 
-    ret = 0;
-    printf("\nThis is A Client running\n");
-    ret = native_message_passing_client(LOCAL_ATTACH_POINT);
+    printf("Welcome to the QNX Momentics mqueue receive process\n");
 
-    // // Test 2 Implementations
-    // int living = 1;
-    // while (living) {
-    //     printf("Waiting for a packet from the ESP8266\n");
-    //     UART_read();
-    //     printf("\nThis is A Client running\n");
-    //     ret = 0;
-    //     ret = native_message_passing_client(LOCAL_ATTACH_POINT, char_read_buffer);
-    //     UART_write();
-    //     if (!strcmp(char_read_buffer,"END")) {
-    //         living = 0;
-    //     }
-    // }
+    mqd_t   qd;
+    char    buf[MESSAGESIZE];
 
-    // // Test 1 Implementations
-    // UART_write("Hello",1);
-    // printf("Value of UART_read: %s\n", UART_read());
+    struct  mq_attr attr;
+
+    // example using the default path notation.
+    const char * MqueueLocation = "/test_queue";    /* will be located /dev/mqueue/test_queue  */
+    //const char * MqueueLocation = "/net/VM-Target01/dev/mqueue/test_queue"; // (when Bridged use: VM-Target01.sece-lab.rmit.edu.au)
+    /* Use the above line for networked (qnet) MqueueLocation
+     * the command 'hostname <name>' to set hostname. here it is 'M1'
+     * You mast also have qnet running. to do this execute the following
+     * command: mount -T io-net /lib/dll/lsm-qnet.so
+     */
+
+    qd = mq_open(MqueueLocation, O_RDONLY);     //MqueueLocation should be opened on the node where the queue was established
+    while (1) {
+        if (qd != -1) {
+            mq_getattr(qd, &attr);
+            printf ("max. %ld msgs, %ld bytes; waiting: %ld\n", attr.mq_maxmsg, attr.mq_msgsize, attr.mq_curmsgs);
+
+            while (mq_receive(qd, buf, MESSAGESIZE, NULL) > 0)  //wait for the messages
+            {
+                printf("dequeue: '%s'\n", buf);                 //print out the messages to this terminal
+                if (!strcmp(buf, "done")) {          //once we get this message we know not to expect any more mqueue data
+                    break;
+                } else {
+                    strcpy(char_write_buffer, buf);
+                    UART_write();
+                }
+            }
+            mq_close(qd);
+        }
+    }
 
     if (close(file) == -1) {
         printf("close failed: %s\n", strerror(errno));
     }
 
-    // //--------SPI Code--------
-    // // CS   : Pin 28 - Connector 9
-    // // MOSI : Pin 29 - Connector 9 (MISO)
-    // // MISO : Pin 30 - Connector 9 (MIS1)
-    // // SCLK : Pin 31 - Connector 9
-    // spiopen(SPI_PATH);
-    // spisetcfg();
-
-    // // printf("How many times would you like to send the data? ");
-    // // int input;
-    // // scanf("%d",&input);
-    // // printf("Input: %d\n\n",input);
-
-    // // spiwrite(input);
-    // spiwrite(1000);
-    // spiclose();
 
     printf("Main Terminated...!\n");
     return EXIT_SUCCESS;
 }
 //--------------------------------Function Definitions--------------------------------
-// Native Message Passing Client code
-int native_message_passing_client(char *sname/*, char *message*/) {
-    my_data msg;
-    my_reply reply;
-
-    int server_coid;
-    int compare;
-    int index    = 0;
-    int living   = 1;
-    msg.ClientID = 600; // Unique number for this client (optional)
-    char message[32];
-
-    printf("Trying to connect to server named: %s\n", sname);
-    // if ((server_coid = name_open(sname, 0)) == -1) {
-    //     printf("--->ERROR, could not connect to server!\n\n");
-    //     return EXIT_FAILURE;
-    // }
-    while ((server_coid = name_open(sname, 0)) == -1) {
-        printf("--->ERROR, could not connect to server!\n\n");
-        delay(250);
-    }
-
-
-    printf("Connection established to: %s\n\n", sname);
-
-    // We would have pre-defined data to stuff here
-    msg.hdr.type    = 0x00;
-    msg.hdr.subtype = 0x00;
-
-    // Do whatever work you wanted with server connection
-    while(living) { // send data packets
-        UART_read();
-        strcpy(msg.data, char_read_buffer);
-
-        // // Original implementation
-        // printf("Enter the message you wish to send: ");
-        // if(fgets(message, sizeof message, stdin) != NULL) {
-        //     message[strcspn(message, "\r\n")] = 0;
-        // } else {
-        //     printf("Error: No characters have been read at end-of-file!\n");
-        // }
-        // // scanf("%s", &message);
-        // // printf("You entered: %s\n", message);
-
-        // if (!strcmp(message, "END")) {
-        //     printf("Equal to intended\n");
-        //     living = 0;
-        // }
-        
-        // // Test 2 Implementation
-        // strcpy(msg.data, message);
-
-        // // Test 3 Implementation
-        // UART_read();
-        // strcpy(msg.data, char_read_buffer);
-
-        // the data we are sending is in msg.data
-        // printf("char message: '%s'\n", message); // Test 2 Implementation
-        printf("Client (ID:%d), sending data packet with the integer value: %s \n", msg.ClientID, msg.data);
-        fflush(stdout);
-
-        if (MsgSend(server_coid, &msg, sizeof(msg), &reply, sizeof(reply)) == -1) {
-            printf("--->Error data '%s' NOT sent to server\n", msg.data);
-            // maybe we did not get a reply from the server
-            // break;
-
-            printf("--->Trying to connect to server named: %s\n", sname);
-            if ((server_coid = name_open(sname, 0)) == -1) {
-                printf("--->ERROR, could not connect to server!\n\n");
-                // return EXIT_FAILURE;
-            } else {
-                printf("Connection established to: %s\n", sname);
-            }
-        } else { // now process the reply
-            printf("Reply is: '%s'\n\n", reply.buf);
-            strcpy(char_write_buffer, reply.buf);
-            UART_write();
-            // UART_read();
-
-            if (!strcmp(reply.buf, "Request to Terminate has been received")) {
-                living = 0;
-            } else {
-                living = 1;
-            }
-        }
-        sleep(1);       // Wait a few seconds before sending the next data packet
-        // living = 0;     // Testing purposes only
-    }
-
-    // Close the connection
-    printf("\nSending message to server to tell it to close the connection\n");
-    name_close(server_coid);
-
-    return EXIT_SUCCESS;
-}
-
 // Checking the status of the pins
 void Pin_status() {
     printf("0. val = %#8x\n\n",AM335X_GPIO1_BASE);

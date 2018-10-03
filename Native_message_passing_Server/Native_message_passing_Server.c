@@ -15,9 +15,9 @@
 // Change myname to something unique for you (The client should be set to same name)
 #define ATTACH_POINT "test_native_message_passing"
 
-#define BUF_SIZE 100
+#define BUF_SIZE 7000
 
-char key_press_data[100];
+char key_press_data[7000];
 
 typedef struct {
     struct _pulse hdr; // Our real data comes after this header
@@ -163,87 +163,88 @@ void DecodeKeyValue(uint32_t word)
         case 0x01:
             printf("Key  1 pressed\n");
             pthread_create(NULL, NULL, Flash_LED0_ex, NULL); // flash LED
-            strcpy(key_press_data,"Key  1 pressed");
+            strcat(key_press_data,"Key  1:");
             break;
         case 0x02:
             printf("Key  2 pressed\n");
             pthread_create(NULL, NULL, Flash_LED0_ex, NULL); // flash LED
-            strcpy(key_press_data,"Key  2 pressed");
+            strcat(key_press_data,"Key  2:");
             break;
         case 0x04:
             printf("Key  3 pressed\n");
             pthread_create(NULL, NULL, Flash_LED0_ex, NULL); // flash LED
-            strcpy(key_press_data,"Key  3 pressed");
+            strcat(key_press_data,"Key  3:");
             break;
         case 0x08:
             printf("Key  4 pressed\n");
             pthread_create(NULL, NULL, Flash_LED0_ex, NULL); // flash LED
-            strcpy(key_press_data,"Key  4 pressed");
+            strcat(key_press_data,"Key  4:");
             break;
         case 0x10:
             printf("Key  5 pressed\n");
             pthread_create(NULL, NULL, Flash_LED0_ex, NULL); // flash LED
-            strcpy(key_press_data,"Key  5 pressed");
+            strcat(key_press_data,"Key  5:");
             break;
         case 0x20:
             printf("Key  6 pressed\n");
             pthread_create(NULL, NULL, Flash_LED0_ex, NULL); // flash LED
-            strcpy(key_press_data,"Key  6 pressed");
+            strcat(key_press_data,"Key  6:");
             break;
         case 0x40:
             printf("Key  7 pressed\n");
             pthread_create(NULL, NULL, Flash_LED0_ex, NULL); // flash LED
-            strcpy(key_press_data,"Key  7 pressed");
+            strcat(key_press_data,"Key  7:");
             break;
         case 0x80:
             printf("Key  8 pressed\n");
             pthread_create(NULL, NULL, Flash_LED0_ex, NULL); // flash LED
-            strcpy(key_press_data,"Key  8 pressed");
+            strcat(key_press_data,"Key  8:");
             break;
         case 0x100:
             printf("Key  9 pressed\n");
             pthread_create(NULL, NULL, Flash_LED0_ex, NULL); // flash LED
-            strcpy(key_press_data,"Key  9 pressed");
+            strcat(key_press_data,"Key  9:");
             break;
         case 0x200:
             printf("Key 10 pressed\n");
             pthread_create(NULL, NULL, Flash_LED0_ex, NULL); // flash LED
-            strcpy(key_press_data,"Key  10 pressed");
+            strcat(key_press_data,"Key  10:");
             break;
         case 0x400:
             printf("Key 11 pressed\n");
             pthread_create(NULL, NULL, Flash_LED0_ex, NULL); // flash LED
-            strcpy(key_press_data,"Key  11 pressed");
+            strcat(key_press_data,"Key  11:");
             break;
         case 0x800:
             printf("Key 12 pressed\n");
             pthread_create(NULL, NULL, Flash_LED0_ex, NULL); // flash LED
-            strcpy(key_press_data,"Key  12 pressed");
+            strcat(key_press_data,"Key  12:");
             break;
         case 0x1000:
             printf("Key 13 pressed\n");
             pthread_create(NULL, NULL, Flash_LED0_ex, NULL); // flash LED
-            strcpy(key_press_data,"Key  13 pressed");
+            strcat(key_press_data,"Key  13:");
             break;
         case 0x2000:
             printf("Key 14 pressed\n");
             pthread_create(NULL, NULL, Flash_LED0_ex, NULL); // flash LED
-            strcpy(key_press_data,"Key  14 pressed");
+            strcat(key_press_data,"Key  14:");
             break;
         case 0x4000:
             printf("Key 15 pressed\n");
             pthread_create(NULL, NULL, Flash_LED0_ex, NULL); // flash LED
-            strcpy(key_press_data,"Key  15 pressed");
+            strcat(key_press_data,"Key  15:");
             break;
         case 0x8000:
             printf("Key 16 pressed\n");
             pthread_create(NULL, NULL, Flash_LED0_ex, NULL); // flash LED
-            strcpy(key_press_data,"Key  16 pressed");
+            strcat(key_press_data,"Key  16:");
             break;
         case 0x00:  // key release event (do nothing)
             break;
         default:
             printf("Key pressed could not be determined - %lu\n", word);
+            strcat(key_press_data,"Unknown:");
     }
 }
 

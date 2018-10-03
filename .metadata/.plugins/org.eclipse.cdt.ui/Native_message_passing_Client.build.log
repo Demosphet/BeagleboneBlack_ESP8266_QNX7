@@ -1,12 +1,12 @@
-"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm all --file=C:/Users/sachs/AppData/Local/Temp/QMakefile15383003754432166494568965973314.tmp 
-C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile all
+"C:\\qnx700\\host\\win64\\x86_64\\usr\\bin\\make.exe" -k CPULIST=arm clean --file=C:/Users/sachs/AppData/Local/Temp/QMakefile1538551745970344829557069138131.tmp 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Carm -fMakefile clean
 make.exe[1]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/arm'
-C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile all 
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7 -fMakefile clean 
 make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/arm/o-le-v7'
-make.exe[2]: Nothing to be done for 'all'.
+C:/qnx700/host/win64/x86_64/usr/bin/rm -f  Native_message_passing_Client  *.pinfo *.o *.err *.map mapfile *.sym *.i   
 make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/arm/o-le-v7'
-C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile all
+C:/qnx700/host/win64/x86_64/usr/bin/make.exe -j 1 -Co-le-v7-g -fMakefile clean
 make.exe[2]: Entering directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/arm/o-le-v7-g'
-make.exe[2]: Nothing to be done for 'all'.
+C:/qnx700/host/win64/x86_64/usr/bin/rm -f  Native_message_passing_Client_g  *.pinfo *.o *.err *.map mapfile *.sym *.i   
 make.exe[2]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/arm/o-le-v7-g'
 make.exe[1]: Leaving directory 'C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client/arm'
