@@ -1,8 +1,14 @@
+/*--------------------------------Pin Configuration--------------------------------
+**
+** Beaglebone Black Pins           -> ESP-12F Witty Cloud
+** UART Tx - Pin 13  - Connector 9 -> Rx
+** UART Rx - Pin 11  - Connector 9 -> Tx
+** GND     - Pin 1/2 - Connector 9 -> GND
+*/
+
 //--------------------------------Headers--------------------------------
 #include <stdio.h>
 #include <stdlib.h>
-
-// New Headers
 #include <devctl.h>
 #include <errno.h>
 #include <unistd.h>
@@ -77,7 +83,7 @@
 #define PIN_MODE_7                              0x07
 
 // SPI - Path & Message size
-#define SPI_PATH "/dev/spi1"
+#define SPI_PATH                                "/dev/spi1"
 #define TSPI_WRITE_7                            (7)
 #define TSPI_WRITE_SHORT                        (8)
 #define TSPI_WRITE_12                           (12)
@@ -87,7 +93,7 @@
 // Message Queues
 #define MESSAGESIZE                             1000
 
-////--------------------------------Global Variables//--------------------------------
+//--------------------------------Global Variables--------------------------------
 // UART - Message size
 char char_read_temp_buffer                      [32];
 char char_read_buffer                           [32];
@@ -121,19 +127,18 @@ uint8_t reg4[8]     =                           {0x48, 0x65, 0x72, 0x65, 0x21, 0
 uint8_t reg5[12]    =                           {0x48, 0x65, 0x6c, 0x6c, 0x6f, 0x20, 0x53, 0x6c, 0x61, 0x76, 0x65};
 uint8_t reg6[16]    =                           {0x41, 0x72, 0x65, 0x20, 0x79, 0x6f, 0x75, 0x20, 0x61, 0x6c, 0x69, 0x76, 0x65, 0x3f, 0x0};
 
-// //--------------------------------Prototypes--------------------------------
-// void Pin_status();
-// void Pin_control(unsigned int pin, unsigned int value);
-// void Pin_config(int mode, unsigned int puden, unsigned int putypesel, unsigned int rxactive, unsigned int slewctrl, unsigned int pin);
-// int spiopen();
-// int spisetcfg();
-// int spigetdevinfo();
-// int spiwrite(int iterations);
-// int spiclose();
-// int UART_write();
-// int UART_read();
-// // int UART_write(char *message, int iterations);
-// // char *UART_read();
+//--------------------------------Prototypes--------------------------------
+void Pin_status();
+void Pin_control(unsigned int pin, unsigned int value);
+void Pin_config(int mode, unsigned int puden, unsigned int putypesel, unsigned int rxactive, unsigned int slewctrl, unsigned int pin);
+int spiopen();
+int spisetcfg();
+int spigetdevinfo();
+int spiwrite(int iterations);
+int spiclose();
+int UART_write();
+int UART_read();
+
 
 //-------------------------------------------------------------------------
 int main(int argc, char *argv[]) {
@@ -141,11 +146,16 @@ int main(int argc, char *argv[]) {
 
     ThreadCtl( _NTO_TCTL_IO_PRIV , NULL); // Request I/O privileges
 
-    //--------UART Code--------
-    // Tx : Pin 13 - Connector 9
-    // Rx : Pin 11 - Connector 9
-    ret = 0;
-    file = open(UART_PATH, O_RDWR);
+    // Pin_status();
+    // Pin_config(PIN_MODE_7,PU_ENABLE,PU_PULL_DOWN,RECV_ENABLE,SLEW_FAST,GPIO_2_pinConfig);
+    // Pin_config(PIN_MODE_7,PU_ENABLE,PU_PULL_DOWN,RECV_ENABLE,SLEW_FAST,GPIO_3_pinConfig);
+    // Pin_status();
+    // Pin_control(GPIO02, 0xFF);
+    // Pin_control(GPIO03, 0xFF);
+    // Pin_control(GPIO06, 0xFF);
+    // Pin_control(GPIO07, 0xFF);
+    // Pin_status();   
+    // sleep(3);
 
     printf("Welcome to the QNX Momentics mqueue receive process\n");
 
@@ -154,39 +164,33 @@ int main(int argc, char *argv[]) {
 
     struct  mq_attr attr;
 
-    // example using the default path notation.
-    const char * MqueueLocation = "/test_queue";    /* will be located /dev/mqueue/test_queue  */
-    //const char * MqueueLocation = "/net/VM-Target01/dev/mqueue/test_queue"; // (when Bridged use: VM-Target01.sece-lab.rmit.edu.au)
-    /* Use the above line for networked (qnet) MqueueLocation
-     * the command 'hostname <name>' to set hostname. here it is 'M1'
-     * You mast also have qnet running. to do this execute the following
-     * command: mount -T io-net /lib/dll/lsm-qnet.so
-     */
+    // Configuring the location for the mqueue
+    const char * MqueueLocation = "/test_queue";                // Will be located /dev/mqueue/test_queue
 
-    qd = mq_open(MqueueLocation, O_RDONLY);     //MqueueLocation should be opened on the node where the queue was established
+    int count = 0;
+    qd = mq_open(MqueueLocation, O_RDONLY);                     // MqueueLocation should be opened on the node where the queue was established
     while (1) {
         if (qd != -1) {
             mq_getattr(qd, &attr);
+            // Stating mqueue configuration from the sending process
             printf ("max. %ld msgs, %ld bytes; waiting: %ld\n", attr.mq_maxmsg, attr.mq_msgsize, attr.mq_curmsgs);
 
-            while (mq_receive(qd, buf, MESSAGESIZE, NULL) > 0)  //wait for the messages
-            {
-                printf("dequeue: '%s'\n", buf);                 //print out the messages to this terminal
-                if (!strcmp(buf, "done")) {          //once we get this message we know not to expect any more mqueue data
-                    break;
-                } else {
-                    strcpy(char_write_buffer, buf);
-                    UART_write();
+            // Dequeue strings from the sending process
+            while (mq_receive(qd, buf, MESSAGESIZE, NULL) > 0) {
+                printf("dequeue: '%s'\n", buf);                 // Print out the messages to this terminal
+                strcpy(char_write_buffer, buf);
+                //--------UART Code--------
+                ret = 0;
+                file = open(UART_PATH, O_RDWR);
+                UART_write();
+                printf("Count value: %d\n", count++);
+                if (close(file) == -1) {
+                    printf("close failed: %s\n", strerror(errno));
                 }
             }
             mq_close(qd);
         }
     }
-
-    if (close(file) == -1) {
-        printf("close failed: %s\n", strerror(errno));
-    }
-
 
     printf("Main Terminated...!\n");
     return EXIT_SUCCESS;
@@ -434,45 +438,18 @@ int spiclose() {
 }
 
 // UART write function
-int UART_write(/*char *message, int iterations*/) {
+int UART_write() {
     ret = 0;
-    printf("Test 2\n");
     printf("\nTx: %s", char_write_buffer);
     ret = write(file, &char_write_buffer, strlen(char_write_buffer));
     printf("\nTx: Number of Bytes: %d\n", ret);
     return ret;
-
-    // int counter = 0;
-    // int living  = 1;
-    // ret         = 0;
-    // strcpy(char_write_buffer,message);
-
-    // while(living) {
-    //     printf("Test 2\n");
-    //     printf("\n%d Tx: %s", counter, char_write_buffer);
-    //     ret = write(file, &char_write_buffer, strlen(char_write_buffer));
-    //     printf("\n%d Tx: Number of Bytes: %d\n", counter, ret);
-    //     // delay(1000);
-    //     counter++;
-
-    //     if(iterations == counter){
-    //         living = 0;
-    //     }
-    // }
-    // return ret;
 }
 
 // UART read function
 int UART_read() {
     ret = 0;
-    // printf("Test 3\n");
-    // ret = read(file, &char_read_buffer, sizeof(char_read_buffer));
-    // printf("Test 4\n");
-    // char_read_buffer[ret-1] = '\0';
-
-    printf("Test 3\n");
     ret = read(file, &char_read_temp_buffer, sizeof(char_read_temp_buffer));
-    printf("Test 4\n");
     // char_read_buffer[ret] = '\0'    //Use this if you want to include either "\n" or the "\r" at the end
     char_read_temp_buffer[ret-1] = '\0';
     while (!strcmp(char_read_temp_buffer, "")) {
@@ -483,21 +460,4 @@ int UART_read() {
     printf("\nRx: Number of Bytes: %d", ret);
     printf("\nRx: %s\n", char_read_buffer);
     return ret;
-
-    // int counter = 0;
-    // int living  = 1;
-    // ret         = 0;
-
-    // while(living) {
-    //     printf("Test 3\n");
-    //     ret = read(file, &char_read_buffer, sizeof(char_read_buffer));
-    //     printf("Test 4\n");
-    //     char_read_buffer[ret] = '\0';
-    //     printf("\n%d Rx: Number of Bytes: %d", counter, ret);
-    //     printf("\n%d Rx: %s\n", counter, char_read_buffer);
-    //     counter++;
-    //     if(counter == 2){
-    //         living = 0;
-    //     }
-    // }
 }

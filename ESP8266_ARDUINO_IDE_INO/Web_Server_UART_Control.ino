@@ -13,6 +13,10 @@ const char* password = "Why not Whales-4-Wales!!!";
 //const char* ssid = "TP-Link-AkinaSpeedStars-2.4GHz";
 //const char* password = "Cool VIBRATIONS!?! Nan1? :0";
 
+// // WIFI Access point credentials
+// const char* ssid     = "ESP-AP";
+// const char* password = "Test Password";
+
 // Set web server port number to 80
 WiFiServer server(80);
 
@@ -27,14 +31,16 @@ String log_operations = "";
 String status_RTN = "Not acquired";
 
 // Tokenisation preparations
+int ind0;
 int ind1;
 int ind2;
 int ind3;
 int ind4;
+int ind5;
 int counter;
 int string_length;
 int number_of_packets = 0;
-int packet_length = 26;
+int packet_length = 21;
 String data_token = "";
 String time_date_token = "";
 
@@ -42,41 +48,42 @@ String time_date_token = "";
 //const int output5 = 5;
 //const int output4 = 4;
 
-String incoming_bytes = "";
+// String incoming_bytes = "";
+char incoming_bytes;
 
 void read_serial() {
-    if(Serial.available() > 0) {
-    incoming_bytes = "";
+    while (Serial.available() > 0) {
+      // incoming_bytes = "";
+      
+      // Serial.println("Serial.readString()");
+      // incoming_bytes = Serial.readString();  // Read incoming data as a String
+      incoming_bytes = Serial.read();
+      Serial.println(incoming_bytes);  
 
-//    Serial.println("Serial.readString()");
-//    Serial.println(Serial.readString()); 
-//    
-    incoming_bytes = Serial.readString();  // Read incoming data as a String
-    current_operations = incoming_bytes;
-    log_operations += current_operations;
-    
-    Serial.println("current_operations");
-    Serial.println(current_operations); 
+      current_operations = incoming_bytes;
+      log_operations += current_operations;
+      
+      Serial.println("current_operations");
+      Serial.println(current_operations); 
 
-    Serial.println("string_length - current_operations");
-    Serial.println(current_operations.length());    
+      Serial.println("string_length - current_operations");
+      Serial.println(current_operations.length());    
 
-    string_length = log_operations.length();
-    Serial.println("string_length");
-    Serial.println(string_length);
+      string_length = log_operations.length();
+      Serial.println("string_length");
+      Serial.println(string_length);
     number_of_packets = string_length/packet_length;
-    if (string_length == 0) {
+    } if (string_length == 0) {
       string_length = 1;
     } else {
-      ind1 = log_operations.lastIndexOf('|',(string_length-2));
-      ind2 = log_operations.lastIndexOf('|',(ind1-1));
+      ind0 = log_operations.lastIndexOf('|',(string_length-2));
+      ind1 = log_operations.lastIndexOf('|',(ind0-1));
+      Serial.println("ind0");
+      Serial.println(ind0);
       Serial.println("ind1");
       Serial.println(ind1);
-      Serial.println("ind2");
-      Serial.println(ind2);
-      current_operations = log_operations.substring(ind2+1, (string_length-1));
+      current_operations = log_operations.substring(ind1+1, (string_length-1));
     }
-  }
 }
 
 void clear_variables() {
@@ -85,33 +92,39 @@ void clear_variables() {
   status_RTN = "";
   data_token = "";
   time_date_token = "";
+  ind0 = 0;
   ind1 = 0;
   ind2 = 0;
+  ind3 = 0;
+  ind4 = 0;
   string_length = 0;
 }
 
 void setup() {
   Serial.begin(115200);
-//  // Initialize the output variables as outputs
-//  pinMode(output5, OUTPUT);
-//  pinMode(output4, OUTPUT);
-//  // Set outputs to LOW
-//  digitalWrite(output5, LOW);
-//  digitalWrite(output4, LOW);
 
-  // Connect to Wi-Fi network with SSID and password
-//  Serial.print("Connecting to ");
-//  Serial.println(ssid);
+  // // WIFI Access Point Code
+  // Serial.print("Configuring access point...");
+  // WiFi.softAP(ssid, password);
+  // IPAddress myIP = WiFi.softAPIP();
+  // Serial.print("AP IP address: ");
+  // Serial.println(myIP);
+  // server.begin();
+  // Serial.println("HTTP server started");
+
+  // WIFI Client Code
+  Serial.print("Connecting to ");
+  Serial.println(ssid);
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
-//    Serial.print(".");
+    Serial.print(".");
   }
-//  // Print local IP address and start web server
-//  Serial.println("");
-//  Serial.println("WiFi connected.");
-//  Serial.println("IP address: ");
-//  Serial.println(WiFi.localIP());
+  // Print local IP address and start web server
+  Serial.println("");
+  Serial.println("WiFi connected.");
+  Serial.println("IP address: ");
+  Serial.println(WiFi.localIP());
   server.begin();
 }
 
@@ -119,7 +132,7 @@ void loop(){
   WiFiClient client = server.available();   // Listen for incoming clients
 
   if (client) {                             // If a new client connects,
-//    Serial.println("New Client.");          // print a message out in the serial port
+    Serial.println("New Client.");          // print a message out in the serial port
     String currentLine = "";                // make a String to hold incoming data from the client
     while (client.connected()) {            // loop while the client's connected
       if (client.available()) {             // if there's bytes to read from the client,
@@ -139,34 +152,14 @@ void loop(){
             
             // turns the GPIOs on and off
             if (header.indexOf("GET /5/on") >= 0) {
-              // output5State = "on";
-              // digitalWrite(output5, HIGH);
-              Serial.println("Data?");
+              // Serial.println("Data?");
               read_serial();
-              
-//            } else if (header.indexOf("GET /5/off") >= 0) {
-//              output5State = "off";
-//              // digitalWrite(output5, LOW);
-//              Serial.println("First response");
-//              read_serial();
-//            } 
 
             } else if (header.indexOf("GET /4/on") >= 0) {
-              // output4State = "on";
-              // GPIO_4_state = "ON";
-              // Serial.println("ON");
-              Serial.println("First response");
+              // Serial.println("First response");
               clear_variables();
               
             }
-            
-//            } else if (header.indexOf("GET /4/off") >= 0) {
-//              Serial.println("GPIO 4 off");
-//              output4State = "off";
-//              // GPIO_4_state = "OFF";
-//              //Serial.println("OFF");
-//            }
-            
             // Display the HTML web page
             client.println("<!DOCTYPE html><html>");
             client.println("<head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">");
@@ -185,31 +178,15 @@ void loop(){
             client.println("<body><h2>Current Operations : " + current_operations + " </h2>");
             client.println("<body><h2>Status : " + log_operations + " </h2>");
                     
-            // Display current state, and ON/OFF buttons for GPIO 5  
-//            client.println("<p>GPIO 5 - State " + output5State + "</p>");
-            // If the output5State is off, it displays the ON button
-            client.println("<p><a href=\"/5/on\"><button class=\"button\">Request</button></a></p>");       
-//            if (output5State=="off") {
-//              client.println("<p><a href=\"/5/on\"><button class=\"button\">ON</button></a></p>");
-//            } else {
-//              client.println("<p><a href=\"/5/off\"><button class=\"button button2\">OFF</button></a></p>");
-//            } 
-               
-            // Display current state, and ON/OFF buttons for GPIO 4  
-//            client.println("<p>GPIO 4 - State " + output4State + "</p>");
-            // If the output4State is off, it displays the ON button
+            // Display current state, and ON/OFF buttons for GPIO 5
+            client.println("<p><a href=\"/5/on\"><button class=\"button\">Request</button></a></p>");
             client.println("<p><a href=\"/4/on\"><button class=\"button\">Clear</button></a></p>");       
-//            if (output4State=="off") {
-//              client.println("<p><a href=\"/4/on\"><button class=\"button\">ON</button></a></p>");
-//            } else {
-//              client.println("<p><a href=\"/4/off\"><button class=\"button button2\">OFF</button></a></p>");
-//            }
 
             //Table for displaying values and buttons
             client.println("<table align='center'>");
             client.println("<tr>");
             client.println("<td>Time/Date</td>");
-            client.println("<td>Content</td>");
+            client.println("<td>Key Presses</td>");
             client.println("</tr>");
             counter = 0;
             ind3 = log_operations.indexOf('|', 0);
@@ -218,26 +195,50 @@ void loop(){
             Serial.println(ind3);
             Serial.println("Ind4");
             Serial.println(ind4);
-            for (int i = 0; i < number_of_packets; i++) {
+            for (int i = 0; i <= number_of_packets; i++) {
               if (i == 0) {
                 Serial.println("number_of_packets");
                 Serial.println(number_of_packets);
+
                 data_token = log_operations.substring(0, ind3);
-                time_date_token = log_operations.substring((ind3+1), (ind3+18));
+                time_date_token = log_operations.substring((ind3+1), ind4);
                 Serial.println("data_token");
                 Serial.println(data_token);
                 Serial.println("time_date_token");
                 Serial.println(time_date_token);
+
+                ind2 = ind4 + 1;
+                ind3 = log_operations.indexOf('|',(ind2));
+                ind4 = log_operations.indexOf('|',(ind3+1));
+                Serial.println("Ind2");
+                Serial.println(ind2);
+                Serial.println("Ind3");
+                Serial.println(ind3);
+                Serial.println("Ind4");
+                Serial.println(ind4);
               } else {
-                data_token = log_operations.substring(ind4+1+counter, (ind4+8+counter));
-                time_date_token = log_operations.substring(ind4+9+counter, (ind4+9+counter+18));
+                // data_token = log_operations.substring(ind4+1+counter, (ind4+1+counter+7));
+                // time_date_token = log_operations.substring(ind4+1+7+counter, (ind4+1+7+counter+18));
+                data_token = log_operations.substring(ind2, ind3);
+                time_date_token = log_operations.substring((ind3+1), ind4);
                 Serial.println("data_token");
                 Serial.println(data_token);
+                Serial.println("time_date_token");
+                Serial.println(time_date_token);
+
                 counter = counter + packet_length;
                 Serial.println("counter");
                 Serial.println(counter);
-                Serial.println("time_date_token");
-                Serial.println(time_date_token);                
+
+                ind2 = ind4 + 1;
+                ind3 = log_operations.indexOf('|',(ind2));
+                ind4 = log_operations.indexOf('|',(ind3+1));
+                Serial.println("Ind2");
+                Serial.println(ind2);
+                Serial.println("Ind3");
+                Serial.println(ind3);
+                Serial.println("Ind4");
+                Serial.println(ind4);
               }
               client.println("<tr>");
               client.println("<td>" + time_date_token + "</td>");
@@ -264,7 +265,7 @@ void loop(){
     header = "";
     // Close the connection
     client.stop();
-//    Serial.println("Client disconnected.");
+    Serial.println("Client disconnected.");
 //    Serial.println("");
   }
 }

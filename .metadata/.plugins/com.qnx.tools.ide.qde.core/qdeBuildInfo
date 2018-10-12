@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QdeProjectsBuildInfo>
+<qdeBuildInfo IMemento.internal.id="C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Send" projectName="Message_Queue_Send">
+<srcDirs/>
+<libDirs/>
+<incDirs/>
+<libs/>
+<SRCS/>
+<macros/>
+</qdeBuildInfo>
+<qdeBuildInfo IMemento.internal.id="C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Keypad_InterruptAttachEvent" projectName="Keypad_InterruptAttachEvent">
+<srcDirs/>
+<libDirs/>
+<incDirs/>
+<libs/>
+<SRCS/>
+<macros/>
+</qdeBuildInfo>
+<qdeBuildInfo IMemento.internal.id="C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Message_Queue_Receive" projectName="Message_Queue_Receive">
+<srcDirs/>
+<libDirs/>
+<incDirs/>
+<libs/>
+<SRCS/>
+<macros/>
+</qdeBuildInfo>
+<qdeBuildInfo IMemento.internal.id="C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Client" projectName="Native_message_passing_Client">
+<srcDirs/>
+<libDirs/>
+<incDirs/>
+<libs/>
+<SRCS/>
+<macros/>
+</qdeBuildInfo>
+<qdeBuildInfo IMemento.internal.id="C:/QNX7workspace/05ESP8266_BBB_UART_SPI/Native_message_passing_Server" projectName="Native_message_passing_Server">
+<srcDirs/>
+<libDirs/>
+<incDirs/>
+<libs/>
+<SRCS/>
+<macros/>
+</qdeBuildInfo>
+<qdeBuildInfo IMemento.internal.id="C:/QNX7workspace/05ESP8266_BBB_UART_SPI/ESP8266_BBB_UART_SPI" projectName="ESP8266_BBB_UART_SPI">
+<srcDirs/>
+<libDirs/>
+<incDirs/>
+<libs/>
+<SRCS/>
+<macros/>
+</qdeBuildInfo>
+</QdeProjectsBuildInfo>
