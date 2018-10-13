@@ -7,15 +7,15 @@
 // Load Wi-Fi library
 #include <ESP8266WiFi.h>
 
-// Replace with your network credentials
-const char* ssid     = "BigPond 12";
-const char* password = "Why not Whales-4-Wales!!!";
-//const char* ssid = "TP-Link-AkinaSpeedStars-2.4GHz";
-//const char* password = "Cool VIBRATIONS!?! Nan1? :0";
+//// Replace with your network credentials
+//const char* ssid     = "BigPond 12";
+//const char* password = "Why not Whales-4-Wales!!!";
+////const char* ssid = "TP-Link-AkinaSpeedStars-2.4GHz";
+////const char* password = "Cool VIBRATIONS!?! Nan1? :0";
 
-// // WIFI Access point credentials
-// const char* ssid     = "ESP-AP";
-// const char* password = "Test Password";
+ // WIFI Access point credentials
+ const char* ssid     = "ESP-AP - s3483160";
+ const char* password = "Test Password";
 
 // Set web server port number to 80
 WiFiServer server(80);
@@ -103,23 +103,23 @@ void clear_variables() {
 void setup() {
   Serial.begin(115200);
 
-  // // WIFI Access Point Code
-  // Serial.print("Configuring access point...");
-  // WiFi.softAP(ssid, password);
-  // IPAddress myIP = WiFi.softAPIP();
-  // Serial.print("AP IP address: ");
-  // Serial.println(myIP);
-  // server.begin();
-  // Serial.println("HTTP server started");
+   // WIFI Access Point Code
+   Serial.print("Configuring access point...");
+   WiFi.softAP(ssid, password);
+   IPAddress myIP = WiFi.softAPIP();
+   Serial.print("AP IP address: ");
+   Serial.println(myIP);
+   server.begin();
+   Serial.println("HTTP server started");
 
-  // WIFI Client Code
-  Serial.print("Connecting to ");
-  Serial.println(ssid);
-  WiFi.begin(ssid, password);
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-    Serial.print(".");
-  }
+//  // WIFI Client Code
+//  Serial.print("Connecting to ");
+//  Serial.println(ssid);
+//  WiFi.begin(ssid, password);
+//  while (WiFi.status() != WL_CONNECTED) {
+//    delay(500);
+//    Serial.print(".");
+//  }
   // Print local IP address and start web server
   Serial.println("");
   Serial.println("WiFi connected.");

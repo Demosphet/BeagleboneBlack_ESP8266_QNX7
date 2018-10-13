@@ -31,33 +31,45 @@
 #define AM335X_CONTROL_MODULE_BASE (uint64_t)   0x44E10000
 #define AM335X_CONTROL_MODULE_SIZE (size_t)     0x00001448
 #define AM335X_GPIO_SIZE                        0x00001000
-#define AM335X_GPIO1_BASE                       0x4804C000
+#define AM335X_GPIO1_BASE                       0x4804C000  // TRM pp 182 for GPIO1
+#define AM335X_GPIO2_BASE                       0x481AC000  // TRM pp 183 for GPIO2
 
 // GPIO configuration registers
-#define GPIO_OE                                 0x134   // Output Enable register
-#define GPIO_DATAOUT                            0x13C   // Data Out register
+#define GPIO_OE                                 0x134       // Output Enable register
+#define GPIO_DATAOUT                            0x13C       // Data Out register
 
 // GPIO pins
-#define GPIO02                                  (1<<2)  // Pin 5 - GPIO06
-#define GPIO03                                  (1<<3)  // Pin 6 - GPIO07
-#define GPIO06                                  (1<<6)  // Pin 3 - GPIO06
-#define GPIO07                                  (1<<7)  // Pin 4 - GPIO07
-
+#define GPIO1_02                                (1<<2)      // Pin 05 - GPIO1_06
+#define GPIO1_03                                (1<<3)      // Pin 06 - GPIO1_07
+#define GPIO1_06                                (1<<6)      // Pin 03 - GPIO1_06
+#define GPIO1_07                                (1<<7)      // Pin 04 - GPIO1_07
+#define GPIO2_06                                (1<<6)      // Pin 45 - GPIO2_06
+#define GPIO2_07                                (1<<7)      // Pin 46 - GPIO2_07
+#define GPIO2_08                                (1<<8)      // Pin 43 - GPIO2_08
+#define GPIO2_09                                (1<<9)      // Pin 44 - GPIO2_09
+#define GPIO2_10                                (1<<10)     // Pin 41 - GPIO2_10
+#define GPIO2_11                                (1<<11)     // Pin 42 - GPIO2_11
 
 // GPIO/SPI/UART Pin pinmux mode overview
-#define GPIO_2_pinConfig                        0x808   // conf_gpmc_a6 (TRM pp 1456) for GPIO1_6
-#define GPIO_3_pinConfig                        0x80C   // conf_gpmc_a6 (TRM pp 1456) for GPIO1_6
-#define GPIO_6_pinConfig                        0x818   // conf_gpmc_a6 (TRM pp 1456) for GPIO1_6
-#define GPIO_7_pinConfig                        0x81C   // conf_gpmc_a7 (TRM pp 1456) for GPIO1_7
-#define P9_12_pinConfig                         0x878 //  conf_gpmc_ben1 (TRM pp 1364) for GPIO1_28,  P9_12
-#define uart1_ctsn_pinConfig                    0x978   // conf_uart1_ctsn (TRM pp 1458) for uart1_ctsn
-#define uart1_rtsn_pinConfig                    0x97C   // conf_uart1_rtsn (TRM pp 1458) for uart1_rtsn
-#define uart1_rxd_pinConfig                     0x980   // conf_uart1_rxd (TRM pp 1458) for uart1_rxd
-#define uart1_txd_pinConfig                     0x984   // conf_uart1_txd (TRM pp 1458) for uart1_txd
-#define spi_cs_1_pinConfig                      0x99C   // conf_conf_mcasp0_ahclkr (TRM pp 1458) for spi_1_cs
-#define spi_d0_1_pinConfig                      0x994   // conf_conf_mcasp0_fsx (TRM pp 1458) for spi_1_d0
-#define spi_d1_1_pinConfig                      0x998   // conf_conf_mcasp0_axr0 (TRM pp 1458) for spi_1_d1
-#define spi_sclk_1_pinConfig                    0x990   // conf_conf_mcasp0_aclkx (TRM pp 1458) for spi_1_sclk
+#define GPIO1_2_pinConfig                       0x808       // conf_gpmc_ad2 (TRM pp 1456) for GPIO1_2
+#define GPIO1_3_pinConfig                       0x80C       // conf_gpmc_ad3 (TRM pp 1456) for GPIO1_3
+#define GPIO1_6_pinConfig                       0x818       // conf_gpmc_ad6 (TRM pp 1456) for GPIO1_6
+#define GPIO1_7_pinConfig                       0x81C       // conf_gpmc_ad7 (TRM pp 1456) for GPIO1_7
+#define GPIO2_6_pinConfig                       0x840       // conf_gpmc_a0 (TRM pp 1456) for GPIO2_6
+#define GPIO2_7_pinConfig                       0x844       // conf_gpmc_a1 (TRM pp 1456) for GPIO2_7
+#define GPIO2_8_pinConfig                       0x848       // conf_gpmc_a2 (TRM pp 1456) for GPIO2_8
+#define GPIO2_9_pinConfig                       0x84C       // conf_gpmc_a3 (TRM pp 1456) for GPIO2_9
+#define GPIO2_10_pinConfig                      0x850       // conf_gpmc_a4 (TRM pp 1456) for GPIO2_10
+#define GPIO2_11_pinConfig                      0x854       // conf_gpmc_a5 (TRM pp 1456) for GPIO2_11
+#define P9_12_pinConfig                         0x878       // conf_gpmc_ben1 (TRM pp 1364) for GPIO1_28,  P9_12
+#define uart1_ctsn_pinConfig                    0x978       // conf_uart1_ctsn (TRM pp 1458) for uart1_ctsn
+#define uart1_rtsn_pinConfig                    0x97C       // conf_uart1_rtsn (TRM pp 1458) for uart1_rtsn
+#define uart1_rxd_pinConfig                     0x980       // conf_uart1_rxd (TRM pp 1458) for uart1_rxd
+#define uart1_txd_pinConfig                     0x984       // conf_uart1_txd (TRM pp 1458) for uart1_txd
+#define spi_cs_1_pinConfig                      0x99C       // conf_conf_mcasp0_ahclkr (TRM pp 1458) for spi_1_cs
+#define spi_d0_1_pinConfig                      0x994       // conf_conf_mcasp0_fsx (TRM pp 1458) for spi_1_d0
+#define spi_d1_1_pinConfig                      0x998       // conf_conf_mcasp0_axr0 (TRM pp 1458) for spi_1_d1
+#define spi_sclk_1_pinConfig                    0x990       // conf_conf_mcasp0_aclkx (TRM pp 1458) for spi_1_sclk
 
 // UART - Path & Message size
 #define UART_PATH                               "/dev/ser2"
@@ -147,13 +159,19 @@ int main(int argc, char *argv[]) {
     ThreadCtl( _NTO_TCTL_IO_PRIV , NULL); // Request I/O privileges
 
     // Pin_status();
-    // Pin_config(PIN_MODE_7,PU_ENABLE,PU_PULL_DOWN,RECV_ENABLE,SLEW_FAST,GPIO_2_pinConfig);
-    // Pin_config(PIN_MODE_7,PU_ENABLE,PU_PULL_DOWN,RECV_ENABLE,SLEW_FAST,GPIO_3_pinConfig);
+    // Pin_control(GPIO2_06, 0xFF);
+    // Pin_control(GPIO2_07, 0xFF);
+    // Pin_control(GPIO2_09, 0xFFF);
+    // Pin_control(GPIO2_08, 0xFFF);
+    // Pin_control(GPIO2_10, 0xFFF);
+    // Pin_control(GPIO2_11, 0xFFF);
+    // Pin_config(PIN_MODE_7,PU_ENABLE,PU_PULL_DOWN,RECV_ENABLE,SLEW_FAST,GPIO1_2_pinConfig);
+    // Pin_config(PIN_MODE_7,PU_ENABLE,PU_PULL_DOWN,RECV_ENABLE,SLEW_FAST,GPIO1_3_pinConfig);
     // Pin_status();
-    // Pin_control(GPIO02, 0xFF);
-    // Pin_control(GPIO03, 0xFF);
-    // Pin_control(GPIO06, 0xFF);
-    // Pin_control(GPIO07, 0xFF);
+    // Pin_control(GPIO1_02, 0xFF);
+    // Pin_control(GPIO1_03, 0xFF);
+    // Pin_control(GPIO1_06, 0xFF);
+    // Pin_control(GPIO1_07, 0xFF);
     // Pin_status();   
     // sleep(3);
 
@@ -211,20 +229,38 @@ void Pin_status() {
 
     // Displaying the current PIN MUX configurations
     if (control_module) {
-        in32s(&val,1,control_module+GPIO_2_pinConfig);
-        printf("Current pinmux configuration for      GPIO2  = %#010x\n", val);
+        in32s(&val,1,control_module+GPIO1_2_pinConfig);
+        printf("Current pinmux configuration for      GPIO1_02  = %#010x\n", val);
 
-        in32s(&val,1,control_module+GPIO_3_pinConfig);
-        printf("Current pinmux configuration for      GPIO3  = %#010x\n", val);
+        in32s(&val,1,control_module+GPIO1_3_pinConfig);
+        printf("Current pinmux configuration for      GPIO1_03  = %#010x\n", val);
 
-        in32s(&val,1,control_module+GPIO_6_pinConfig);
-        printf("Current pinmux configuration for      GPIO6  = %#010x\n", val);
+        in32s(&val,1,control_module+GPIO1_6_pinConfig);
+        printf("Current pinmux configuration for      GPIO1_06  = %#010x\n", val);
 
-        in32s(&val,1,control_module+GPIO_7_pinConfig);
-        printf("Current pinmux configuration for      GPIO7  = %#010x\n", val);
+        in32s(&val,1,control_module+GPIO1_7_pinConfig);
+        printf("Current pinmux configuration for      GPIO1_07  = %#010x\n", val);
 
         in32s(&val,1,control_module+P9_12_pinConfig);
-        printf("Current pinmux configuration for     GPIO28  = %#010x\n", val);
+        printf("Current pinmux configuration for      GPIO1_28  = %#010x\n", val);
+
+        in32s(&val,1,control_module+GPIO2_6_pinConfig);
+        printf("Current pinmux configuration for      GPIO2_06  = %#010x\n", val);
+
+        in32s(&val,1,control_module+GPIO2_7_pinConfig);
+        printf("Current pinmux configuration for      GPIO2_07  = %#010x\n", val);
+
+        in32s(&val,1,control_module+GPIO2_8_pinConfig);
+        printf("Current pinmux configuration for      GPIO2_08  = %#010x\n", val);
+
+        in32s(&val,1,control_module+GPIO2_9_pinConfig);
+        printf("Current pinmux configuration for      GPIO2_09  = %#010x\n", val);
+
+        in32s(&val,1,control_module+GPIO2_10_pinConfig);
+        printf("Current pinmux configuration for      GPIO2_10  = %#010x\n", val);
+
+        in32s(&val,1,control_module+GPIO2_11_pinConfig);
+        printf("Current pinmux configuration for      GPIO2_11  = %#010x\n", val);
 
         in32s(&val,1,control_module+spi_cs_1_pinConfig);
         printf("Current pinmux configuration for   SPI 1 CS  = %#010x\n", val);
@@ -262,17 +298,19 @@ void Pin_control(unsigned int pin, unsigned int value) {
     printf("VALUE: %d\n",value);
     printf("New PIN VALUE: %d\n\n",new_pin);
 
-    uintptr_t gpio1_base    = NULL;
+    // uintptr_t gpio1_base    = NULL;
+    uintptr_t gpio2_base    = NULL;
     volatile uint32_t val   = 0;
 
-    gpio1_base = mmap_device_io(AM335X_GPIO_SIZE , AM335X_GPIO1_BASE);  //Reading the state of the registers
+    // gpio1_base = mmap_device_io(AM335X_GPIO_SIZE , AM335X_GPIO1_BASE);  //Reading the state of the registers
+    gpio2_base = mmap_device_io(AM335X_GPIO_SIZE , AM335X_GPIO2_BASE);  //Reading the state of the registers
 
     // Write value to output enable
-    if (gpio1_base) {
+    if (gpio2_base) {
         val &= ~(pin);
-        out32(gpio1_base + GPIO_OE, val);
+        out32(gpio2_base + GPIO_OE, val);
 
-        val = in32(gpio1_base + GPIO_DATAOUT);      // Read in current value
+        val = in32(gpio2_base + GPIO_DATAOUT);      // Read in current value
         printf("1. val = %#8x\n", val);             // Debug
         
         if (new_pin) {                              // Determining whether the PIN is required to set LOW or HIGH
@@ -282,10 +320,10 @@ void Pin_control(unsigned int pin, unsigned int value) {
             val &= ~(pin);                          // Clear the bits that we might change
             printf("2. val = %#8x\n", val);         // Debug            
         }
-        out32(gpio1_base + GPIO_DATAOUT, val);      // Write new value
+        out32(gpio2_base + GPIO_DATAOUT, val);      // Write new value
         delay(250);
 
-        munmap_device_io(gpio1_base, AM335X_GPIO_SIZE);
+        munmap_device_io(gpio2_base, AM335X_GPIO_SIZE);
     }
 }
 
