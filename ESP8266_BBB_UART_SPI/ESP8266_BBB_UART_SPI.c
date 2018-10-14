@@ -195,13 +195,13 @@ int main(int argc, char *argv[]) {
 
             // Dequeue strings from the sending process
             while (mq_receive(qd, buf, MESSAGESIZE, NULL) > 0) {
-                printf("dequeue: '%s'\n", buf);                 // Print out the messages to this terminal
+                printf("dequeue: '%s'", buf);                 // Print out the messages to this terminal
                 strcpy(char_write_buffer, buf);
                 //--------UART Code--------
                 ret = 0;
                 file = open(UART_PATH, O_RDWR);
                 UART_write();
-                printf("Count value: %d\n", count++);
+                // printf("Count value: %d\n", count++);
                 if (close(file) == -1) {
                     printf("close failed: %s\n", strerror(errno));
                 }
@@ -480,7 +480,7 @@ int UART_write() {
     ret = 0;
     printf("\nTx: %s", char_write_buffer);
     ret = write(file, &char_write_buffer, strlen(char_write_buffer));
-    printf("\nTx: Number of Bytes: %d\n", ret);
+    printf("\nTx: Number of Bytes: %d\n\n", ret);
     return ret;
 }
 

@@ -409,14 +409,14 @@ int main(int argc, char *argv[]) {
                     timeinfo = localtime (&rawtime);
                     strftime (time_date,80,"%D %X|",timeinfo);
                     strcat(buf, time_date);
-                    printf("queue: '%s'\n", buf);           //print the message to this processes terminal
+                    printf("queue: '%s'\n\n", buf);           //print the message to this processes terminal
                     mq_send(qd, buf, MESSAGESIZE, 0);       //send the mqueue
                     memset(buf,0,strlen(buf));
                     memset(key_press_data,0,strlen(key_press_data));
                 }
                                                             // not to expect any more messages. 5 char long because
                                                             // of '/0' char at end of the "done" string
-                printf("\nAll Messages sent to the queue\n");
+                // printf("\nAll Messages sent to the queue\n");
 
                 // as soon as this code executes the mqueue data will be deleted
                 // from the /dev/mqueue/test_queue  file structure
