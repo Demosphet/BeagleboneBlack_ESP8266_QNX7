@@ -175,8 +175,8 @@ void loop(){
             
             // Web Page Heading
             client.println("<body><h1>s3483160 - Gateway</h1>");
-            client.println("<body><h2>Current Operations : " + current_operations + " </h2>");
-            client.println("<body><h2>Status : " + log_operations + " </h2>");
+            client.println("<body><h2>Current Operation : " + current_operations + " </h2>");
+            // client.println("<body><h2>Status : " + log_operations + " </h2>");
                     
             // Display current state, and ON/OFF buttons for GPIO 5
             client.println("<p><a href=\"/5/on\"><button class=\"button\">Request</button></a></p>");
@@ -195,8 +195,8 @@ void loop(){
             Serial.println(ind3);
             Serial.println("Ind4");
             Serial.println(ind4);
-            for (int i = 0; i <= number_of_packets; i++) {
-              if (i == 0) {
+            for (int i = 1; i <= number_of_packets; i++) {
+              if (i == 1) {
                 Serial.println("number_of_packets");
                 Serial.println(number_of_packets);
 
