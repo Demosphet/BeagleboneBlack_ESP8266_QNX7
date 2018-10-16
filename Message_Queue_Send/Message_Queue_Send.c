@@ -49,6 +49,9 @@
 #include <sys/mman.h>      // for mmap_device_io();
 #include <stdint.h>        // for unit32 types
 #include <sys/neutrino.h>  // for ThreadCtl( _NTO_TCTL_IO_PRIV , NULL)
+#include <dirent.h>
+#include <errno.h>
+#include <sys/types.h>
 
 //--------------------------------Global Definitions--------------------------------
 #define AM335X_CONTROL_MODULE_BASE   (uint64_t) 0x44E10000
@@ -369,6 +372,8 @@ int main(int argc, char *argv[]) {
     const char * MqueueLocation = "/test_queue";    // will be located /dev/mqueue/test_queue  */
 
     qd = mq_open(MqueueLocation, Q_FLAGS, Q_Mode, &attr);            // full path will be: <host_name>/dev/mqueue/test_queue
+    DIR* dir;
+    struct dirent *dl;
 
     // Keypad code
     printf( "Waiting For Interrupt 99 - key press on Jaycar (XC4602) keypad\n");
@@ -410,9 +415,28 @@ int main(int argc, char *argv[]) {
                     strftime (time_date,80,"%D %X|",timeinfo);
                     strcat(buf, time_date);
                     printf("queue: '%s'\n\n", buf);           //print the message to this processes terminal
-                    mq_send(qd, buf, MESSAGESIZE, 0);       //send the mqueue
-                    memset(buf,0,strlen(buf));
-                    memset(key_press_data,0,strlen(key_press_data));
+                    dir = opendir("/dev/");
+                    if (dir) {
+                        // printf("Exists!\n");
+                        while ((dl = readdir(dir)) != NULL) {
+                            // printf("%s\n", dl->d_name);
+                            if(!strcmp("ESP", dl->d_name)) {
+                                mq_send(qd, buf, MESSAGESIZE, 0);       //send the mqueue
+                                memset(buf,0,strlen(buf));
+                                memset(key_press_data,0,strlen(key_press_data));
+                                break;
+                            } else {
+                                //ESP Resource Driver not found
+                            }
+                        }
+                        closedir(dir);
+                    } else if (ENOENT == errno) {
+                        printf("Does not exists\n");
+                    } else if (dir == NULL) {
+                        printf("Cannot open directory\n");
+                    } else {
+                        printf("Uknownn Error\n");
+                    }
                 }
                                                             // not to expect any more messages. 5 char long because
                                                             // of '/0' char at end of the "done" string

@@ -24,7 +24,7 @@
 #include <sys/mman.h>       // For mmap_device_io()
 #include <hw/inout.h>       // For in32() and out32()
 #include <hw/spi-master.h>
-
+#include <stddef.h>
 
 //--------------------------------Global Definitions--------------------------------
 // Registers required to configure and use the pins
@@ -105,6 +105,9 @@
 // Message Queues
 #define MESSAGESIZE                             1000
 
+// Resource manager
+#define INTNUM                                  0
+
 //--------------------------------Global Variables--------------------------------
 // UART - Message size
 char char_read_temp_buffer                      [32];
@@ -139,7 +142,13 @@ uint8_t reg4[8]     =                           {0x48, 0x65, 0x72, 0x65, 0x21, 0
 uint8_t reg5[12]    =                           {0x48, 0x65, 0x6c, 0x6c, 0x6f, 0x20, 0x53, 0x6c, 0x61, 0x76, 0x65};
 uint8_t reg6[16]    =                           {0x41, 0x72, 0x65, 0x20, 0x79, 0x6f, 0x75, 0x20, 0x61, 0x6c, 0x69, 0x76, 0x65, 0x3f, 0x0};
 
+// Resource manager
+static resmgr_connect_funcs_t   connect_funcs;
+static resmgr_io_funcs_t        io_funcs;
+static iofunc_attr_t            attr;
+
 //--------------------------------Prototypes--------------------------------
+void * interrupt_thread (void * data);
 void Pin_status();
 void Pin_control(unsigned int pin, unsigned int value);
 void Pin_config(int mode, unsigned int puden, unsigned int putypesel, unsigned int rxactive, unsigned int slewctrl, unsigned int pin);
@@ -153,27 +162,68 @@ int UART_read();
 
 
 //-------------------------------------------------------------------------
-int main(int argc, char *argv[]) {
-    puts("Hello World!!!"); /* prints Hello World!!! */
+int main(int argc, char **argv) {
+    thread_pool_attr_t    pool_attr;
+    resmgr_attr_t         resmgr_attr;
+    dispatch_t            *dpp;
+    thread_pool_t         *tpp;
+    int                   id;
 
-    ThreadCtl( _NTO_TCTL_IO_PRIV , NULL); // Request I/O privileges
 
-    // Pin_status();
-    // Pin_control(GPIO2_06, 0xFF);
-    // Pin_control(GPIO2_07, 0xFF);
-    // Pin_control(GPIO2_09, 0xFFF);
-    // Pin_control(GPIO2_08, 0xFFF);
-    // Pin_control(GPIO2_10, 0xFFF);
-    // Pin_control(GPIO2_11, 0xFFF);
-    // Pin_config(PIN_MODE_7,PU_ENABLE,PU_PULL_DOWN,RECV_ENABLE,SLEW_FAST,GPIO1_2_pinConfig);
-    // Pin_config(PIN_MODE_7,PU_ENABLE,PU_PULL_DOWN,RECV_ENABLE,SLEW_FAST,GPIO1_3_pinConfig);
-    // Pin_status();
-    // Pin_control(GPIO1_02, 0xFF);
-    // Pin_control(GPIO1_03, 0xFF);
-    // Pin_control(GPIO1_06, 0xFF);
-    // Pin_control(GPIO1_07, 0xFF);
-    // Pin_status();   
-    // sleep(3);
+    if((dpp = dispatch_create()) == NULL) {
+        fprintf(stderr, "%s: Unable to allocate dispatch handle.\n", argv[0]);
+        return EXIT_FAILURE;
+    }
+
+    memset(&pool_attr, 0, sizeof pool_attr);
+    pool_attr.handle = dpp; 
+    pool_attr.context_alloc = dispatch_context_alloc; 
+    pool_attr.block_func = dispatch_block;  
+    pool_attr.unblock_func = dispatch_unblock; 
+    pool_attr.handler_func = dispatch_handler; 
+    pool_attr.context_free = dispatch_context_free;
+    pool_attr.lo_water = 2;
+    pool_attr.hi_water = 4;
+    pool_attr.increment = 1;
+    pool_attr.maximum = 50;
+
+    if((tpp = thread_pool_create(&pool_attr, POOL_FLAG_EXIT_SELF)) == NULL) {
+        fprintf(stderr, "%s: Unable to initialize thread pool.\n", argv[0]);
+        return EXIT_FAILURE;
+    }
+
+    iofunc_func_init(_RESMGR_CONNECT_NFUNCS, &connect_funcs, _RESMGR_IO_NFUNCS, &io_funcs);
+    iofunc_attr_init(&attr, S_IFNAM | 0666, 0, 0);
+        
+    memset(&resmgr_attr, 0, sizeof resmgr_attr);
+    resmgr_attr.nparts_max = 1;
+    resmgr_attr.msg_max_size = 2048;
+
+    if((id = resmgr_attach(dpp, &resmgr_attr, "/dev/ESP", _FTYPE_ANY, 0, &connect_funcs, &io_funcs, &attr)) == -1) {
+        fprintf(stderr, "%s: Unable to attach name.\n", argv[0]);
+        return EXIT_FAILURE;
+    }
+
+    /* Start the thread that will handle interrupt events. */
+    pthread_create (NULL, NULL, interrupt_thread, NULL);
+
+    /* Never returns */
+    thread_pool_start(tpp);
+}
+//--------------------------------Function Definitions--------------------------------
+void * interrupt_thread (void * data) {
+    struct sigevent event;
+    int             id;
+
+    /* fill in "event" structure */
+    memset(&event, 0, sizeof(event));
+    event.sigev_notify = SIGEV_INTR;
+
+    /* Obtain I/O privileges */
+    ThreadCtl( _NTO_TCTL_IO, 0 );
+
+    /* intNum is the desired interrupt level */
+    id = InterruptAttachEvent (INTNUM, &event, 0);
 
     printf("Welcome to the QNX Momentics mqueue receive process\n");
 
@@ -210,10 +260,18 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    printf("Main Terminated...!\n");
-    return EXIT_SUCCESS;
+    while (1) {
+        InterruptWait (NULL, NULL);
+        /*  do something about the interrupt,
+         *  perhaps updating some shared
+         *  structures in the resource manager 
+         *
+         *  unmask the interrupt when done
+         */
+        InterruptUnmask(INTNUM, id);
+    }
 }
-//--------------------------------Function Definitions--------------------------------
+
 // Checking the status of the pins
 void Pin_status() {
     printf("0. val = %#8x\n\n",AM335X_GPIO1_BASE);
